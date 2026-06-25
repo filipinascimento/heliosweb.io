@@ -51,7 +51,7 @@ def empty_doc() -> dict:
 
 def rel(path: Path) -> str:
     path = path.resolve()
-    for package_root in (ROOT / "helios-web-next", ROOT / "helios-network-v2", ROOT / "helios-xnet"):
+    for package_root in (ROOT / "helios-web", ROOT / "helios-web-next", ROOT / "helios-network-v2", ROOT / "helios-xnet"):
         try:
             return path.relative_to(package_root).as_posix()
         except ValueError:
@@ -1673,8 +1673,8 @@ def require_summaries(symbols: list[Symbol], names: set[str], label: str) -> Non
 def emit_helios_web() -> None:
     package_dir = DOCS / "api" / "helios-web"
     clean_generated_api_dir(package_dir)
-    package = read_json(ROOT / "helios-web-next" / "package.json")
-    entry = ROOT / "helios-web-next" / "src" / "index.js"
+    package = read_json(ROOT / "helios-web" / "package.json")
+    entry = ROOT / "helios-web" / "src" / "index.js"
     exports = parse_js_exports(entry)
     export_sources = parse_js_export_sources(entry)
     symbols: list[Symbol] = []
@@ -1686,17 +1686,17 @@ def emit_helios_web() -> None:
         class_names = {symbol.name for symbol in symbols if symbol.kind == "class" and symbol.source == source}
         class_method_sources.update(parse_js_class_methods(source, class_names))
     symbols = attach_methods(symbols, class_method_sources)
-    method_symbols = parse_js_methods(ROOT / "helios-web-next" / "src" / "Helios.js", {
+    method_symbols = parse_js_methods(ROOT / "helios-web" / "src" / "Helios.js", {
         "getFigureExportCapabilities",
         "exportFigureBlob",
         "exportFigurePreviewBlob",
         "exportFigure",
     })
-    method_symbols.extend(parse_js_methods(ROOT / "helios-web-next" / "src" / "behaviors" / "MappersBehavior.js", {
+    method_symbols.extend(parse_js_methods(ROOT / "helios-web" / "src" / "behaviors" / "MappersBehavior.js", {
         "setChannelConfig",
         "getSerializedChannelConfig",
     }))
-    method_symbols.extend(parse_js_methods(ROOT / "helios-web-next" / "src" / "behaviors" / "FilterBehavior.js", {
+    method_symbols.extend(parse_js_methods(ROOT / "helios-web" / "src" / "behaviors" / "FilterBehavior.js", {
         "replaceRules",
         "clear",
     }))
@@ -1772,7 +1772,7 @@ No advanced internal exports are documented in this build. When an exported help
     text = f"""
 # Helios Web API
 
-<img class="helios-api-logo" src="../../assets/helios-web-logo.svg" alt="Helios Web logo">
+<img class="helios-api-logo" src="../../assets/helios-logo.svg" alt="Helios Web logo">
 
 <p class="helios-api-version">Version {package.get("version", "unknown")}</p>
 

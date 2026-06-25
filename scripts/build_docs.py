@@ -68,7 +68,7 @@ def stage_example_assets() -> None:
     """
     try:
         network_dist = resolve_dist("HELIOS_NETWORK_DIST", "helios-network", "helios-network-v2")
-        web_dist = resolve_dist("HELIOS_WEB_DIST", "helios-web", "helios-web-next")
+        web_dist = resolve_dist("HELIOS_WEB_DIST", "helios-web", "helios-web")
     except FileNotFoundError:
         if (VENDOR_DIR / "helios-network.js").exists() and (VENDOR_DIR / "helios-web.es.js").exists():
             print("Using committed Helios vendor bundles; released packages were not installed yet.")
@@ -97,8 +97,8 @@ def stage_example_assets() -> None:
 
 def resolve_main_app_dir() -> Path:
     for candidate in (
-        ROOT / "helios-web-next" / "docs" / "app",
         ROOT / "helios-web" / "docs" / "app",
+        ROOT / "helios-web-next" / "docs" / "app",
     ):
         if (candidate / "main.js").exists():
             return candidate
@@ -126,7 +126,7 @@ def write_root_homepage() -> None:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Helios</title>
-  <link rel="icon" href="/docs/assets/helios-web-logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/docs/assets/helios-mark.svg" type="image/svg+xml">
   <style>
     :root {
       color-scheme: light dark;
@@ -186,7 +186,7 @@ def write_root_homepage() -> None:
 <body>
   <header class="shell">
     <nav aria-label="Primary">
-      <img class="mark" src="/docs/assets/helios-web-logo.svg" alt="Helios">
+      <img class="mark" src="/docs/assets/helios-logo.svg" alt="Helios">
       <div class="tabs">
         <a class="primary" href="/app/">App</a>
         <a href="/docs/">Docs</a>
@@ -196,7 +196,7 @@ def write_root_homepage() -> None:
     </nav>
     <div class="hero">
       <main>
-        <img class="logo" src="/docs/assets/helios-web-logo.svg" alt="Helios">
+        <img class="logo" src="/docs/assets/helios-logo.svg" alt="Helios">
         <h1>Interactive network visualization.</h1>
         <p class="lead">Helios pairs a WebGPU/WebGL renderer with a WebAssembly graph store, plus CLI, notebook, and desktop hosts for real workflows.</p>
         <div class="actions">
@@ -256,6 +256,11 @@ def write_root_homepage() -> None:
         ui: false,
         quickControls: false,
         debug: false,
+        storage: false,
+        session: false,
+        warnOnUnsavedSessionChanges: false,
+        legends: { enabled: false },
+        behaviors: { legends: false },
         layout: {
           type: 'd3force3d',
           options: {
@@ -270,6 +275,9 @@ def write_root_homepage() -> None:
         },
       });
       await helios.ready;
+      helios.nodeSizeScale(0.16);
+      helios.edgeWidthScale(0.45);
+      helios.legends(false);
       helios.frameNetwork({ animate: false });
       label.textContent = '520 nodes - 3D Watts-Strogatz';
       window.__heliosLandingPreview = helios;
@@ -294,7 +302,7 @@ def write_app_route() -> None:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Helios App</title>
-  <link rel="icon" href="/docs/assets/helios-web-logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/docs/assets/helios-mark.svg" type="image/svg+xml">
   <style>
     html, body, #app { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #070a0f; }
   </style>

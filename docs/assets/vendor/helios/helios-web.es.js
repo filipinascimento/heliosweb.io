@@ -49504,7 +49504,7 @@ class q0 extends EventTarget {
       description: "Scales mapped edge widths",
       defaultValue: 1,
       domain: { min: 0, max: 10 },
-      recommendedRange: { min: 0, max: 4 },
+      recommendedRange: { min: 0, max: 10 },
       step: 0.01
     },
     edgeWidthBase: {
@@ -49560,7 +49560,7 @@ class q0 extends EventTarget {
       description: "Scales mapped node sizes",
       defaultValue: 1,
       domain: { min: 0, max: 100 },
-      recommendedRange: { min: 0, max: 3 },
+      recommendedRange: { min: 0, max: 10 },
       step: 0.01
     },
     nodeSizeBase: {
@@ -49586,8 +49586,8 @@ class q0 extends EventTarget {
       label: "Outline Width Scale",
       description: "Scales mapped outline widths",
       defaultValue: 0,
-      domain: { min: 0, max: 10 },
-      recommendedRange: { min: 0, max: 10 },
+      domain: { min: 0, max: 20 },
+      recommendedRange: { min: 0, max: 20 },
       step: 0.01
     },
     nodeOutlineWidthBase: {

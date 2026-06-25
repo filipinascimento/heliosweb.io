@@ -19,7 +19,7 @@ def run(command: list[str]) -> subprocess.CompletedProcess[str]:
 def test_mkdocs_material_and_sidecode_are_configured():
     config = yaml.safe_load((DOCS_SITE / "mkdocs.yml").read_text(encoding="utf-8"))
     assert config["theme"]["name"] == "material"
-    assert config["theme"]["logo"] == "assets/helios-web-logo.svg"
+    assert config["theme"]["logo"] == "assets/helios-logo.svg"
     sidecode_config = next(item["sidecode"] for item in config["plugins"] if isinstance(item, dict) and "sidecode" in item)
     assert sidecode_config["import_map"]["helios-web"].endswith("helios-web.es.js")
     assert config["site_url"].endswith("/docs/")
@@ -71,7 +71,7 @@ def test_api_generator_emits_public_reference_pages():
     assert "Network" in (DOCS_SITE / "docs/api/helios-network-python/index.md").read_text(encoding="utf-8")
     assert "CXNewNetwork" in (DOCS_SITE / "docs/api/helios-network-native-c/index.md").read_text(encoding="utf-8")
     web_text = (DOCS_SITE / "docs/api/helios-web/index.md").read_text(encoding="utf-8")
-    assert "helios-web-logo.svg" in web_text
+    assert "helios-logo.svg" in web_text
     assert "Source entry" not in web_text
     assert "src/index.d.ts" not in web_text
     assert "Declaration surface" not in web_text
@@ -182,6 +182,11 @@ def test_docs_build_path_succeeds():
     index_text = index.read_text(encoding="utf-8")
     assert "network-preview" in index_text
     assert "3D Watts-Strogatz preview" in index_text
+    assert "/docs/assets/helios-logo.svg" in index_text
+    assert "storage: false" in index_text
+    assert "session: false" in index_text
+    assert "warnOnUnsavedSessionChanges: false" in index_text
+    assert "helios.nodeSizeScale(0.16)" in index_text
     assert (DOCS_SITE / "site/docs/index.html").exists()
     assert (DOCS_SITE / "site/app/index.html").exists()
     app_main = (DOCS_SITE / "site/app/main.js").read_text(encoding="utf-8")

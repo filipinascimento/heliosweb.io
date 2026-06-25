@@ -1,7 +1,7 @@
 
 # Helios Web API
 
-<img class="helios-api-logo" src="../../assets/helios-web-logo.svg" alt="Helios Web logo">
+<img class="helios-api-logo" src="../../assets/helios-logo.svg" alt="Helios Web logo">
 
 <p class="helios-api-version">Version 0.10.0</p>
 

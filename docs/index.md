@@ -1,6 +1,6 @@
 <section class="helios-hero">
   <div class="helios-hero-copy">
-    <img class="helios-home-logo" src="assets/helios-web-logo.svg" alt="Helios Web">
+    <img class="helios-home-logo" src="assets/helios-logo.svg" alt="Helios Web">
     <p class="helios-eyebrow">Open-source graph visualization</p>
     <h1>Interactive network visualization with a WebAssembly graph store.</h1>
     <p>

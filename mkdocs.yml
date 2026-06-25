@@ -16,7 +16,7 @@ not_in_nav: |
 theme:
   name: material
   language: en
-  logo: assets/helios-web-logo.svg
+  logo: assets/helios-logo.svg
   favicon: assets/helios-mark.svg
   palette:
     - media: "(prefers-color-scheme: light)"
