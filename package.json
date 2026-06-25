@@ -1,0 +1,17 @@
+{
+  "name": "heliosweb.io",
+  "version": "0.10.0",
+  "private": true,
+  "description": "Helios documentation and website source.",
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build_docs.py",
+    "test": "pytest tests",
+    "version:docs": "mike deploy --push --update-aliases 0.10.0 latest"
+  },
+  "dependencies": {
+    "helios-network": "0.10.0",
+    "helios-web": "0.10.0"
+  },
+  "devDependencies": {}
+}

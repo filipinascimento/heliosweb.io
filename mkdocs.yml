@@ -1,0 +1,191 @@
+site_name: Helios
+site_description: Open-source graph visualization and WebAssembly-backed network data tools.
+site_url: https://heliosweb.io/docs/
+edit_uri: ""
+docs_dir: docs
+site_dir: site/docs
+strict: true
+not_in_nav: |
+  examples/behaviors.md
+  examples/persistence-save-restore.md
+  api/helios-web/*.md
+  api/helios-network-js-wasm/*.md
+  api/helios-network-python/*.md
+  api/helios-network-native-c/*.md
+
+theme:
+  name: material
+  language: en
+  logo: assets/helios-web-logo.svg
+  favicon: assets/helios-mark.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+
+plugins:
+  - search
+  - sidecode:
+      import_map:
+        helios-web: ../vendor/helios/helios-web.es.js
+        helios-network: ../vendor/helios/helios-network.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - assets/stylesheets/helios.css
+
+extra_javascript:
+  - assets/javascripts/api-search.js
+
+extra:
+  version:
+    default: "0.10.0"
+  helios:
+    docs_channel: "0.10.0"
+    public_urls:
+      landing: https://heliosweb.io/
+      app: https://heliosweb.io/app/
+      docs: https://heliosweb.io/docs/
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/filipinascimento/heliosweb.io
+
+nav:
+  - Overview: index.md
+  - Getting Started:
+      - Overview: getting-started/index.md
+      - First Visual Graph: getting-started/interactive.md
+  - Examples:
+      - Start Here: examples/index.md
+      - Visual Examples:
+          - Guide: examples/helios-web/index.md
+          - Basic Rendering: examples/helios-web/basic.md
+          - Attributes, Mappers, And Legends: examples/helios-web/attributes-mappers.md
+          - Interaction And Labels: examples/helios-web/interaction-labels.md
+          - Layouts And Filters: examples/helios-web/layouts-filters.md
+          - Persistence And Export: examples/helios-web/persistence-export.md
+          - Touch And Mobile Controls: examples/helios-web/mobile-custom.md
+          - Extension Patterns: examples/helios-web/advanced-apis.md
+      - Data/API Examples:
+          - Guide: examples/helios-network/index.md
+          - Graphs And Attributes: examples/helios-network/graphs-attributes.md
+          - Selectors And Serialization: examples/helios-network/selectors-serialization.md
+          - Low-Level Buffer Access: examples/helios-network/buffer-access.md
+          - Language Bindings: examples/helios-network/language-bindings.md
+  - Guides:
+      - Overview: guides/index.md
+      - Installation And Bundling: guides/installation.md
+      - Behaviors: guides/behaviors.md
+      - Data Formats:
+          - Overview: guides/data-formats/index.md
+          - BXNet And ZXNet: guides/data-formats/bxnet-zxnet.md
+          - XNet: guides/data-formats/xnet.md
+          - GML: guides/data-formats/gml.md
+          - graph-tool GT: guides/data-formats/gt.md
+          - Node-Link JSON: guides/data-formats/node-link-json.md
+      - Persistence: guides/persistence.md
+      - API Documentation Pipeline: guides/api-docs-pipeline.md
+      - Development And Contributing: guides/development.md
+  - Apps And Integrations:
+      - Overview: apps/index.md
+      - Helios CLI: apps/helios-cli.md
+      - Helios Widget: apps/helios-widget.md
+      - Helios Desktop: apps/helios-desktop.md
+  - API Reference:
+      - Overview: api/index.md
+      - Helios Web:
+          - Overview: api/helios-web/index.md
+          - Core:
+              - Helios: api/helios-web/Helios.md
+          - Constants:
+              - EVENTS: api/helios-web/EVENTS.md
+              - FIGURE_EXPORT_PRESETS: api/helios-web/FIGURE_EXPORT_PRESETS.md
+          - Behaviors:
+              - Behavior: api/helios-web/Behavior.md
+              - BehaviorManager: api/helios-web/BehaviorManager.md
+              - BehaviorRegistry: api/helios-web/BehaviorRegistry.md
+              - AppearanceBehavior: api/helios-web/AppearanceBehavior.md
+              - ExporterBehavior: api/helios-web/ExporterBehavior.md
+              - FilterBehavior: api/helios-web/FilterBehavior.md
+              - HoverBehavior: api/helios-web/HoverBehavior.md
+              - InterfaceBehavior: api/helios-web/InterfaceBehavior.md
+              - LabelsBehavior: api/helios-web/LabelsBehavior.md
+              - LayoutBehavior: api/helios-web/LayoutBehavior.md
+              - LegendsBehavior: api/helios-web/LegendsBehavior.md
+              - MappersBehavior: api/helios-web/MappersBehavior.md
+              - SelectionBehavior: api/helios-web/SelectionBehavior.md
+          - Layouts:
+              - Layout: api/helios-web/Layout.md
+              - StaticLayout: api/helios-web/StaticLayout.md
+              - WorkerLayout: api/helios-web/WorkerLayout.md
+              - D3Force3DLayout: api/helios-web/D3Force3DLayout.md
+              - GpuForceLayout: api/helios-web/GpuForceLayout.md
+              - PositionDelegate: api/helios-web/PositionDelegate.md
+              - GpuForcePositionDelegate: api/helios-web/GpuForcePositionDelegate.md
+          - Mappers And Filters:
+              - Mapper: api/helios-web/Mapper.md
+              - MapperCollection: api/helios-web/MapperCollection.md
+              - HeliosFilter: api/helios-web/HeliosFilter.md
+          - Persistence And Export:
+              - HeliosStorageManager: api/helios-web/HeliosStorageManager.md
+              - BrowserStorageManager: api/helios-web/BrowserStorageManager.md
+              - RemoteStorageManager: api/helios-web/RemoteStorageManager.md
+              - DummyStorageManager: api/helios-web/DummyStorageManager.md
+              - HeliosStateManager: api/helios-web/HeliosStateManager.md
+              - SessionStore: api/helios-web/SessionStore.md
+          - Internal: api/helios-web/section-internal.md
+      - Helios Network JS/WASM:
+          - Overview: api/helios-network-js-wasm/index.md
+          - Classes: api/helios-network-js-wasm/section-classes.md
+          - Methods: api/helios-network-js-wasm/section-methods.md
+          - Enums And Constants: api/helios-network-js-wasm/section-enums-and-constants.md
+      - Helios Network Python:
+          - Overview: api/helios-network-python/index.md
+          - Network: api/helios-network-python/section-network.md
+          - Import And Conversion: api/helios-network-python/section-import-and-conversion.md
+          - UMAP: api/helios-network-python/section-umap.md
+          - Enums And Models: api/helios-network-python/section-enums-and-models.md
+      - Helios Network Native C:
+          - Overview: api/helios-network-native-c/index.md
+          - Network Lifecycle: api/helios-network-native-c/section-network-lifecycle.md
+          - Topology: api/helios-network-native-c/section-topology.md
+          - Attributes: api/helios-network-native-c/section-attributes.md
+          - Buffers And Versions: api/helios-network-native-c/section-buffers-and-versions.md
+          - Selectors: api/helios-network-native-c/section-selectors.md
+          - Queries: api/helios-network-native-c/section-queries.md
+          - Serialization: api/helios-network-native-c/section-serialization.md
+          - Measurements: api/helios-network-native-c/section-measurements.md
+          - Measurement Sessions: api/helios-network-native-c/section-measurement-sessions.md

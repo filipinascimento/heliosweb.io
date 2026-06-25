@@ -1,0 +1,4 @@
+site/
+output/
+docs/assets/vendor/helios/
+tests/__pycache__/
