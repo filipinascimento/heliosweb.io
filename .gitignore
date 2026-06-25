@@ -1,4 +1,32 @@
+# macOS / filesystem noise
+.DS_Store
+._*
+
+# Editor and local environment files
+.idea/
+.vscode/
+.env
+.env.*
+
+# Python caches and virtualenvs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node dependencies and package-manager logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Generated docs/site artifacts
 site/
 output/
+
+# Vendored release bundles are committed only when explicitly force-added.
 docs/assets/vendor/helios/
-tests/__pycache__/
