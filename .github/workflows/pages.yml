@@ -35,7 +35,11 @@ jobs:
 
       - name: Install released Helios packages
         run: |
-          npm install || echo "::warning::Released Helios packages are not available yet; using committed vendor bundles."
+          npm install || {
+            echo "::warning::Released Helios packages are not available yet; using committed vendor bundles and release-branch sources."
+            git clone --depth 1 --branch release/0.10.0 https://github.com/filipinascimento/helios-network.git ../helios-network-v2
+            git clone --depth 1 --branch main https://github.com/filipinascimento/helios-web.git ../helios-web-next
+          }
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
