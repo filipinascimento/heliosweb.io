@@ -95,6 +95,28 @@ def stage_example_assets() -> None:
     copy_file(web_dist / "helios-web.es.js.map", VENDOR_DIR / "helios-web.es.js.map")
 
 
+def resolve_main_app_dir() -> Path:
+    for candidate in (
+        ROOT / "helios-web-next" / "docs" / "app",
+        ROOT / "helios-web" / "docs" / "app",
+    ):
+        if (candidate / "main.js").exists():
+            return candidate
+    raise FileNotFoundError("Could not locate Helios Web main app source in a sibling checkout.")
+
+
+def rewrite_main_app_source(source: str) -> str:
+    source = source.replace(
+        "import HeliosNetwork, { AttributeType } from 'helios-network';",
+        "import HeliosNetwork, { AttributeType } from '../docs/assets/vendor/helios/helios-network.js';",
+    )
+    source = source.replace(
+        "import { Helios, EVENTS, HeliosUI } from '../../src/index.js';",
+        "import { Helios, EVENTS, HeliosUI } from '../docs/assets/vendor/helios/helios-web.es.js';",
+    )
+    return source.replace("'/assets/umap/", "'/docs/assets/vendor/helios/assets/umap/")
+
+
 def write_root_homepage() -> None:
     site_dir = DOCS_SITE / "site"
     site_dir.mkdir(parents=True, exist_ok=True)
@@ -104,35 +126,158 @@ def write_root_homepage() -> None:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Helios</title>
+  <link rel="icon" href="/docs/assets/helios-web-logo.svg" type="image/svg+xml">
   <style>
-    :root { color-scheme: light dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f7f9fb; color: #17212b; }
-    main { width: min(920px, calc(100vw - 40px)); }
-    img { width: min(360px, 72vw); height: auto; display: block; margin-bottom: 34px; }
-    h1 { font-size: clamp(2.3rem, 8vw, 5.8rem); line-height: 0.94; margin: 0 0 24px; letter-spacing: 0; }
-    p { max-width: 680px; font-size: 1.15rem; line-height: 1.65; margin: 0 0 32px; color: #435160; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    a { border: 1px solid #17212b; color: #17212b; text-decoration: none; padding: 12px 16px; border-radius: 6px; font-weight: 650; }
-    a.primary { background: #17212b; color: white; }
+    :root {
+      color-scheme: light dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f7f9fb;
+      color: #17212b;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #f7f9fb; color: #17212b; }
+    a { color: inherit; }
+    .shell { width: min(1180px, calc(100vw - 40px)); margin: 0 auto; }
+    header { min-height: min(760px, 100vh); display: flex; flex-direction: column; }
+    nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 22px 0; }
+    .mark { height: 30px; width: auto; display: block; }
+    .tabs { display: flex; align-items: center; gap: 4px; border: 1px solid #cbd5df; border-radius: 8px; padding: 4px; background: #ffffff; }
+    .tabs a { text-decoration: none; font-weight: 650; font-size: 0.95rem; line-height: 1; padding: 10px 13px; border-radius: 6px; white-space: nowrap; }
+    .tabs a:hover, .tabs a.primary { background: #17212b; color: #ffffff; }
+    .hero { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 470px); align-items: center; gap: clamp(28px, 6vw, 72px); padding: 20px 0 60px; }
+    .logo { width: min(390px, 76vw); height: auto; display: block; margin-bottom: 32px; }
+    h1 { font-size: clamp(2.5rem, 7vw, 6rem); line-height: 0.94; margin: 0 0 24px; letter-spacing: 0; max-width: 760px; }
+    .lead { max-width: 700px; font-size: 1.13rem; line-height: 1.68; margin: 0 0 30px; color: #435160; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
+    .button { border: 1px solid #17212b; color: #17212b; text-decoration: none; padding: 12px 16px; border-radius: 6px; font-weight: 700; }
+    .button.primary { background: #17212b; color: white; }
+    .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 760px; }
+    .fact { border-top: 2px solid #2f7d79; padding-top: 10px; font-size: 0.92rem; line-height: 1.45; color: #435160; }
+    .fact strong { display: block; color: #17212b; margin-bottom: 4px; }
+    .preview { aspect-ratio: 1; min-height: 360px; border: 1px solid #cbd5df; border-radius: 8px; overflow: hidden; background: #071018; position: relative; }
+    #network-preview { position: absolute; inset: 0; }
+    .preview-label { position: absolute; left: 14px; bottom: 12px; z-index: 2; color: #dce8f2; font-size: 0.78rem; letter-spacing: 0; background: rgba(7, 16, 24, 0.72); padding: 7px 9px; border-radius: 5px; }
+    .below { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; border-top: 1px solid #d8e0e8; background: #d8e0e8; }
+    .below section { background: #ffffff; padding: 28px; min-height: 190px; }
+    .below h2 { font-size: 1.05rem; margin: 0 0 10px; letter-spacing: 0; }
+    .below p { margin: 0 0 18px; line-height: 1.6; color: #536170; }
+    .below a { font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    @media (max-width: 860px) {
+      header { min-height: auto; }
+      nav { align-items: flex-start; flex-direction: column; }
+      .tabs { width: 100%; overflow-x: auto; }
+      .hero { grid-template-columns: 1fr; padding-top: 28px; }
+      .preview { min-height: min(86vw, 420px); }
+      .facts, .below { grid-template-columns: 1fr; }
+    }
     @media (prefers-color-scheme: dark) {
-      body { background: #0d1117; color: #eef4fa; }
-      p { color: #b6c2cf; }
-      a { border-color: #eef4fa; color: #eef4fa; }
-      a.primary { background: #eef4fa; color: #0d1117; }
+      :root, body { background: #0d1117; color: #eef4fa; }
+      .tabs, .below section { background: #111922; border-color: #2a3541; }
+      .tabs { border-color: #2a3541; }
+      .tabs a:hover, .tabs a.primary, .button.primary { background: #eef4fa; color: #0d1117; }
+      .lead, .fact, .below p { color: #b6c2cf; }
+      .fact strong { color: #eef4fa; }
+      .button { border-color: #eef4fa; color: #eef4fa; }
+      .below { border-color: #2a3541; background: #2a3541; }
+      .preview { border-color: #2a3541; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <img src="/docs/assets/helios-web-logo.svg" alt="Helios">
-    <h1>Interactive network visualization.</h1>
-    <p>Helios pairs a WebGPU/WebGL renderer with a WebAssembly graph store, plus CLI, notebook, and desktop hosts for real workflows.</p>
-    <div class="actions">
-      <a class="primary" href="/app/">Launch app</a>
-      <a href="/docs/">Read docs</a>
-      <a href="https://github.com/filipinascimento/heliosweb.io">Source</a>
+  <header class="shell">
+    <nav aria-label="Primary">
+      <img class="mark" src="/docs/assets/helios-web-logo.svg" alt="Helios">
+      <div class="tabs">
+        <a class="primary" href="/app/">App</a>
+        <a href="/docs/">Docs</a>
+        <a href="/docs/examples/">Examples</a>
+        <a href="https://github.com/filipinascimento/helios-web">GitHub</a>
+      </div>
+    </nav>
+    <div class="hero">
+      <main>
+        <img class="logo" src="/docs/assets/helios-web-logo.svg" alt="Helios">
+        <h1>Interactive network visualization.</h1>
+        <p class="lead">Helios pairs a WebGPU/WebGL renderer with a WebAssembly graph store, plus CLI, notebook, and desktop hosts for real workflows.</p>
+        <div class="actions">
+          <a class="button primary" href="/app/">Launch app</a>
+          <a class="button" href="/docs/">Read docs</a>
+          <a class="button" href="/docs/getting-started/quickstart/">Quickstart</a>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>Renderer</strong> WebGPU first, WebGL2 fallback.</div>
+          <div class="fact"><strong>Network core</strong> WASM-backed graph storage and formats.</div>
+          <div class="fact"><strong>Apps</strong> Browser, CLI, notebooks, and desktop.</div>
+        </div>
+      </main>
+      <aside class="preview" aria-label="3D Watts-Strogatz preview">
+        <div id="network-preview"></div>
+        <div class="preview-label">3D Watts-Strogatz preview</div>
+      </aside>
     </div>
-  </main>
+  </header>
+  <div class="below">
+    <section>
+      <h2>Open The App</h2>
+      <p>Load the main Helios Web app with the standard panels and the 10k-node Watts-Strogatz default.</p>
+      <a href="/app/">Go to /app/</a>
+    </section>
+    <section>
+      <h2>Build With Helios</h2>
+      <p>Install `helios-network` and `helios-web`, then compose the renderer into your own application.</p>
+      <a href="/docs/getting-started/quickstart/">Start the quickstart</a>
+    </section>
+    <section>
+      <h2>Use Other Hosts</h2>
+      <p>Run Helios through the CLI, notebooks, or desktop package while keeping the same network formats.</p>
+      <a href="/docs/apps/helios-cli/">See app integrations</a>
+    </section>
+  </div>
+  <script type="module">
+    import HeliosNetwork from '/docs/assets/vendor/helios/helios-network.js';
+    import { Helios } from '/docs/assets/vendor/helios/helios-web.es.js';
+
+    const container = document.querySelector('#network-preview');
+    const label = document.querySelector('.preview-label');
+
+    try {
+      const network = await HeliosNetwork.generateWattsStrogatz({
+        nodeCount: 520,
+        neighborLevel: 2,
+        rewiringProbability: 0.006,
+        directed: false,
+        seed: 17,
+      });
+      const helios = new Helios(network, {
+        container,
+        renderer: 'webgl',
+        mode: '3d',
+        projection: 'perspective',
+        ui: false,
+        quickControls: false,
+        debug: false,
+        layout: {
+          type: 'd3force3d',
+          options: {
+            mode: '3d',
+            use2D: false,
+            radius: 110,
+            depth: 140,
+            kRepulsion: 2.4,
+            kAttraction: 0.004,
+            kGravity: 0.002,
+          },
+        },
+      });
+      await helios.ready;
+      helios.frameNetwork({ animate: false });
+      label.textContent = '520 nodes - 3D Watts-Strogatz';
+      window.__heliosLandingPreview = helios;
+    } catch (error) {
+      console.warn('Helios landing preview failed to start', error);
+      label.textContent = 'Preview unavailable';
+    }
+  </script>
 </body>
 </html>
 """, encoding="utf-8")
@@ -142,91 +287,26 @@ def write_root_homepage() -> None:
 def write_app_route() -> None:
     app_dir = DOCS_SITE / "site" / "app"
     app_dir.mkdir(parents=True, exist_ok=True)
+    source_dir = resolve_main_app_dir()
     (app_dir / "index.html").write_text("""<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Helios App</title>
+  <link rel="icon" href="/docs/assets/helios-web-logo.svg" type="image/svg+xml">
   <style>
     html, body, #app { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #070a0f; }
-    #status { position: fixed; left: 16px; bottom: 14px; z-index: 2; color: white; font: 13px/1.4 ui-sans-serif, system-ui, sans-serif; background: rgba(7, 10, 15, 0.72); padding: 8px 10px; border-radius: 6px; }
   </style>
 </head>
 <body>
   <div id="app"></div>
-  <div id="status">Loading 10k Watts-Strogatz network...</div>
   <script type="module" src="./main.js"></script>
 </body>
 </html>
 """, encoding="utf-8")
-    (app_dir / "main.js").write_text("""import HeliosNetwork from '../docs/assets/vendor/helios/helios-network.js';
-import { Helios } from '../docs/assets/vendor/helios/helios-web.es.js';
-
-const params = new URLSearchParams(window.location.search);
-const nodeCount = Math.max(1, Math.floor(Number(params.get('nodes') || params.get('nodeCount') || 10000)));
-const dataset = String(params.get('dataset') || 'small-world').toLowerCase();
-const status = document.querySelector('#status');
-
-async function generateGrid3D(count) {
-  const side = Math.max(2, Math.round(Math.cbrt(count)));
-  const nodeCount = Math.min(count, side ** 3);
-  const network = await HeliosNetwork.create({ directed: false, initialNodes: nodeCount, initialEdges: nodeCount * 3 });
-  const edges = new Uint32Array(nodeCount * 6);
-  let offset = 0;
-  const indexAt = (x, y, z) => z * side * side + y * side + x;
-  const push = (from, x, y, z) => {
-    if (x >= side || y >= side || z >= side) return;
-    const to = indexAt(x, y, z);
-    if (to >= nodeCount) return;
-    edges[offset++] = from;
-    edges[offset++] = to;
-  };
-  for (let z = 0; z < side; z += 1) {
-    for (let y = 0; y < side; y += 1) {
-      for (let x = 0; x < side; x += 1) {
-        const from = indexAt(x, y, z);
-        if (from >= nodeCount) break;
-        push(from, x + 1, y, z);
-        push(from, x, y + 1, z);
-        push(from, x, y, z + 1);
-      }
-    }
-  }
-  if (offset > 0) network.addEdges(edges.subarray(0, offset));
-  return network;
-}
-
-function chooseNetwork() {
-  if (dataset === 'grid' || dataset === 'grid2d') {
-    const side = Math.max(2, Math.round(Math.sqrt(nodeCount)));
-    return HeliosNetwork.generateLattice2D({ rows: side, columns: side, periodic: true });
-  }
-  if (dataset === 'grid3d') {
-    return generateGrid3D(nodeCount);
-  }
-  return HeliosNetwork.generateWattsStrogatz({
-    nodeCount,
-    neighborLevel: Number(params.get('neighborLevel') || 8),
-    rewiringProbability: Number(params.get('rewiringProbability') || 0.08),
-    directed: false,
-    seed: Number(params.get('seed') || 13),
-  });
-}
-
-const network = await chooseNetwork();
-const helios = new Helios(network, {
-  container: document.querySelector('#app'),
-  renderer: params.get('renderer') || undefined,
-});
-
-await helios.ready;
-helios.frameNetwork({ animate: false });
-status.textContent = `${network.nodeCount?.() ?? nodeCount} nodes - ${dataset === 'small-world' ? 'Watts-Strogatz' : dataset}`;
-setTimeout(() => status.remove(), 3200);
-window.helios = helios;
-window.network = network;
-""", encoding="utf-8")
+    app_source = rewrite_main_app_source((source_dir / "main.js").read_text(encoding="utf-8"))
+    (app_dir / "main.js").write_text(app_source, encoding="utf-8")
 
 
 def main() -> int:

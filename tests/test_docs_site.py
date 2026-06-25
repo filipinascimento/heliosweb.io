@@ -179,11 +179,16 @@ def test_docs_build_path_succeeds():
     run([sys.executable, "scripts/build_docs.py"])
     index = DOCS_SITE / "site/index.html"
     assert index.exists()
+    index_text = index.read_text(encoding="utf-8")
+    assert "network-preview" in index_text
+    assert "3D Watts-Strogatz preview" in index_text
     assert (DOCS_SITE / "site/docs/index.html").exists()
     assert (DOCS_SITE / "site/app/index.html").exists()
     app_main = (DOCS_SITE / "site/app/main.js").read_text(encoding="utf-8")
     assert "generateWattsStrogatz" in app_main
-    assert "10000" in app_main
+    assert "10_000" in app_main
+    assert "HeliosUI" in app_main
+    assert "rewiringProbability" in app_main
     visual_examples = (DOCS_SITE / "site/docs/examples/helios-web/basic/index.html").read_text(encoding="utf-8")
     assert "mkdocs-sidecode-page-data" in visual_examples
     assert "<template" in visual_examples
