@@ -66,8 +66,14 @@ def stage_example_assets() -> None:
     Release docs prefer installed package bundles from node_modules. Local
     checkout builds are accepted as a fallback while preparing the release.
     """
-    network_dist = resolve_dist("HELIOS_NETWORK_DIST", "helios-network", "helios-network-v2")
-    web_dist = resolve_dist("HELIOS_WEB_DIST", "helios-web", "helios-web-next")
+    try:
+        network_dist = resolve_dist("HELIOS_NETWORK_DIST", "helios-network", "helios-network-v2")
+        web_dist = resolve_dist("HELIOS_WEB_DIST", "helios-web", "helios-web-next")
+    except FileNotFoundError:
+        if (VENDOR_DIR / "helios-network.js").exists() and (VENDOR_DIR / "helios-web.es.js").exists():
+            print("Using committed Helios vendor bundles; released packages were not installed yet.")
+            return
+        raise
 
     if VENDOR_DIR.exists():
         shutil.rmtree(VENDOR_DIR)
