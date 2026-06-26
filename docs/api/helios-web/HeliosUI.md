@@ -57,7 +57,7 @@ export class HeliosUI {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:470</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:482</code></p>
 <p>Register a UI-owned value with the Helios state manager.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -77,7 +77,7 @@ export class HeliosUI {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:513</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:525</code></p>
 <p>Write a UI control value through the Helios state manager.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -98,7 +98,7 @@ export class HeliosUI {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:551</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:563</code></p>
 <p>Create a dirty/default indicator for a state path or state scope.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -115,17 +115,18 @@ export class HeliosUI {
 
 <a id="method-settheme" class="helios-api-member-anchor"></a>
 
-### `setTheme(theme)` &rarr; &#123;void&#125;
+### `setTheme(theme, options = {})` &rarr; &#123;void&#125;
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:609</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:621</code></p>
 <p>Apply a UI theme.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
 <thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
 <tbody>
 <tr><td class="helios-api-param-name"><code>theme</code></td><td class="helios-api-param-type">&#x27;<code>dark</code>&#x27;|&#x27;<code>light</code>&#x27;|<code>string</code></td><td class="helios-api-param-attributes"></td><td class="helios-api-param-default"></td><td class="helios-api-param-description">Theme name stored on the UI container.</td></tr>
+<tr><td class="helios-api-param-name"><code>options</code></td><td class="helios-api-param-type"><code>Object</code></td><td class="helios-api-param-attributes">optional</td><td class="helios-api-param-default"><code>{}</code></td><td class="helios-api-param-description">Options object for this operation.</td></tr>
 </tbody>
 </table>
 <h4>Returns</h4>
@@ -134,14 +135,27 @@ export class HeliosUI {
 
 <a id="method-toggletheme" class="helios-api-member-anchor"></a>
 
-### `toggleTheme()` &rarr; &#123;void&#125;
+### `toggleTheme(options = {})` &rarr; &#123;void&#125;
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:622</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:635</code></p>
 <p>Toggle between the built-in dark and light themes.</p>
+<h4>Parameters</h4>
+<table class="helios-api-params">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="helios-api-param-name"><code>options</code></td><td class="helios-api-param-type"><code>Object</code></td><td class="helios-api-param-attributes">optional</td><td class="helios-api-param-default"><code>{}</code></td><td class="helios-api-param-description">Options object for this operation.</td></tr>
+</tbody>
+</table>
 <h4>Returns</h4>
 <div class="helios-api-return"><span class="helios-api-return-type"><strong>Type</strong> <code>void</code></span></div>
+<h4>Example</h4>
+<pre class="helios-api-example"><code>
+helios.toggleTheme({
+  enabled: true,
+});
+</code></pre>
 </div>
 
 <a id="method-serializestate" class="helios-api-member-anchor"></a>
@@ -150,7 +164,7 @@ export class HeliosUI {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:633</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:650</code></p>
 <p>Serialize UI panel, dock, theme, and responsive-interface state.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Serializable UI state snapshot.</p><span class="helios-api-return-type"><strong>Type</strong> <code>Object</code></span></div>
@@ -162,7 +176,7 @@ export class HeliosUI {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:652</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:669</code></p>
 <p>Restore a UI state snapshot.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -181,7 +195,7 @@ export class HeliosUI {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:670</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:687</code></p>
 <p>Resolve the best available viewport width for responsive UI behavior.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Width in CSS pixels, or zero when unavailable.</p><span class="helios-api-return-type"><strong>Type</strong> <code>number</code></span></div>
@@ -197,7 +211,7 @@ const value = helios.getViewportWidth();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:694</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:711</code></p>
 <p>Apply responsive interface state to the UI container and panel manager.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -216,7 +230,7 @@ const value = helios.getViewportWidth();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1333</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1350</code></p>
 <p>Bind a Helios accessor method to a UIAttribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -236,7 +250,7 @@ const value = helios.getViewportWidth();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1402</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1419</code></p>
 <p>Bind a behavior accessor method to a UIAttribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -257,7 +271,7 @@ const value = helios.getViewportWidth();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1525</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1542</code></p>
 <p>Create a standard Helios UI panel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -282,7 +296,7 @@ helios.createPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1562</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1579</code></p>
 <p>Create a panel whose content is managed by a tabbed panel primitive.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -307,7 +321,7 @@ helios.createTabbedPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1590</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:1607</code></p>
 <p>Create the default scene/demo controls panel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -332,7 +346,7 @@ helios.createDemoPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:4335</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:4352</code></p>
 <p>Create the graph filtering panel with node and edge rule editors.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -357,7 +371,7 @@ helios.createFilterPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:4599</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:4616</code></p>
 <p>Create a metrics panel for basic graph and renderer counters.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -382,7 +396,7 @@ helios.createMetricsPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:7087</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:7104</code></p>
 <p>Create a debug panel for persistence and state-manager counters.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -407,7 +421,7 @@ helios.createDebugPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:7164</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:7181</code></p>
 <p>Dispose all UI controls, panels, listeners, timers, and container resources.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><span class="helios-api-return-type"><strong>Type</strong> <code>void</code></span></div>
@@ -419,7 +433,7 @@ helios.createDebugPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:7189</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:7206</code></p>
 <p>Create the visual mapper configuration panel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -444,7 +458,7 @@ helios.createMappersPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:9206</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:9223</code></p>
 <p>Create the layout controls panel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -469,7 +483,7 @@ helios.createLayoutPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:9218</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:9235</code></p>
 <p>Create the legends controls panel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -494,7 +508,7 @@ helios.createLegendsPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:9230</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:9247</code></p>
 <p>Create the camera controls panel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -519,7 +533,7 @@ helios.createCameraPanel({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:9242</code></p>
+<p class="helios-api-source">Source: <code>src/ui/HeliosUI.js:9259</code></p>
 <p>Create the selection and hover controls panel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

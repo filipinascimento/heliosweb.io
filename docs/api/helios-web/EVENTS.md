@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>symbol</dd>
 <dt>Source</dt>
-<dd>src/Helios.js:1940</dd>
+<dd>src/Helios.js:2070</dd>
 </dl>
 
 ## Description

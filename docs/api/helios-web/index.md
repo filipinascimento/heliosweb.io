@@ -3,7 +3,7 @@
 
 <img class="helios-api-logo" src="../../assets/helios-logo.svg" alt="Helios Web logo">
 
-<p class="helios-api-version">Version 0.10.3</p>
+<p class="helios-api-version">Version 0.10.5</p>
 
 Helios Web is the browser visualization layer: renderer selection, camera and interaction state, behaviors, mappers, filters, layouts, persistence, and export. The reference below is grouped by the way users usually extend or configure a visualization.
 

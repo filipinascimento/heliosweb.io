@@ -153,9 +153,9 @@ def write_root_homepage() -> None:
     .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 760px; }
     .fact { border-top: 2px solid #2f7d79; padding-top: 10px; font-size: 0.92rem; line-height: 1.45; color: #435160; }
     .fact strong { display: block; color: #17212b; margin-bottom: 4px; }
-    .preview { aspect-ratio: 1; min-height: 430px; border: 1px solid #cbd5df; border-radius: 8px; overflow: hidden; background: #071018; position: relative; }
+    .preview { aspect-ratio: 1; min-height: 430px; border: 1px solid #cbd5df; border-radius: 8px; overflow: hidden; background: #ffffff; position: relative; }
     #network-preview { position: absolute; inset: 0; }
-    .preview-label { position: absolute; left: 14px; bottom: 12px; z-index: 2; color: #dce8f2; font-size: 0.78rem; letter-spacing: 0; background: rgba(7, 16, 24, 0.72); padding: 7px 9px; border-radius: 5px; }
+    .preview-label { position: absolute; left: 14px; bottom: 12px; z-index: 2; color: #17212b; font-size: 0.78rem; letter-spacing: 0; background: rgba(255, 255, 255, 0.76); padding: 7px 9px; border-radius: 5px; }
     .below { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; border-top: 1px solid #d8e0e8; background: #d8e0e8; }
     .below section { background: #ffffff; padding: 28px; min-height: 190px; }
     .below h2 { font-size: 1.05rem; margin: 0 0 10px; letter-spacing: 0; }
@@ -178,7 +178,8 @@ def write_root_homepage() -> None:
       .fact strong { color: #eef4fa; }
       .button { border-color: #eef4fa; color: #eef4fa; }
       .below { border-color: #2a3541; background: #2a3541; }
-      .preview { border-color: #2a3541; }
+      .preview { border-color: #2a3541; background: #071018; }
+      .preview-label { color: #dce8f2; background: rgba(7, 16, 24, 0.72); }
     }
   </style>
 </head>
@@ -310,7 +311,10 @@ def write_app_route() -> None:
   <title>Helios App</title>
   <link rel="icon" href="/docs/assets/helios-mark.svg" type="image/svg+xml">
   <style>
-    html, body, #app { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #070a0f; }
+    html, body, #app { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #f7f9fb; }
+    @media (prefers-color-scheme: dark) {
+      html, body, #app { background: #070a0f; }
+    }
   </style>
 </head>
 <body>

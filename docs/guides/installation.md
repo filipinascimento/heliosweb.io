@@ -30,7 +30,7 @@ npm run dev
   },
   "dependencies": {
     "helios-network": "^0.10.2",
-    "helios-web": "^0.10.3"
+    "helios-web": "^0.10.5"
   },
   "devDependencies": {
     "vite": "^5"
