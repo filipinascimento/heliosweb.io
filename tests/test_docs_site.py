@@ -194,10 +194,11 @@ def test_docs_build_path_succeeds():
     assert "margin-top: -50pt" in index_text
     assert "minmax(420px, 560px)" in index_text
     assert "helios.nodeSizeScale(0.05)" in index_text
-    assert "helios.edgeWidthScale(0.24)" in index_text
+    assert "helios.edgeWidthScale(0.16)" in index_text
     assert "autoFitPaddingRatio: 0.18" in index_text
     assert "orbit: true" in index_text
-    assert "orbitSpeed: 0.025" in index_text
+    assert "orbitSpeed: 0.04" in index_text
+    assert "orbitAngle: 16" in index_text
     assert (DOCS_SITE / "site/docs/index.html").exists()
     docs_index_text = (DOCS_SITE / "site/docs/index.html").read_text(encoding="utf-8")
     assert 'href="https://heliosweb.io/" title="Helios" class="md-header__button md-logo"' in docs_index_text

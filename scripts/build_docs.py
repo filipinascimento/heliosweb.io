@@ -275,17 +275,18 @@ def write_root_homepage() -> None:
       });
       await helios.ready;
       helios.nodeSizeScale(0.05);
-      helios.edgeWidthScale(0.24);
+      helios.edgeWidthScale(0.16);
       helios.legends(false);
+      helios.frameNetwork({ animate: false, paddingRatio: 0.2 });
       helios.cameraControls?.({
         autoFit: true,
         autoFitPaddingRatio: 0.18,
         orbit: true,
-        orbitSpeed: 0.025,
-        orbitAngle: 12,
+        orbitSpeed: 0.04,
+        orbitAngle: 16,
         orbitAxis: [0, 1, 0],
       });
-      helios.frameNetwork({ animate: false, paddingRatio: 0.2 });
+      helios.scheduler?.requestRender?.();
       label.textContent = '520 nodes - 3D Watts-Strogatz';
       window.__heliosLandingPreview = helios;
     } catch (error) {
