@@ -71,6 +71,7 @@ extra_javascript:
   - assets/javascripts/api-search.js
 
 extra:
+  homepage: https://heliosweb.io/
   version:
     default: "0.10.0"
   helios:

@@ -25,6 +25,7 @@ def test_mkdocs_material_and_sidecode_are_configured():
     assert config["site_url"].endswith("/docs/")
     assert "assets/stylesheets/helios.css" in config["extra_css"]
     assert "assets/javascripts/api-search.js" in config["extra_javascript"]
+    assert config["extra"]["homepage"] == "https://heliosweb.io/"
     assert config["extra"]["version"]["default"] == "0.10.0"
     assert any("Examples" in item for item in config["nav"])
     assert any("Apps And Integrations" in item for item in config["nav"])
@@ -186,8 +187,16 @@ def test_docs_build_path_succeeds():
     assert "storage: false" in index_text
     assert "session: false" in index_text
     assert "warnOnUnsavedSessionChanges: false" in index_text
-    assert "helios.nodeSizeScale(0.16)" in index_text
+    assert "Interactive network visualization</h1>" in index_text
+    assert "1M+ nodes with real-time GPU-based layout in 2D and 3D" in index_text
+    assert "agentic skill integrations" in index_text
+    assert 'href="/docs/getting-started/">Quickstart</a>' in index_text
+    assert "helios.nodeSizeScale(0.08)" in index_text
+    assert "helios.edgeWidthScale(0.32)" in index_text
+    assert "autoFitPaddingRatio: 0.12" in index_text
     assert (DOCS_SITE / "site/docs/index.html").exists()
+    docs_index_text = (DOCS_SITE / "site/docs/index.html").read_text(encoding="utf-8")
+    assert 'href="https://heliosweb.io/" title="Helios" class="md-header__button md-logo"' in docs_index_text
     assert (DOCS_SITE / "site/app/index.html").exists()
     app_main = (DOCS_SITE / "site/app/main.js").read_text(encoding="utf-8")
     assert "generateWattsStrogatz" in app_main
@@ -196,9 +205,8 @@ def test_docs_build_path_succeeds():
     assert "rewiringProbability" in app_main
     visual_examples = (DOCS_SITE / "site/docs/examples/helios-web/basic/index.html").read_text(encoding="utf-8")
     assert "mkdocs-sidecode-page-data" in visual_examples
-    assert "<template" in visual_examples
-    assert "<script type=\"application/json\" class=\"mkdocs-sidecode-page-data\"" not in visual_examples
-    payload = visual_examples.split('class="mkdocs-sidecode-page-data">', 1)[1].split("</template>", 1)[0]
+    assert "<script type=\"application/json\" class=\"mkdocs-sidecode-page-data\"" in visual_examples
+    payload = visual_examples.split('class="mkdocs-sidecode-page-data">', 1)[1].split("</script>", 1)[0]
     assert json.loads(payload)["examples"]
     assert (DOCS_SITE / "site/docs/versions.json").exists()
     assert (DOCS_SITE / "site/docs/assets/vendor/helios/helios-web.es.js").exists()

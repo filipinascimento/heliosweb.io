@@ -2,7 +2,7 @@
 
 This guide replaces the old top-level Reference pages. It collects the practical
 development workflow for people editing this checkout, rebuilding generated
-artifacts, and keeping the docs-site in sync with source annotations.
+artifacts, and keeping heliosweb.io in sync with source annotations.
 
 ## Repository Shape
 
@@ -12,8 +12,8 @@ The Helios checkout contains related packages rather than one single package:
   native C surfaces.
 - `helios-web` is the renderer, interaction, behavior, UI, layout,
   persistence, and export package.
-- `docs-site` is the MkDocs site. It stages local bundles from the package
-  `dist/` folders before building.
+- `heliosweb.io` is the MkDocs site. It stages browser runtime bundles from
+  the installed npm packages before building.
 
 Several package folders have their own build and test commands. Do not assume a
 top-level build updates everything.
@@ -39,10 +39,10 @@ npm run build
 npm test
 ```
 
-When docs-site pages or generated API references change:
+When heliosweb.io pages or generated API references change:
 
 ```bash
-cd docs-site
+cd heliosweb.io
 python3 scripts/build_docs.py
 ```
 
@@ -55,7 +55,7 @@ MkDocs in strict mode.
 For a local-only preview:
 
 ```bash
-cd docs-site
+cd heliosweb.io
 python3 scripts/build_docs.py
 python3 -m http.server 8111 --directory site
 ```
@@ -66,7 +66,7 @@ matches the generated artifacts exactly.
 For live editing, use MkDocs directly after dependencies are installed:
 
 ```bash
-cd docs-site
+cd heliosweb.io
 mkdocs serve --dev-addr 127.0.0.1:8111
 ```
 
@@ -74,13 +74,13 @@ Use a host-network tunnel or LAN binding only when the machine should be
 reachable from another device:
 
 ```bash
-cd docs-site
+cd heliosweb.io
 python3 -m http.server 8111 --bind 0.0.0.0 --directory site
 ```
 
 The docs examples load staged local bundles from `docs/assets/vendor/helios/`.
-If a visual example is stale, rebuild the packages first, then rebuild the docs
-site so those bundles are copied again.
+If a visual example is stale, update/install the npm packages first, then
+rebuild the website so those bundles are copied again.
 
 ## API Documentation Contract
 
@@ -94,7 +94,7 @@ API reference pages are generated from source:
 - Native C: `CX_EXTERN` declarations and Doxygen comments in public headers.
 
 Do not hand-edit generated API Markdown as the source of truth. Fix the source
-annotation or the generator, then rebuild the docs-site.
+annotation or the generator, then rebuild heliosweb.io.
 
 `helios-web/src/index.d.ts` is a downstream declaration surface. It should
 be generated from source annotations; until that workflow is wired into the
@@ -107,7 +107,7 @@ When adding public API, update the owning source annotation first:
 3. Add `@remarks` when there is lifecycle, memory, renderer, or persistence
    behavior that is not obvious from the signature.
 4. Add a short `@example` when the API is commonly called directly.
-5. Rebuild the docs-site and confirm the symbol appears in the expected API
+5. Rebuild heliosweb.io and confirm the symbol appears in the expected API
    group.
 
 For Helios Network buffer APIs, document memory lifetime explicitly. WASM typed
@@ -115,13 +115,13 @@ array views can become invalid after allocation or memory growth, so docs should
 explain whether an API returns a view, copies data, allocates, or must be called
 inside `withBufferAccess(...)`.
 
-## Docs-Site Link Checks
+## Website Link Checks
 
 MkDocs strict mode catches missing files in navigation, but not every generated
 runtime path. After API generator changes, check representative section links:
 
 ```bash
-cd docs-site
+cd heliosweb.io
 python3 scripts/build_docs.py
 python3 -m http.server 8111 --directory site
 ```
@@ -129,8 +129,8 @@ python3 -m http.server 8111 --directory site
 Then verify paths like:
 
 ```text
-http://localhost:8111/api/helios-web/section-mappers/
-http://localhost:8111/api/helios-web/Mapper/
+http://localhost:8111/docs/api/helios-web/section-mappers/
+http://localhost:8111/docs/api/helios-web/Mapper/
 ```
 
 Section cards should link to sibling symbol pages, not nested URLs such as
@@ -144,7 +144,7 @@ This repo owns the public website, app, and docs URLs:
   in `mkdocs.yml`.
 - The docs URL is configured under `extra.helios.public_urls.docs`.
 - Package examples use the public names `helios-network` and `helios-web`.
-- Runnable docs examples use the staged 0.10.0 bundles from
+- Runnable docs examples use the staged npm package bundles from
   `docs/assets/vendor/helios`.
 
 When release artifacts change, update these places together:
@@ -163,7 +163,7 @@ The docs include rendered examples. After changing examples, renderer behavior,
 or staged bundles, run:
 
 ```bash
-cd docs-site
+cd heliosweb.io
 node scripts/validate_visual_examples.mjs
 ```
 

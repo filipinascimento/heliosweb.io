@@ -5,7 +5,7 @@ short version is: use ESM, keep the Helios Network and Helios Web packages on
 matching versions, and prefer Vite unless your application already has a
 bundler.
 
-Use matching 0.10.0 versions for `helios-network` and `helios-web`. The hosted
+Use the current 0.10 package train for `helios-network` and `helios-web`. The hosted
 docs also stage browser bundles under
 `https://heliosweb.io/docs/assets/vendor/helios/` for direct ESM examples.
 
@@ -29,8 +29,8 @@ npm run dev
     "preview": "vite preview"
   },
   "dependencies": {
-    "helios-network": "^0.10.0",
-    "helios-web": "^0.10.0"
+    "helios-network": "^0.10.2",
+    "helios-web": "^0.10.3"
   },
   "devDependencies": {
     "vite": "^5"
@@ -114,10 +114,10 @@ npm run build
 npm test
 ```
 
-Then rebuild the docs-site:
+Then rebuild heliosweb.io:
 
 ```bash
-cd ../docs-site
+cd ../heliosweb.io
 python3 scripts/build_docs.py
 ```
 
@@ -127,6 +127,6 @@ python3 scripts/build_docs.py
 - **Duplicate network package**: ensure the visual package and app code import
   the same Helios Network version.
 - **WASM asset 404**: let the bundler copy package assets, or use the staged
-  docs-site vendor bundles.
+  heliosweb.io vendor bundles.
 - **WebGPU unavailable**: Helios falls back to WebGL2. Use WebGPU-specific tests
   only on a browser/profile that exposes WebGPU.

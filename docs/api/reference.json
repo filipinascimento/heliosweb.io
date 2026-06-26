@@ -983,7 +983,7 @@
         }
       ],
       "title": "Helios Network JS/WASM",
-      "version": "0.10.0"
+      "version": "0.10.2"
     },
     "helios-network-native-c": {
       "notes": {
@@ -8492,7 +8492,7 @@
         }
       ],
       "title": "Helios Network Python",
-      "version": "0.10.0"
+      "version": "0.10.2"
     },
     "helios-web": {
       "notes": {
@@ -11658,7 +11658,7 @@
               },
               "signature": "setCameraPose(pose, options = {})",
               "source": {
-                "line": 10861,
+                "line": 10862,
                 "path": "src/Helios.js"
               },
               "summary": "Apply a camera pose immediately."
@@ -11692,7 +11692,7 @@
               },
               "signature": "async transitionCamera(pose, options = {})",
               "source": {
-                "line": 10923,
+                "line": 10924,
                 "path": "src/Helios.js"
               },
               "summary": "Animate the camera from its current pose to a target pose."
@@ -11711,7 +11711,7 @@
               },
               "signature": "stopCameraTransition()",
               "source": {
-                "line": 10953,
+                "line": 10954,
                 "path": "src/Helios.js"
               },
               "summary": "Stop any active camera transition."
@@ -11730,7 +11730,7 @@
               },
               "signature": "mode()",
               "source": {
-                "line": 10965,
+                "line": 10966,
                 "path": "src/Helios.js"
               },
               "summary": "Return the active dimensional rendering mode."
@@ -11764,7 +11764,7 @@
               },
               "signature": "async setMode(mode, options = {})",
               "source": {
-                "line": 10978,
+                "line": 10979,
                 "path": "src/Helios.js"
               },
               "summary": "Switch between 2D and 3D rendering modes."
@@ -11833,7 +11833,7 @@
               },
               "signature": "density(options)",
               "source": {
-                "line": 11141,
+                "line": 11142,
                 "path": "src/Helios.js"
               },
               "summary": "Read or update the screen-space density overlay configuration."
@@ -11860,7 +11860,7 @@
               },
               "signature": "densityEnabled(value)",
               "source": {
-                "line": 11302,
+                "line": 11303,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether the density overlay is enabled."
@@ -11887,7 +11887,7 @@
               },
               "signature": "densityScale(value)",
               "source": {
-                "line": 11315,
+                "line": 11316,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the density overlay quality scale."
@@ -11914,7 +11914,7 @@
               },
               "signature": "densityTopographic(value)",
               "source": {
-                "line": 11328,
+                "line": 11329,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether density is rendered with topographic contours."
@@ -11941,7 +11941,7 @@
               },
               "signature": "densityScaleWithZoom(value)",
               "source": {
-                "line": 11341,
+                "line": 11342,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether density bandwidth scales with camera zoom."
@@ -11968,7 +11968,7 @@
               },
               "signature": "densityBandwidth(value)",
               "source": {
-                "line": 11354,
+                "line": 11355,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the density kernel bandwidth."
@@ -11995,7 +11995,7 @@
               },
               "signature": "densityWeight(value)",
               "source": {
-                "line": 11367,
+                "line": 11368,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the scalar multiplier applied to density weights."
@@ -12022,7 +12022,7 @@
               },
               "signature": "densityProperty(value)",
               "source": {
-                "line": 11380,
+                "line": 11381,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the node attribute used as the primary density property."
@@ -12049,7 +12049,7 @@
               },
               "signature": "densityVsProperty(value)",
               "source": {
-                "line": 11393,
+                "line": 11394,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the comparison property used for diverging density views."
@@ -12076,7 +12076,7 @@
               },
               "signature": "densityNormalizeVs(value)",
               "source": {
-                "line": 11406,
+                "line": 11407,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether comparison density values are normalized before differencing."
@@ -12103,7 +12103,7 @@
               },
               "signature": "densityColormap(value)",
               "source": {
-                "line": 11419,
+                "line": 11420,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the sequential colormap used by the density overlay."
@@ -12130,7 +12130,7 @@
               },
               "signature": "densityDivergingColormap(value)",
               "source": {
-                "line": 11432,
+                "line": 11433,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the diverging colormap used by comparison density overlays."
@@ -12149,7 +12149,7 @@
               },
               "signature": "updateDensityMap()",
               "source": {
-                "line": 11444,
+                "line": 11445,
                 "path": "src/Helios.js"
               },
               "summary": "Request a density overlay update on the next render frame."
@@ -12168,7 +12168,7 @@
               },
               "signature": "redrawDensityMap()",
               "source": {
-                "line": 11456,
+                "line": 11457,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `updateDensityMap()`."
@@ -12195,7 +12195,7 @@
               },
               "signature": "edgeTransparencyMode(mode)",
               "source": {
-                "line": 11469,
+                "line": 11470,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the edge transparency compositing mode."
@@ -12250,7 +12250,7 @@
               },
               "signature": "labels(options)",
               "source": {
-                "line": 11491,
+                "line": 11492,
                 "path": "src/Helios.js"
               },
               "summary": "Read or update label rendering options."
@@ -12284,7 +12284,7 @@
               },
               "signature": "legends(options)",
               "source": {
-                "line": 11551,
+                "line": 11552,
                 "path": "src/Helios.js"
               },
               "summary": "Read or update legend rendering options."
@@ -12311,7 +12311,7 @@
               },
               "signature": "legendsEnabled(value)",
               "source": {
-                "line": 11571,
+                "line": 11572,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether legends are enabled."
@@ -12366,7 +12366,7 @@
               },
               "signature": "overlayInsets(insets)",
               "source": {
-                "line": 12056,
+                "line": 12057,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set reserved viewport insets for overlays such as labels and legends."
@@ -12393,7 +12393,7 @@
               },
               "signature": "labelsEnabled(value)",
               "source": {
-                "line": 12080,
+                "line": 12081,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether labels are enabled."
@@ -12420,7 +12420,7 @@
               },
               "signature": "labelsMode(value)",
               "source": {
-                "line": 12096,
+                "line": 12097,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the label selection mode."
@@ -12447,7 +12447,7 @@
               },
               "signature": "labelsMaxVisible(value)",
               "source": {
-                "line": 12126,
+                "line": 12127,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the maximum number of visible labels."
@@ -12474,7 +12474,7 @@
               },
               "signature": "labelsSelectedOnlySpaceAware(value)",
               "source": {
-                "line": 12141,
+                "line": 12142,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether selected-only labels still avoid spatial collisions."
@@ -12501,7 +12501,7 @@
               },
               "signature": "labelsFontSizeScale(value)",
               "source": {
-                "line": 12154,
+                "line": 12155,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the label font-size multiplier."
@@ -12528,7 +12528,7 @@
               },
               "signature": "labelsMinScreenRadius(value)",
               "source": {
-                "line": 12169,
+                "line": 12170,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the minimum on-screen node radius required for label candidates."
@@ -12555,7 +12555,7 @@
               },
               "signature": "labelsOutlineWidth(value)",
               "source": {
-                "line": 12184,
+                "line": 12185,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set label outline width."
@@ -12582,7 +12582,7 @@
               },
               "signature": "labelsOffsetRadiusFactor(value)",
               "source": {
-                "line": 12199,
+                "line": 12200,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the radial node-size multiplier used to offset labels."
@@ -12609,7 +12609,7 @@
               },
               "signature": "labelsOffsetPx(value)",
               "source": {
-                "line": 12214,
+                "line": 12215,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the fixed pixel offset added to label placement."
@@ -12636,7 +12636,7 @@
               },
               "signature": "labelsMaxChars(value)",
               "source": {
-                "line": 12229,
+                "line": 12230,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the maximum number of characters per label row."
@@ -12663,7 +12663,7 @@
               },
               "signature": "labelsMaxRows(value)",
               "source": {
-                "line": 12244,
+                "line": 12245,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the maximum number of rows per wrapped label."
@@ -12690,7 +12690,7 @@
               },
               "signature": "labelFill(color)",
               "source": {
-                "line": 12259,
+                "line": 12260,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set label fill color."
@@ -12717,7 +12717,7 @@
               },
               "signature": "labelOutlineColor(color)",
               "source": {
-                "line": 12275,
+                "line": 12276,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set label outline color."
@@ -12744,7 +12744,7 @@
               },
               "signature": "labelFontFamily(value)",
               "source": {
-                "line": 12291,
+                "line": 12292,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the CSS font-family used by labels."
@@ -12771,7 +12771,7 @@
               },
               "signature": "labelSource(value)",
               "source": {
-                "line": 12305,
+                "line": 12306,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the label text source."
@@ -12798,7 +12798,7 @@
               },
               "signature": "async prewarm(options = {})",
               "source": {
-                "line": 12322,
+                "line": 12323,
                 "path": "src/Helios.js"
               },
               "summary": "Pre-runs mapper application before first render. Useful for large graphs where the first geometry pass is expensive. Can be awaited before `helios.ready` to shorten time to first render."
@@ -12825,7 +12825,7 @@
               },
               "signature": "createLayout(layoutOption)",
               "source": {
-                "line": 12354,
+                "line": 12355,
                 "path": "src/Helios.js"
               },
               "summary": "Create a layout instance from a layout option object or return an existing layout."
@@ -12859,7 +12859,7 @@
               },
               "signature": "addNodes(count, initializer)",
               "source": {
-                "line": 12399,
+                "line": 12400,
                 "path": "src/Helios.js"
               },
               "summary": "Add nodes to the backing network and initialize their visual state."
@@ -12893,7 +12893,7 @@
               },
               "signature": "addEdges(edges, initializer)",
               "source": {
-                "line": 12428,
+                "line": 12429,
                 "path": "src/Helios.js"
               },
               "summary": "Add edges to the backing network and initialize their visual state."
@@ -12920,7 +12920,7 @@
               },
               "signature": "interactionRenderOrder(value)",
               "source": {
-                "line": 12508,
+                "line": 12509,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether selected and highlighted items are promoted later in render order."
@@ -12968,7 +12968,7 @@
               },
               "signature": "nodeState(indices, mask, options = {})",
               "source": {
-                "line": 12579,
+                "line": 12580,
                 "path": "src/Helios.js"
               },
               "summary": "Apply a state bitmask to node indices."
@@ -13016,7 +13016,7 @@
               },
               "signature": "edgeState(indices, mask, options = {})",
               "source": {
-                "line": 12636,
+                "line": 12637,
                 "path": "src/Helios.js"
               },
               "summary": "Apply a state bitmask to edge indices."
@@ -13050,7 +13050,7 @@
               },
               "signature": "hoverNodeState(index, mask)",
               "source": {
-                "line": 12682,
+                "line": 12683,
                 "path": "src/Helios.js"
               },
               "summary": "Set transient hover state for a node."
@@ -13084,7 +13084,7 @@
               },
               "signature": "hoverEdgeState(index, mask)",
               "source": {
-                "line": 12720,
+                "line": 12721,
                 "path": "src/Helios.js"
               },
               "summary": "Set transient hover state for an edge."
@@ -13111,7 +13111,7 @@
               },
               "signature": "highlightConnectedEdges(value)",
               "source": {
-                "line": 12822,
+                "line": 12823,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether highlighted nodes also highlight their connected edges."
@@ -13145,7 +13145,7 @@
               },
               "signature": "nodeStateStyle(slot, style)",
               "source": {
-                "line": 12842,
+                "line": 12843,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set styling for nodes carrying a state bit."
@@ -13172,7 +13172,7 @@
               },
               "signature": "nodeNoStateStyle(style)",
               "source": {
-                "line": 12886,
+                "line": 12887,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set styling for nodes with no active state bits."
@@ -13206,7 +13206,7 @@
               },
               "signature": "edgeStateStyle(slot, style)",
               "source": {
-                "line": 12918,
+                "line": 12919,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set styling for edges carrying a state bit."
@@ -13233,7 +13233,7 @@
               },
               "signature": "edgeNoStateStyle(style)",
               "source": {
-                "line": 12961,
+                "line": 12962,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set styling for edges with no active state bits."
@@ -13260,7 +13260,7 @@
               },
               "signature": "nodeHoverStyle(style)",
               "source": {
-                "line": 12991,
+                "line": 12992,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the transient hover style for nodes."
@@ -13287,7 +13287,7 @@
               },
               "signature": "edgeHoverStyle(style)",
               "source": {
-                "line": 13020,
+                "line": 13021,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set the transient hover style for edges."
@@ -13314,7 +13314,7 @@
               },
               "signature": "hoverStyleFromHighlight(value)",
               "source": {
-                "line": 13056,
+                "line": 13057,
                 "path": "src/Helios.js"
               },
               "summary": "Read or set whether hover style follows the highlighted-state style."
@@ -13333,7 +13333,7 @@
               },
               "signature": "resetStateStyles()",
               "source": {
-                "line": 13074,
+                "line": 13075,
                 "path": "src/Helios.js"
               },
               "summary": "Reset all node and edge state styles to renderer defaults."
@@ -13388,7 +13388,7 @@
               },
               "signature": "mappers({ nodeMapper, edgeMapper } = {})",
               "source": {
-                "line": 13098,
+                "line": 13099,
                 "path": "src/Helios.js"
               },
               "summary": "Read, replace, or reset the default node and edge mapper collections."
@@ -13415,7 +13415,7 @@
               },
               "signature": "layout(layout)",
               "source": {
-                "line": 13144,
+                "line": 13145,
                 "path": "src/Helios.js"
               },
               "summary": "Read or replace the active layout instance."
@@ -13456,7 +13456,7 @@
               },
               "signature": "getLayoutPositionAttributeChoices(options = {})",
               "source": {
-                "line": 13202,
+                "line": 13203,
                 "path": "src/Helios.js"
               },
               "summary": "List node attributes that can seed layout positions."
@@ -13497,7 +13497,7 @@
               },
               "signature": "setLayoutPositionsFromNodeAttribute(name, options = {})",
               "source": {
-                "line": 13257,
+                "line": 13258,
                 "path": "src/Helios.js"
               },
               "summary": "Copy a numeric node attribute into the canonical layout-position attribute."
@@ -13538,7 +13538,7 @@
               },
               "signature": "positions(options)",
               "source": {
-                "line": 13392,
+                "line": 13393,
                 "path": "src/Helios.js"
               },
               "summary": "Read or update the active position source used for rendering and layout handoff."
@@ -13572,7 +13572,7 @@
               },
               "signature": "async snapshotDelegatePositions(options = {})",
               "source": {
-                "line": 13423,
+                "line": 13424,
                 "path": "src/Helios.js"
               },
               "summary": "Snapshot all node positions from the active or supplied position delegate."
@@ -13620,7 +13620,7 @@
               },
               "signature": "async snapshotNodePositions(nodeIds, options = {})",
               "source": {
-                "line": 13451,
+                "line": 13452,
                 "path": "src/Helios.js"
               },
               "summary": "Snapshot selected node positions from the active position source."
@@ -13661,7 +13661,7 @@
               },
               "signature": "async snapshotNodePosition(nodeId, options = {})",
               "source": {
-                "line": 13528,
+                "line": 13529,
                 "path": "src/Helios.js"
               },
               "summary": "Snapshot one node position from the active position source."
@@ -13702,7 +13702,7 @@
               },
               "signature": "async snapshotNodeCentroid(nodeIds, options = {})",
               "source": {
-                "line": 13560,
+                "line": 13561,
                 "path": "src/Helios.js"
               },
               "summary": "Compute the centroid of selected nodes from the active position source."
@@ -13736,7 +13736,7 @@
               },
               "signature": "async syncDelegatePositionsToNetwork(options = {})",
               "source": {
-                "line": 13597,
+                "line": 13598,
                 "path": "src/Helios.js"
               },
               "summary": "Write the active delegate position snapshot back into the network position attribute."
@@ -13784,7 +13784,7 @@
               },
               "signature": "interpolation(options)",
               "source": {
-                "line": 13627,
+                "line": 13628,
                 "path": "src/Helios.js"
               },
               "summary": "Read or update GPU position interpolation settings."
@@ -13811,7 +13811,7 @@
               },
               "signature": "setLayout(layout)",
               "source": {
-                "line": 13777,
+                "line": 13778,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `layout(layout)`."
@@ -13838,7 +13838,7 @@
               },
               "signature": "setPositions(options)",
               "source": {
-                "line": 13786,
+                "line": 13787,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `positions(options)`."
@@ -13865,7 +13865,7 @@
               },
               "signature": "setInterpolation(options)",
               "source": {
-                "line": 13795,
+                "line": 13796,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `interpolation(options)`."
@@ -13892,7 +13892,7 @@
               },
               "signature": "setDensity(options)",
               "source": {
-                "line": 13804,
+                "line": 13805,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `density(options)`."
@@ -13919,7 +13919,7 @@
               },
               "signature": "setLabels(options)",
               "source": {
-                "line": 13813,
+                "line": 13814,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `labels(options)`."
@@ -13946,7 +13946,7 @@
               },
               "signature": "setLegends(options)",
               "source": {
-                "line": 13822,
+                "line": 13823,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `legends(options)`."
@@ -13973,7 +13973,7 @@
               },
               "signature": "setMappers(mappers)",
               "source": {
-                "line": 13831,
+                "line": 13832,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `mappers(mappers)`."
@@ -14014,7 +14014,7 @@
               },
               "signature": "setNodeState(indices, mask, options)",
               "source": {
-                "line": 13842,
+                "line": 13843,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `nodeState(indices, mask, options)`."
@@ -14055,7 +14055,7 @@
               },
               "signature": "setEdgeState(indices, mask, options)",
               "source": {
-                "line": 13853,
+                "line": 13854,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `edgeState(indices, mask, options)`."
@@ -14089,7 +14089,7 @@
               },
               "signature": "setNodeStateStyle(slot, style)",
               "source": {
-                "line": 13863,
+                "line": 13864,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `nodeStateStyle(slot, style)`."
@@ -14123,7 +14123,7 @@
               },
               "signature": "setEdgeStateStyle(slot, style)",
               "source": {
-                "line": 13873,
+                "line": 13874,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `edgeStateStyle(slot, style)`."
@@ -14150,7 +14150,7 @@
               },
               "signature": "setNodeNoStateStyle(style)",
               "source": {
-                "line": 13882,
+                "line": 13883,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `nodeNoStateStyle(style)`."
@@ -14177,7 +14177,7 @@
               },
               "signature": "setEdgeNoStateStyle(style)",
               "source": {
-                "line": 13891,
+                "line": 13892,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `edgeNoStateStyle(style)`."
@@ -14204,7 +14204,7 @@
               },
               "signature": "setNodeHoverStyle(style)",
               "source": {
-                "line": 13900,
+                "line": 13901,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `nodeHoverStyle(style)`."
@@ -14231,7 +14231,7 @@
               },
               "signature": "setEdgeHoverStyle(style)",
               "source": {
-                "line": 13909,
+                "line": 13910,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `edgeHoverStyle(style)`."
@@ -14258,7 +14258,7 @@
               },
               "signature": "setHoverStyleFromHighlight(value)",
               "source": {
-                "line": 13918,
+                "line": 13919,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `hoverStyleFromHighlight(value)`."
@@ -14285,7 +14285,7 @@
               },
               "signature": "setHighlightConnectedEdges(value)",
               "source": {
-                "line": 13927,
+                "line": 13928,
                 "path": "src/Helios.js"
               },
               "summary": "Alias for `highlightConnectedEdges(value)`."
@@ -14319,7 +14319,7 @@
               },
               "signature": "startLayout(algo = null, params = null)",
               "source": {
-                "line": 13938,
+                "line": 13939,
                 "path": "src/Helios.js"
               },
               "summary": "Enable layout execution and optionally request a layout algorithm or parameters."
@@ -14346,7 +14346,7 @@
               },
               "signature": "stopLayout(reason = 'user')",
               "source": {
-                "line": 13958,
+                "line": 13959,
                 "path": "src/Helios.js"
               },
               "summary": "Disable layout execution."
@@ -14365,7 +14365,7 @@
               },
               "signature": "requestRender()",
               "source": {
-                "line": 13970,
+                "line": 13971,
                 "path": "src/Helios.js"
               },
               "summary": "Schedule a render frame."
@@ -14384,7 +14384,7 @@
               },
               "signature": "performRendering()",
               "source": {
-                "line": 13982,
+                "line": 13983,
                 "path": "src/Helios.js"
               },
               "summary": "Render one frame immediately when manual rendering is enabled."
@@ -14425,7 +14425,7 @@
               },
               "signature": "enableAttributeTracking(nodeAttribute = '$index', edgeAttribute = null, options = {})",
               "source": {
-                "line": 14031,
+                "line": 14032,
                 "path": "src/Helios.js"
               },
               "summary": "Enable offscreen attribute tracking for picking."
@@ -14452,7 +14452,7 @@
               },
               "signature": "disableAttributeTracking(scope)",
               "source": {
-                "line": 14054,
+                "line": 14055,
                 "path": "src/Helios.js"
               },
               "summary": "Disable attribute tracking for a scope or for all scopes."
@@ -14471,7 +14471,7 @@
               },
               "signature": "async renderAttributeTracking()",
               "source": {
-                "line": 14065,
+                "line": 14066,
                 "path": "src/Helios.js"
               },
               "summary": "Render the attribute-tracking target for the current frame."
@@ -14505,7 +14505,7 @@
               },
               "signature": "async pickAttributesAt(clientX, clientY)",
               "source": {
-                "line": 14085,
+                "line": 14086,
                 "path": "src/Helios.js"
               },
               "summary": "Pick encoded node and edge attributes at viewport coordinates."
@@ -14524,7 +14524,7 @@
               },
               "signature": "getFramebufferVersionsByRefMap()",
               "source": {
-                "line": 14098,
+                "line": 14099,
                 "path": "src/Helios.js"
               },
               "summary": "Returns a Map of framebuffer/attachment references to monotonically increasing \"version\" counters (wrapping at Number.MAX_SAFE_INTEGER). Keys are live object references (e.g. RenderTarget instances, WebGLFramebuffer, GPUTexture) so they can be used for identity comparisons."
@@ -14543,7 +14543,7 @@
               },
               "signature": "getFramebufferInformation()",
               "source": {
-                "line": 14140,
+                "line": 14141,
                 "path": "src/Helios.js"
               },
               "summary": "Returns framebuffer/attachment information keyed by a meaningful name. Values include the version counter and a minimal shape description. Key format conventions: - `attributes.<attributeName>.<scope>.<tracking|picking>[.<depth>]` - `render.<variation>`"
@@ -14562,7 +14562,7 @@
               },
               "signature": "getFramebufferVersions()",
               "source": {
-                "line": 14270,
+                "line": 14271,
                 "path": "src/Helios.js"
               },
               "summary": "Returns an object keyed by a meaningful framebuffer name, where each value is the version counter. Key format conventions: - `attributes.<attributeName>.<scope>.<tracking|picking>[.<depth>]` - `render.<variation>`"
@@ -14581,7 +14581,7 @@
               },
               "signature": "getFramebufferVersionsByRef()",
               "source": {
-                "line": 14338,
+                "line": 14339,
                 "path": "src/Helios.js"
               },
               "summary": "Return framebuffer resource versions keyed by reference for renderer diagnostics."
@@ -14608,7 +14608,7 @@
               },
               "signature": "enableNodePicking(options = {})",
               "source": {
-                "line": 14350,
+                "line": 14351,
                 "path": "src/Helios.js"
               },
               "summary": "Enable pointer picking for nodes."
@@ -14635,7 +14635,7 @@
               },
               "signature": "enableEdgePicking(options = {})",
               "source": {
-                "line": 14366,
+                "line": 14367,
                 "path": "src/Helios.js"
               },
               "summary": "Enable pointer picking for edges."
@@ -14654,7 +14654,7 @@
               },
               "signature": "disableNodePicking()",
               "source": {
-                "line": 14381,
+                "line": 14382,
                 "path": "src/Helios.js"
               },
               "summary": "Disable node pointer picking."
@@ -14673,7 +14673,7 @@
               },
               "signature": "disableEdgePicking()",
               "source": {
-                "line": 14394,
+                "line": 14395,
                 "path": "src/Helios.js"
               },
               "summary": "Disable edge pointer picking."
@@ -14692,7 +14692,7 @@
               },
               "signature": "destroy()",
               "source": {
-                "line": 14988,
+                "line": 14989,
                 "path": "src/Helios.js"
               },
               "summary": "Dispose renderer resources, UI bindings, workers, timers, and event listeners owned by this instance."
@@ -33822,7 +33822,7 @@
         }
       ],
       "title": "Helios Web",
-      "version": "0.10.0"
+      "version": "0.10.3"
     }
   },
   "schemaVersion": "1.0.0"

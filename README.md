@@ -14,9 +14,16 @@ npm install
 python3 scripts/build_docs.py
 ```
 
-The release build installs `helios-network@0.10.0` and `helios-web@0.10.0`.
-During local release preparation the build script can also stage bundles from
-adjacent `helios-network-v2/dist` and `helios-web-next/dist` directories.
+The release build installs `helios-network@0.10.2` and `helios-web@0.10.3`.
+The current website runtime, examples, and `/app/` route are staged from the
+installed `helios-network` and `helios-web` npm packages. API reference
+generation reads Helios Web and Helios Network source checkouts so generated
+reference pages come from the repositories, not from generated bundles.
+
+For a local source override, set `HELIOS_WEB_SOURCE` or
+`HELIOS_NETWORK_SOURCE`. If a checkout is not present, Helios Web can fall back
+to `node_modules/helios-web/src`; Helios Network still needs the source checkout
+for Python and native C reference pages.
 
 ## Versioned Docs
 

@@ -10,8 +10,11 @@
     "version:docs": "mike deploy --push --update-aliases 0.10.0 latest"
   },
   "dependencies": {
-    "helios-network": "0.10.0",
-    "helios-web": "0.10.0"
+    "helios-network": "0.10.2",
+    "helios-web": "0.10.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "playwright": "^1.61.1",
+    "pngjs": "^7.0.0"
+  }
 }

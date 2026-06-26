@@ -13,7 +13,7 @@ then pass it to `new Helios(network, options)`.
 
 ## What To Install
 
-Use matching 0.10.0 package versions across the renderer, graph core, and host
+Use the current 0.10 package train across the renderer, graph core, and host
 tools.
 
 For a visual browser app:
@@ -34,7 +34,7 @@ For Python workflows:
 pip install helios-network
 ```
 
-The hosted docs and app stage the same 0.10.0 bundles under
+The hosted docs and app stage the same npm package bundles under
 `https://heliosweb.io/docs/assets/vendor/helios/` for browser-only examples.
 
 ## Runtime Requirements
@@ -120,11 +120,11 @@ import HeliosNetwork from "https://heliosweb.io/docs/assets/vendor/helios/helios
 import { Helios } from "https://heliosweb.io/docs/assets/vendor/helios/helios-web.es.js";
 ```
 
-Use local checkout bundles for docs-site and repository examples:
+Use local checkout bundles for heliosweb.io and repository examples:
 
 ```js
-import HeliosNetwork from "/assets/vendor/helios/helios-network.js";
-import { Helios } from "/assets/vendor/helios/helios-web.es.js";
+import HeliosNetwork from "/docs/assets/vendor/helios/helios-network.js";
+import { Helios } from "/docs/assets/vendor/helios/helios-web.es.js";
 ```
 
 Avoid mixing two different Helios Network copies in the same page. The Web

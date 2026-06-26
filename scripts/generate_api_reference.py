@@ -17,6 +17,42 @@ ROOT = Path(os.environ.get("HELIOS_MONOREPO_ROOT", DOCS_SITE.parent)).resolve()
 DOCS = DOCS_SITE / "docs"
 
 
+class ApiExtractionError(RuntimeError):
+    pass
+
+
+def resolve_source_root(env_name: str, package_name: str, sibling_names: tuple[str, ...], required_paths: tuple[str, ...]) -> Path:
+    candidates: list[Path] = []
+    explicit = os.environ.get(env_name)
+    if explicit:
+        candidates.append(Path(explicit).expanduser().resolve())
+    candidates.extend(ROOT / name for name in sibling_names)
+    candidates.append(DOCS_SITE / "node_modules" / package_name)
+    for candidate in candidates:
+        if all((candidate / required).exists() for required in required_paths):
+            return candidate
+    searched = "\n".join(f"- {candidate}" for candidate in candidates)
+    raise ApiExtractionError(
+        f"Could not locate source files for {package_name}. Searched:\n{searched}\n"
+        f"Clone the source repository next to this repo, run `npm install`, or set {env_name}."
+    )
+
+
+HELIOS_WEB_SOURCE = resolve_source_root(
+    "HELIOS_WEB_SOURCE",
+    "helios-web",
+    ("helios-web",),
+    ("package.json", "src/index.js", "src/Helios.js"),
+)
+
+HELIOS_NETWORK_SOURCE = resolve_source_root(
+    "HELIOS_NETWORK_SOURCE",
+    "helios-network",
+    ("helios-network-v2", "helios-network"),
+    ("package.json", "src/helios-network.js", "src/js/HeliosNetwork.js", "python/pyproject.toml", "src/native/include/helios"),
+)
+
+
 @dataclass(frozen=True)
 class Symbol:
     name: str
@@ -33,10 +69,6 @@ class Symbol:
     methods: tuple["Symbol", ...] = ()
 
 
-class ApiExtractionError(RuntimeError):
-    pass
-
-
 def empty_doc() -> dict:
     return {
         "summary": "",
@@ -51,11 +83,15 @@ def empty_doc() -> dict:
 
 def rel(path: Path) -> str:
     path = path.resolve()
-    for package_root in (ROOT / "helios-web", ROOT / "helios-web-next", ROOT / "helios-network-v2", ROOT / "helios-xnet"):
+    for package_root in (HELIOS_WEB_SOURCE, HELIOS_NETWORK_SOURCE, ROOT / "helios-xnet"):
         try:
             return path.relative_to(package_root).as_posix()
         except ValueError:
             continue
+    try:
+        return path.relative_to(DOCS_SITE).as_posix()
+    except ValueError:
+        pass
     return path.relative_to(ROOT).as_posix()
 
 
@@ -84,12 +120,17 @@ def read_json(path: Path) -> dict:
 def git_revision() -> str:
     try:
         return subprocess.check_output(
-            ["git", "-C", str(ROOT / "helios-network-v2"), "rev-parse", "--short", "HEAD"],
+            ["git", "-C", str(HELIOS_NETWORK_SOURCE), "rev-parse", "--short", "HEAD"],
             text=True,
             stderr=subprocess.DEVNULL,
         ).strip()
     except Exception:
-        return "current-checkout"
+        try:
+            web_version = read_json(HELIOS_WEB_SOURCE / "package.json").get("version", "unknown")
+            network_version = read_json(HELIOS_NETWORK_SOURCE / "package.json").get("version", "unknown")
+            return f"helios-web {web_version}, helios-network {network_version}"
+        except Exception:
+            return "current-sources"
 
 
 def write(path: Path, text: str) -> None:
@@ -1673,8 +1714,8 @@ def require_summaries(symbols: list[Symbol], names: set[str], label: str) -> Non
 def emit_helios_web() -> None:
     package_dir = DOCS / "api" / "helios-web"
     clean_generated_api_dir(package_dir)
-    package = read_json(ROOT / "helios-web" / "package.json")
-    entry = ROOT / "helios-web" / "src" / "index.js"
+    package = read_json(HELIOS_WEB_SOURCE / "package.json")
+    entry = HELIOS_WEB_SOURCE / "src" / "index.js"
     exports = parse_js_exports(entry)
     export_sources = parse_js_export_sources(entry)
     symbols: list[Symbol] = []
@@ -1686,17 +1727,17 @@ def emit_helios_web() -> None:
         class_names = {symbol.name for symbol in symbols if symbol.kind == "class" and symbol.source == source}
         class_method_sources.update(parse_js_class_methods(source, class_names))
     symbols = attach_methods(symbols, class_method_sources)
-    method_symbols = parse_js_methods(ROOT / "helios-web" / "src" / "Helios.js", {
+    method_symbols = parse_js_methods(HELIOS_WEB_SOURCE / "src" / "Helios.js", {
         "getFigureExportCapabilities",
         "exportFigureBlob",
         "exportFigurePreviewBlob",
         "exportFigure",
     })
-    method_symbols.extend(parse_js_methods(ROOT / "helios-web" / "src" / "behaviors" / "MappersBehavior.js", {
+    method_symbols.extend(parse_js_methods(HELIOS_WEB_SOURCE / "src" / "behaviors" / "MappersBehavior.js", {
         "setChannelConfig",
         "getSerializedChannelConfig",
     }))
-    method_symbols.extend(parse_js_methods(ROOT / "helios-web" / "src" / "behaviors" / "FilterBehavior.js", {
+    method_symbols.extend(parse_js_methods(HELIOS_WEB_SOURCE / "src" / "behaviors" / "FilterBehavior.js", {
         "replaceRules",
         "clear",
     }))
@@ -1800,9 +1841,9 @@ Primary public class members currently using generated fallback descriptions:
 def emit_network_js() -> None:
     package_dir = DOCS / "api" / "helios-network-js-wasm"
     clean_generated_api_dir(package_dir)
-    package = read_json(ROOT / "helios-network-v2" / "package.json")
-    entry = ROOT / "helios-network-v2" / "src" / "helios-network.js"
-    impl = ROOT / "helios-network-v2" / "src" / "js" / "HeliosNetwork.js"
+    package = read_json(HELIOS_NETWORK_SOURCE / "package.json")
+    entry = HELIOS_NETWORK_SOURCE / "src" / "helios-network.js"
+    impl = HELIOS_NETWORK_SOURCE / "src" / "js" / "HeliosNetwork.js"
     exports = parse_js_exports(entry)
     implementation_names = set(exports)
     if "default" in implementation_names:
@@ -1863,10 +1904,9 @@ The current JavaScript/WASM package does not publish TypeScript declarations. Un
 def emit_network_python() -> None:
     docs_package_dir = DOCS / "api" / "helios-network-python"
     clean_generated_api_dir(docs_package_dir)
-    package = read_json(ROOT / "helios-network-v2" / "python" / "pyproject.toml") if False else {}
-    pyproject = (ROOT / "helios-network-v2" / "python" / "pyproject.toml").read_text(encoding="utf-8")
+    pyproject = (HELIOS_NETWORK_SOURCE / "python" / "pyproject.toml").read_text(encoding="utf-8")
     version_match = re.search(r'^version\s*=\s*"([^"]+)"', pyproject, re.M)
-    source_package_dir = ROOT / "helios-network-v2" / "python" / "src" / "helios_network"
+    source_package_dir = HELIOS_NETWORK_SOURCE / "python" / "src" / "helios_network"
     symbols = apply_categories(unique_symbols(parse_python_public_api(source_package_dir)), categorize_python)
     missing_docstrings = [symbol for symbol in symbols if not symbol.summary]
     if missing_docstrings:
@@ -1910,7 +1950,7 @@ The structured reference is available at [`../reference.json`](../reference.json
 def emit_network_c() -> None:
     package_dir = DOCS / "api" / "helios-network-native-c"
     clean_generated_api_dir(package_dir)
-    include_dir = ROOT / "helios-network-v2" / "src" / "native" / "include" / "helios"
+    include_dir = HELIOS_NETWORK_SOURCE / "src" / "native" / "include" / "helios"
     symbols, missing = parse_c_headers(include_dir)
     if missing:
         raise ApiExtractionError(

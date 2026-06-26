@@ -7,24 +7,24 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const require = createRequire(import.meta.url);
-const { chromium } = require('../../helios-web-next/node_modules/playwright');
-const { PNG } = require('../../helios-web-next/node_modules/pngjs');
+const { chromium } = require('playwright');
+const { PNG } = require('pngjs');
 
 const DOCS_SITE = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 const SITE_DIR = path.join(DOCS_SITE, 'site');
 const OUTPUT_DIR = path.join(DOCS_SITE, 'output', 'playwright');
 const TARGETS = [
-  { id: 'basic-rendering', path: '/examples/helios-web/basic/', bodyName: 'helios_web_basic_rendering' },
-  { id: 'loading-building', path: '/examples/helios-web/attributes-mappers/', bodyName: 'helios_web_loading_building' },
-  { id: 'mappers-legends', path: '/examples/helios-web/attributes-mappers/', bodyName: 'helios_web_mappers_legends' },
-  { id: 'selection-hover-labels', path: '/examples/helios-web/interaction-labels/', bodyName: 'helios_web_selection_labels' },
-  { id: 'layouts', path: '/examples/helios-web/layouts-filters/', bodyName: 'helios_web_layouts' },
-  { id: 'filters', path: '/examples/helios-web/layouts-filters/', bodyName: 'helios_web_filters' },
-  { id: 'advanced-filter', path: '/examples/helios-web/advanced-apis/', bodyName: 'helios_web_advanced_filter' },
-  { id: 'persistence-save-restore', path: '/examples/helios-web/persistence-export/', bodyName: 'helios_web_persistence' },
-  { id: 'exporter-figure-output', path: '/examples/helios-web/persistence-export/', bodyName: 'helios_web_exporter' },
-  { id: 'mobile-touch', path: '/examples/helios-web/mobile-custom/', bodyName: 'helios_web_mobile_touch' },
-  { id: 'custom-behavior', path: '/examples/helios-web/mobile-custom/', bodyName: 'helios_web_custom_behavior' },
+  { id: 'basic-rendering', path: '/docs/examples/helios-web/basic/', bodyName: 'helios_web_basic_rendering' },
+  { id: 'loading-building', path: '/docs/examples/helios-web/attributes-mappers/', bodyName: 'helios_web_loading_building' },
+  { id: 'mappers-legends', path: '/docs/examples/helios-web/attributes-mappers/', bodyName: 'helios_web_mappers_legends' },
+  { id: 'selection-hover-labels', path: '/docs/examples/helios-web/interaction-labels/', bodyName: 'helios_web_selection_labels' },
+  { id: 'layouts', path: '/docs/examples/helios-web/layouts-filters/', bodyName: 'helios_web_layouts' },
+  { id: 'filters', path: '/docs/examples/helios-web/layouts-filters/', bodyName: 'helios_web_filters' },
+  { id: 'advanced-filter', path: '/docs/examples/helios-web/advanced-apis/', bodyName: 'helios_web_advanced_filter' },
+  { id: 'persistence-save-restore', path: '/docs/examples/helios-web/persistence-export/', bodyName: 'helios_web_persistence' },
+  { id: 'exporter-figure-output', path: '/docs/examples/helios-web/persistence-export/', bodyName: 'helios_web_exporter' },
+  { id: 'mobile-touch', path: '/docs/examples/helios-web/mobile-custom/', bodyName: 'helios_web_mobile_touch' },
+  { id: 'custom-behavior', path: '/docs/examples/helios-web/mobile-custom/', bodyName: 'helios_web_custom_behavior' },
 ];
 
 const MIME_TYPES = {
@@ -103,7 +103,7 @@ async function assertNonBlankPng(filePath, label) {
 
 async function main() {
   if (!existsSync(path.join(SITE_DIR, 'index.html'))) {
-    throw new Error('Build docs-site first with `python3 scripts/build_docs.py`.');
+    throw new Error('Build the website first with `python3 scripts/build_docs.py`.');
   }
   mkdirSync(OUTPUT_DIR, { recursive: true });
 

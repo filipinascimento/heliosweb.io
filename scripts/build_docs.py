@@ -46,7 +46,7 @@ def resolve_dist(env_name: str, package_name: str, sibling_name: str) -> Path:
     searched = "\n".join(f"- {candidate}" for candidate in candidates)
     raise FileNotFoundError(
         f"Could not locate {package_name} dist assets. Searched:\n{searched}\n"
-        f"Install {package_name}@0.10.0 or set {env_name}."
+        f"Install {package_name} with npm or set {env_name}."
     )
 
 
@@ -97,12 +97,12 @@ def stage_example_assets() -> None:
 
 def resolve_main_app_dir() -> Path:
     for candidate in (
+        DOCS_SITE / "node_modules" / "helios-web" / "docs" / "app",
         ROOT / "helios-web" / "docs" / "app",
-        ROOT / "helios-web-next" / "docs" / "app",
     ):
         if (candidate / "main.js").exists():
             return candidate
-    raise FileNotFoundError("Could not locate Helios Web main app source in a sibling checkout.")
+    raise FileNotFoundError("Could not locate Helios Web main app source. Run `npm install` or set HELIOS_MONOREPO_ROOT.")
 
 
 def rewrite_main_app_source(source: str) -> str:
@@ -139,14 +139,13 @@ def write_root_homepage() -> None:
     a { color: inherit; }
     .shell { width: min(1180px, calc(100vw - 40px)); margin: 0 auto; }
     header { min-height: min(760px, 100vh); display: flex; flex-direction: column; }
-    nav { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 22px 0; }
-    .mark { height: 30px; width: auto; display: block; }
+    nav { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding: 22px 0 6px; }
     .tabs { display: flex; align-items: center; gap: 4px; border: 1px solid #cbd5df; border-radius: 8px; padding: 4px; background: #ffffff; }
     .tabs a { text-decoration: none; font-weight: 650; font-size: 0.95rem; line-height: 1; padding: 10px 13px; border-radius: 6px; white-space: nowrap; }
     .tabs a:hover, .tabs a.primary { background: #17212b; color: #ffffff; }
-    .hero { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 470px); align-items: center; gap: clamp(28px, 6vw, 72px); padding: 20px 0 60px; }
-    .logo { width: min(390px, 76vw); height: auto; display: block; margin-bottom: 32px; }
-    h1 { font-size: clamp(2.5rem, 7vw, 6rem); line-height: 0.94; margin: 0 0 24px; letter-spacing: 0; max-width: 760px; }
+    .hero { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 470px); align-items: center; gap: clamp(28px, 6vw, 72px); padding: 8px 0 60px; }
+    .logo { width: min(390px, 76vw); height: auto; display: block; margin: 0 0 28px; }
+    h1 { font-size: clamp(2.35rem, 6vw, 5.4rem); line-height: 0.96; margin: 0 0 24px; letter-spacing: 0; max-width: 760px; }
     .lead { max-width: 700px; font-size: 1.13rem; line-height: 1.68; margin: 0 0 30px; color: #435160; }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
     .button { border: 1px solid #17212b; color: #17212b; text-decoration: none; padding: 12px 16px; border-radius: 6px; font-weight: 700; }
@@ -186,7 +185,6 @@ def write_root_homepage() -> None:
 <body>
   <header class="shell">
     <nav aria-label="Primary">
-      <img class="mark" src="/docs/assets/helios-logo.svg" alt="Helios">
       <div class="tabs">
         <a class="primary" href="/app/">App</a>
         <a href="/docs/">Docs</a>
@@ -197,17 +195,17 @@ def write_root_homepage() -> None:
     <div class="hero">
       <main>
         <img class="logo" src="/docs/assets/helios-logo.svg" alt="Helios">
-        <h1>Interactive network visualization.</h1>
-        <p class="lead">Helios pairs a WebGPU/WebGL renderer with a WebAssembly graph store, plus CLI, notebook, and desktop hosts for real workflows.</p>
+        <h1>Interactive network visualization</h1>
+        <p class="lead">Helios pairs a WebGPU/WebGL renderer with a WebAssembly graph store for graph visualization, embeddings, and real workflows. It is built for 1M+ nodes with real-time GPU-based layout in 2D and 3D, plus CLI, notebook, desktop, and agentic skill integrations.</p>
         <div class="actions">
           <a class="button primary" href="/app/">Launch app</a>
           <a class="button" href="/docs/">Read docs</a>
-          <a class="button" href="/docs/getting-started/quickstart/">Quickstart</a>
+          <a class="button" href="/docs/getting-started/">Quickstart</a>
         </div>
         <div class="facts">
           <div class="fact"><strong>Renderer</strong> WebGPU first, WebGL2 fallback.</div>
-          <div class="fact"><strong>Network core</strong> WASM-backed graph storage and formats.</div>
-          <div class="fact"><strong>Apps</strong> Browser, CLI, notebooks, and desktop.</div>
+          <div class="fact"><strong>Network core</strong> WASM-backed graph storage, formats, and embeddings.</div>
+          <div class="fact"><strong>Integrations</strong> Browser, CLI, notebooks, desktop, and agentic skills.</div>
         </div>
       </main>
       <aside class="preview" aria-label="3D Watts-Strogatz preview">
@@ -225,7 +223,7 @@ def write_root_homepage() -> None:
     <section>
       <h2>Build With Helios</h2>
       <p>Install `helios-network` and `helios-web`, then compose the renderer into your own application.</p>
-      <a href="/docs/getting-started/quickstart/">Start the quickstart</a>
+      <a href="/docs/getting-started/">Start the quickstart</a>
     </section>
     <section>
       <h2>Use Other Hosts</h2>
@@ -266,19 +264,20 @@ def write_root_homepage() -> None:
           options: {
             mode: '3d',
             use2D: false,
-            radius: 110,
-            depth: 140,
+            radius: 155,
+            depth: 190,
             kRepulsion: 2.4,
             kAttraction: 0.004,
-            kGravity: 0.002,
+            kGravity: 0.0012,
           },
         },
       });
       await helios.ready;
-      helios.nodeSizeScale(0.16);
-      helios.edgeWidthScale(0.45);
+      helios.nodeSizeScale(0.08);
+      helios.edgeWidthScale(0.32);
       helios.legends(false);
-      helios.frameNetwork({ animate: false });
+      helios.cameraControls?.({ autoFit: true, autoFitPaddingRatio: 0.12 });
+      helios.frameNetwork({ animate: false, paddingRatio: 0.16 });
       label.textContent = '520 nodes - 3D Watts-Strogatz';
       window.__heliosLandingPreview = helios;
     } catch (error) {

@@ -9,7 +9,7 @@ use it, what it changes internally, and what tradeoffs matter in an application.
 - [Installation and bundling](installation.md) covers package installation,
   `package.json`, Vite, ESM imports, CDN-style imports, local checkout bundles,
   and common asset/runtime mistakes.
-- [Development and contributing](development.md) covers local builds, docs-site
+- [Development and contributing](development.md) covers local builds, heliosweb.io
   generation, generated API pages, versioning notes, and how to keep package
   artifacts synchronized.
 

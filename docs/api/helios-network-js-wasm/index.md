@@ -1,7 +1,7 @@
 
 # Helios Network JS/WASM API
 
-<p class="helios-api-version">Version 0.10.0</p>
+<p class="helios-api-version">Version 0.10.2</p>
 
 The JavaScript/WASM package wraps the WebAssembly graph store with selectors, attribute APIs, serialization helpers, and direct typed-buffer access. Use the chainable attribute helpers for everyday code; the direct buffer methods remain documented as the low-level performance path when performance requires operating on WASM-backed views directly.
 

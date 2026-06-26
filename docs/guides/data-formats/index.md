@@ -15,7 +15,7 @@ snapshots, `.xnet` for readable fixtures and examples, `.gml` for graph-tooling
 interchange, `.gt`/`.gt.zst` for graph-tool datasets, and node-link JSON for
 D3/NetworkX-style web and Python data exchange.
 
-Package imports in the examples use the public 0.10.0 package names
+Package imports in the examples use the public package names
 `helios-network` and `helios-web`.
 
 ## Format Summary

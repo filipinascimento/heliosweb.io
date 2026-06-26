@@ -2,13 +2,14 @@
   <div class="helios-hero-copy">
     <img class="helios-home-logo" src="assets/helios-logo.svg" alt="Helios Web">
     <p class="helios-eyebrow">Open-source graph visualization</p>
-    <h1>Interactive network visualization with a WebAssembly graph store.</h1>
+    <h1>Interactive network visualization with a WebAssembly graph store</h1>
     <p>
       Helios pairs a visual WebGPU/WebGL renderer with a data-first graph core.
-      Use Helios Web when you need an interactive graph view. Use Helios Network
-      when you need graph creation, attributes, selection, and serialization
-      across JavaScript/WASM, Python, and native C. Use the CLI, Widget, and
-      Desktop hosts when you need automation, notebooks, or native documents.
+      Use Helios Web when you need an interactive graph view for networks or
+      embeddings. Use Helios Network when you need graph creation, attributes,
+      selection, and serialization across JavaScript/WASM, Python, and native C.
+      Use the CLI, Widget, Desktop, and agentic skills when you need automation,
+      notebooks, native documents, or agent-driven workflows.
     </p>
     <div class="helios-actions">
       <a class="helios-action helios-action-primary" href="https://heliosweb.io/app/">Launch online app</a>
@@ -20,7 +21,7 @@
   <div class="helios-hero-signal" aria-hidden="true">
     <span>WebGPU/WebGL visual layer</span>
     <span>WASM graph data layer</span>
-    <span>CLI, Widget, and Desktop hosts</span>
+    <span>CLI, Widget, Desktop, and skills</span>
     <span>Generated API reference</span>
   </div>
 </section>
@@ -31,6 +32,7 @@
     <p>
       The browser visualization package: rendering, camera controls, behaviors,
       mappers, filters, labels, legends, layouts, persistence, and figure export.
+      The hosted app and examples import the released `helios-web` package.
     </p>
     <p><a href="examples/helios-web/index.md">Open visual examples</a></p>
   </article>
@@ -39,7 +41,7 @@
     <p>
       The graph data package: a native C core compiled to WebAssembly, with
       JavaScript, Python, and C surfaces for attributes, selectors, queries,
-      and import/export.
+      embeddings, and import/export.
     </p>
     <p><a href="examples/helios-network/index.md">Open API/data examples</a></p>
   </article>
@@ -55,8 +57,9 @@
   <article>
     <h2>Apps and integrations</h2>
     <p>
-      Helios CLI, Helios Widget, and Helios Desktop reuse the same Web and
-      Network runtime with host-specific persistence and workflow surfaces.
+      Helios CLI, Helios Widget, Helios Desktop, and portable skills reuse the
+      same Web and Network runtime with host-specific persistence and workflow
+      surfaces.
     </p>
     <p><a href="apps/index.md">Open app docs</a></p>
   </article>
@@ -87,7 +90,7 @@ or manipulating graphs programmatically.
 
 ## Install
 
-Use the 0.10.0 release packages for browser and data workflows.
+Use the current 0.10 release packages for browser and data workflows.
 
 ```bash
 npm install helios-network helios-web
