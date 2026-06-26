@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/storage/HeliosStorageManager.js:2946</dd>
+<dd>src/storage/HeliosStorageManager.js:3014</dd>
 </dl>
 
 ## Description

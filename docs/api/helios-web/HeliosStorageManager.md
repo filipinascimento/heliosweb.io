@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/storage/HeliosStorageManager.js:729</dd>
+<dd>src/storage/HeliosStorageManager.js:743</dd>
 </dl>
 
 ## Description
@@ -37,7 +37,7 @@ export class HeliosStorageManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2907</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2975</code></p>
 <p>Manages destroy for the current instance.</p>
 </div>
 
@@ -51,7 +51,7 @@ export class HeliosStorageManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1500</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1550</code></p>
 <p>Configures or reads pending state change count.</p>
 </div>
 
@@ -61,7 +61,7 @@ export class HeliosStorageManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1504</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1554</code></p>
 <p>Returns the current pending state changes value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -75,7 +75,7 @@ const value = helios.hasPendingStateChanges();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1829</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1883</code></p>
 <p>Configures or reads record portable state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -94,7 +94,7 @@ const value = helios.hasPendingStateChanges();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2831</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2899</code></p>
 <p>Read or set the restore portable state from network setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -123,7 +123,7 @@ helios.restorePortableStateFromNetwork({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:989</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1011</code></p>
 <p>Handles preferences for the current graph or visualization state.</p>
 </div>
 
@@ -133,7 +133,7 @@ helios.restorePortableStateFromNetwork({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1021</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1043</code></p>
 <p>Configures or reads mark network dirty.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -150,7 +150,7 @@ helios.restorePortableStateFromNetwork({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1878</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1932</code></p>
 <p>Read or set the serialize snapshot setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -175,7 +175,7 @@ helios.serializeSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2082</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2136</code></p>
 <p>Read or set the serialize session snapshot setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -200,7 +200,7 @@ helios.serializeSessionSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2263</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2317</code></p>
 <p>Read or set the save session snapshot setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -225,7 +225,7 @@ helios.saveSessionSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2306</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2360</code></p>
 <p>Updates the session snapshot state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -245,7 +245,7 @@ helios.saveSessionSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2402</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2456</code></p>
 <p>Serialize a visualization envelope suitable for attachment to a portable network export. The envelope includes the current <code>storageState</code> snapshot.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -270,7 +270,7 @@ helios.serializeNetworkSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2438</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2492</code></p>
 <p>Attach a visualization-state envelope to the active network.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -290,7 +290,7 @@ helios.serializeNetworkSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2453</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2507</code></p>
 <p>Save the active network with visualization state attached.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -310,7 +310,7 @@ helios.serializeNetworkSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2471</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2525</code></p>
 <p>Restore a portable network snapshot through Helios network loading.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -330,7 +330,7 @@ helios.serializeNetworkSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2479</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2533</code></p>
 <p>Updates the snapshot state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -350,7 +350,7 @@ helios.serializeNetworkSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2497</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2551</code></p>
 <p>Handles session for the current graph or visualization state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -368,7 +368,7 @@ helios.serializeNetworkSnapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2567</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2627</code></p>
 <p>Read or set the restore active session setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -393,7 +393,7 @@ helios.restoreActiveSession({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2694</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2771</code></p>
 <p>Read or set the save session setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -418,7 +418,7 @@ helios.saveSession({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2799</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2867</code></p>
 <p>Updates the session state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -442,7 +442,7 @@ helios.saveSession({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1045</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1067</code></p>
 <p>Configures or reads mark positions dirty.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -463,7 +463,7 @@ helios.saveSession({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:803</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:825</code></p>
 <p>Returns the current unfinished session id value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -477,7 +477,7 @@ const value = helios.getUnfinishedSessionId();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:807</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:829</code></p>
 <p>Set the unfinished session id setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -496,7 +496,7 @@ const value = helios.getUnfinishedSessionId();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:811</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:833</code></p>
 <p>Set the override tracking ready setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -515,7 +515,7 @@ const value = helios.getUnfinishedSessionId();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:977</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:999</code></p>
 <p>Returns the current preferences value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -529,7 +529,7 @@ const value = helios.getPreferences();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1075</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1097</code></p>
 <p>Set the session nickname setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -549,7 +549,7 @@ const value = helios.getPreferences();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2712</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2780</code></p>
 <p>Returns the current session value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -566,7 +566,7 @@ const value = helios.getPreferences();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2749</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2817</code></p>
 <p>Read or set the get resume sessions setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -591,7 +591,7 @@ helios.getResumeSessions({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2778</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2846</code></p>
 <p>Read or set the get resume prompt setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -620,7 +620,7 @@ helios.getResumePrompt({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:922</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:944</code></p>
 <p>Read or set the configure setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -645,7 +645,7 @@ helios.configure({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:993</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1015</code></p>
 <p>Configures or reads update preferences.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -662,7 +662,7 @@ helios.configure({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1508</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1558</code></p>
 <p>Configures or reads acknowledge saved snapshot.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -680,7 +680,7 @@ helios.configure({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1771</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1825</code></p>
 <p>Read or set the debug stats setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -705,7 +705,7 @@ helios.debugStats({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1838</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1892</code></p>
 <p>Configures or reads status.</p>
 </div>
 
@@ -715,7 +715,7 @@ helios.debugStats({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1842</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:1896</code></p>
 <p>Configures or reads persistence status.</p>
 </div>
 
@@ -725,7 +725,7 @@ helios.debugStats({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2218</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2272</code></p>
 <p>Configures or reads deserialize session snapshot.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -742,7 +742,7 @@ helios.debugStats({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2222</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2276</code></p>
 <p>Read or set the capture session thumbnail setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -767,7 +767,7 @@ helios.captureSessionThumbnail({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2529</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2583</code></p>
 <p>Read or set the configure session setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -792,7 +792,7 @@ helios.configureSession({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2608</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2668</code></p>
 <p>Read or set the start new session setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -817,7 +817,7 @@ helios.startNewSession({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2644</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2704</code></p>
 <p>Read or set the flush previous session for switch setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -842,7 +842,7 @@ helios.flushPreviousSessionForSwitch({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2719</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2787</code></p>
 <p>Read or set the list sessions setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -867,7 +867,7 @@ helios.listSessions({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2742</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2810</code></p>
 <p>Read or set the list session summaries setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -892,7 +892,7 @@ helios.listSessionSummaries({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2794</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2862</code></p>
 <p>Configures or reads resume session.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -910,7 +910,7 @@ helios.listSessionSummaries({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2806</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2874</code></p>
 <p>Configures or reads delete session.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -927,7 +927,7 @@ helios.listSessionSummaries({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2817</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2885</code></p>
 <p>Configures or reads mark session finished.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -944,7 +944,7 @@ helios.listSessionSummaries({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2842</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2910</code></p>
 <p>Read or set the flush setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -969,7 +969,7 @@ helios.flush({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2880</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2948</code></p>
 <p>Read or set the sync setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -994,7 +994,7 @@ helios.sync({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2884</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:2952</code></p>
 <p>Read or set the flush autosync setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/storage/HeliosStorageManager.js:480</dd>
+<dd>src/storage/HeliosStorageManager.js:494</dd>
 </dl>
 
 ## Description
@@ -37,7 +37,7 @@ export class SessionStore {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:627</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:641</code></p>
 <p>Returns the current get value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -55,7 +55,7 @@ export class SessionStore {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:672</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:686</code></p>
 <p>Returns the current all value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -69,7 +69,7 @@ const value = helios.getAll();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:707</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:721</code></p>
 <p>Returns the current unfinished session id value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -86,7 +86,7 @@ const value = helios.getAll();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:713</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:727</code></p>
 <p>Set the unfinished session id setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -110,7 +110,7 @@ const value = helios.getAll();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:489</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:503</code></p>
 <p>Configures or reads key.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -127,7 +127,7 @@ const value = helios.getAll();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:493</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:507</code></p>
 <p>Configures or reads network data record id.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -144,7 +144,7 @@ const value = helios.getAll();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:497</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:511</code></p>
 <p>Configures or reads position data record id.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -161,7 +161,7 @@ const value = helios.getAll();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:501</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:515</code></p>
 <p>Configures or reads unfinished session key for.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -178,7 +178,7 @@ const value = helios.getAll();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:610</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:624</code></p>
 <p>Configures or reads put.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -195,7 +195,7 @@ const value = helios.getAll();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:694</code></p>
+<p class="helios-api-source">Source: <code>src/storage/HeliosStorageManager.js:708</code></p>
 <p>Configures or reads delete.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

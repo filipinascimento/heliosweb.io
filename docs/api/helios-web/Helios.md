@@ -158,7 +158,7 @@ application will keep using the same network after unmount.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7968</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7970</code></p>
 <p>Initialize layout, renderer, picking, attribute tracking, and scheduler state.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Resolves when the first renderer and layout setup is complete.</p><span class="helios-api-return-type"><strong>Type</strong> <code>Promise</code>&lt;<code>void</code>&gt;</span></div>
@@ -172,7 +172,7 @@ application will keep using the same network after unmount.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12320</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12322</code></p>
 <p>Pre-runs mapper application before first render. Useful for large graphs where the first geometry pass is expensive. Can be awaited before <code>helios.ready</code> to shorten time to first render.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -197,7 +197,7 @@ helios.prewarm({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14986</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14988</code></p>
 <p>Dispose renderer resources, UI bindings, workers, timers, and event listeners owned by this instance.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><span class="helios-api-return-type"><strong>Type</strong> <code>void</code></span></div>
@@ -295,7 +295,7 @@ const selection = helios.useBehavior(&#x27;selection&#x27;, { multiple: true });
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6734</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6736</code></p>
 <p>Serialize state held by active behaviors.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Behavior state keyed by behavior id.</p><span class="helios-api-return-type"><strong>Type</strong> <code>Object</code></span></div>
@@ -307,7 +307,7 @@ const selection = helios.useBehavior(&#x27;selection&#x27;, { multiple: true });
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6746</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6748</code></p>
 <p>Restore state for active behaviors.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -330,7 +330,7 @@ const selection = helios.useBehavior(&#x27;selection&#x27;, { multiple: true });
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6157</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6159</code></p>
 <p>Return the active graph filter state and filtered graph sizes.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Filter state with <code>enabled</code>, <code>scope</code>, normalized <code>options</code>, filtered/base node and edge counts, and the last filter error.</p><span class="helios-api-return-type"><strong>Type</strong> <code>Object</code></span></div>
@@ -347,7 +347,7 @@ if (state.enabled) console.log(state.nodeCount, state.edgeCount);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6190</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6192</code></p>
 <p>Read or replace the active graph filter.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -373,7 +373,7 @@ helios.graphFilter({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6219</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6221</code></p>
 <p>Apply a render or render-and-layout graph filter.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -404,7 +404,7 @@ helios.setGraphFilter({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6271</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6273</code></p>
 <p>Activate a reusable <code>HeliosFilter</code> instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -428,7 +428,7 @@ helios.activateHeliosFilter(filter);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6289</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6291</code></p>
 <p>Return the reusable filter currently attached to this view.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Active reusable filter, if one was supplied.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/HeliosFilter/"><code>HeliosFilter</code></a>|<code>null</code></span></div>
@@ -444,7 +444,7 @@ const value = helios.getActiveHeliosFilter();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6300</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6302</code></p>
 <p>Re-run the active reusable filter after its rules or source data changed.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This Helios instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/Helios/"><code>Helios</code></a></span></div>
@@ -456,7 +456,7 @@ const value = helios.getActiveHeliosFilter();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6314</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6316</code></p>
 <p>Remove the active graph filter and restore the base graph view.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This Helios instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/Helios/"><code>Helios</code></a></span></div>
@@ -476,7 +476,7 @@ helios.clearGraphFilter();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6353</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6355</code></p>
 <p>Replace the graph store while preserving visualization state by default.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -504,7 +504,7 @@ await helios.replaceNetwork(nextNetwork, { keepCamera: false });
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6619</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6621</code></p>
 <p>Load a serialized network and replace the active graph.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -529,7 +529,7 @@ const network = await helios.loadNetwork(file, { format: &#x27;bxnet&#x27; });
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6696</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6698</code></p>
 <p>Serialize the active graph in a Helios Network format.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -549,7 +549,7 @@ const network = await helios.loadNetwork(file, { format: &#x27;bxnet&#x27; });
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6795</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6797</code></p>
 <p>Build a portable visualization-state envelope.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -574,7 +574,7 @@ helios.serializeVisualizationState({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6822</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6824</code></p>
 <p>Build a portable visualization-state envelope and await async layout snapshots.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -599,7 +599,7 @@ helios.serializeVisualizationStateAsync({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6848</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6850</code></p>
 <p>Import a visualization-state envelope and apply it to this view.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -619,7 +619,7 @@ helios.serializeVisualizationStateAsync({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6925</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6927</code></p>
 <p>Alias for <code>importVisualizationState</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -639,7 +639,7 @@ helios.serializeVisualizationStateAsync({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6938</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6940</code></p>
 <p>Export visualization state as an object, JSON string, or Blob.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -665,7 +665,7 @@ helios.exportVisualizationState({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6957</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6959</code></p>
 <p>Build a sparse visualization-state envelope from tracked state overrides.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -691,7 +691,7 @@ helios.serializeTrackedVisualizationState({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6986</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6988</code></p>
 <p>Build a sparse visualization-state envelope and await async layout snapshots.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -717,7 +717,7 @@ helios.serializeTrackedVisualizationStateAsync({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7015</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7017</code></p>
 <p>Read a visualization-state envelope stored on a network attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -737,7 +737,7 @@ helios.serializeTrackedVisualizationStateAsync({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7036</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7038</code></p>
 <p>Store visualization state on a network string attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -757,7 +757,7 @@ helios.serializeTrackedVisualizationStateAsync({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7056</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7058</code></p>
 <p>Remove visualization state attached to the active network.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -782,7 +782,7 @@ helios.clearAttachedVisualizationState({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7075</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7077</code></p>
 <p>Save the graph with optional embedded visualization state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -803,7 +803,7 @@ helios.clearAttachedVisualizationState({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12397</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12399</code></p>
 <p>Add nodes to the backing network and initialize their visual state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -823,7 +823,7 @@ helios.clearAttachedVisualizationState({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12426</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12428</code></p>
 <p>Add edges to the backing network and initialize their visual state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -847,7 +847,7 @@ helios.clearAttachedVisualizationState({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7263</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7265</code></p>
 <p>Return renderer-aware figure export limits and preset availability.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -874,7 +874,7 @@ helios.getFigureExportCapabilities({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7684</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7686</code></p>
 <p>Capture the current visualization as a PNG or SVG <code>Blob</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -903,7 +903,7 @@ const blob = await helios.exportFigureBlob({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7724</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7726</code></p>
 <p>Capture a scaled PNG preview for a full-size figure export request.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -931,7 +931,7 @@ helios.exportFigurePreviewBlob({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7777</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7779</code></p>
 <p>Capture and download the current visualization.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -957,7 +957,7 @@ helios.exportFigurePreviewBlob({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7820</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7822</code></p>
 <p>Add an event listener and receive an unsubscribe function.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -984,7 +984,7 @@ const unsubscribe = helios.on(EVENTS.NODE_CLICK, (event) =&gt; {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7848</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7850</code></p>
 <p>Add or replace a namespaced event listener.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1011,7 +1011,7 @@ helios.listen(`${EVENTS.NODE_HOVER}.tooltip`, ({ detail }) =&gt; {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7906</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7908</code></p>
 <p>Remove an event listener.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1030,7 +1030,7 @@ helios.listen(`${EVENTS.NODE_HOVER}.tooltip`, ({ detail }) =&gt; {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7919</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7921</code></p>
 <p>Observe every event emitted through Helios.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1056,7 +1056,7 @@ const stop = helios.onAny(EVENTS.NODE_CLICK, (event) =&gt; {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:7943</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:7945</code></p>
 <p>Dispatch a Helios event.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1080,7 +1080,7 @@ const stop = helios.onAny(EVENTS.NODE_CLICK, (event) =&gt; {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6540</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6542</code></p>
 <p>Queue a camera fit once the renderer and graph bounds are ready.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1106,7 +1106,7 @@ helios.requestFrameNetwork({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:6574</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:6576</code></p>
 <p>Fit the camera to the current visible graph or selected node set.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1132,7 +1132,7 @@ helios.frameNetwork({ animate: true, paddingRatio: 0.08 });
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10688</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10690</code></p>
 <p>Capture the current camera pose.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Serializable camera pose, or <code>null</code> before a renderer is available.</p><span class="helios-api-return-type"><strong>Type</strong> <code>Object</code>|<code>null</code></span></div>
@@ -1144,7 +1144,7 @@ helios.frameNetwork({ animate: true, paddingRatio: 0.08 });
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10701</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10703</code></p>
 <p>Read or update automatic camera-control policy.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1170,7 +1170,7 @@ helios.cameraControls({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10763</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10765</code></p>
 <p>Focus the camera on a set of node indices.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1194,7 +1194,7 @@ helios.cameraTargetNodes([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10818</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10820</code></p>
 <p>Keep the camera centered on moving node indices.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1218,7 +1218,7 @@ helios.cameraFollowNodes([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10859</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10861</code></p>
 <p>Apply a camera pose immediately.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1238,7 +1238,7 @@ helios.cameraFollowNodes([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10921</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10923</code></p>
 <p>Animate the camera from its current pose to a target pose.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1258,7 +1258,7 @@ helios.cameraFollowNodes([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10951</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10953</code></p>
 <p>Stop any active camera transition.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This Helios instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/Helios/"><code>Helios</code></a></span></div>
@@ -1270,7 +1270,7 @@ helios.cameraFollowNodes([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10963</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10965</code></p>
 <p>Return the active dimensional rendering mode.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Current camera/rendering mode.</p><span class="helios-api-return-type"><strong>Type</strong> &#x27;2d&#x27;|&#x27;3d&#x27;</span></div>
@@ -1282,7 +1282,7 @@ helios.cameraFollowNodes([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10976</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10978</code></p>
 <p>Switch between 2D and 3D rendering modes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1310,7 +1310,7 @@ await helios.setMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12352</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12354</code></p>
 <p>Create a layout instance from a layout option object or return an existing layout.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1329,7 +1329,7 @@ await helios.setMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13142</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13144</code></p>
 <p>Read or replace the active layout instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1348,7 +1348,7 @@ await helios.setMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13200</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13202</code></p>
 <p>List node attributes that can seed layout positions.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1375,7 +1375,7 @@ helios.getLayoutPositionAttributeChoices({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13255</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13257</code></p>
 <p>Copy a numeric node attribute into the canonical layout-position attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1396,7 +1396,7 @@ helios.getLayoutPositionAttributeChoices({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13390</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13392</code></p>
 <p>Read or update the active position source used for rendering and layout handoff.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1423,7 +1423,7 @@ helios.positions({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13421</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13423</code></p>
 <p>Snapshot all node positions from the active or supplied position delegate.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1449,7 +1449,7 @@ helios.snapshotDelegatePositions({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13449</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13451</code></p>
 <p>Snapshot selected node positions from the active position source.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1475,7 +1475,7 @@ helios.snapshotNodePositions([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13526</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13528</code></p>
 <p>Snapshot one node position from the active position source.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1496,7 +1496,7 @@ helios.snapshotNodePositions([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13558</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13560</code></p>
 <p>Compute the centroid of selected nodes from the active position source.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1521,7 +1521,7 @@ helios.snapshotNodeCentroid([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13595</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13597</code></p>
 <p>Write the active delegate position snapshot back into the network position attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1547,7 +1547,7 @@ helios.syncDelegatePositionsToNetwork({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13625</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13627</code></p>
 <p>Read or update GPU position interpolation settings.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1575,7 +1575,7 @@ helios.interpolation({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13775</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13777</code></p>
 <p>Alias for <code>layout(layout)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1594,7 +1594,7 @@ helios.interpolation({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13784</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13786</code></p>
 <p>Alias for <code>positions(options)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1619,7 +1619,7 @@ helios.setPositions({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13793</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13795</code></p>
 <p>Alias for <code>interpolation(options)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1644,7 +1644,7 @@ helios.setInterpolation({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13936</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13938</code></p>
 <p>Enable layout execution and optionally request a layout algorithm or parameters.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1664,7 +1664,7 @@ helios.setInterpolation({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13956</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13958</code></p>
 <p>Disable layout execution.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1687,7 +1687,7 @@ helios.setInterpolation({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13096</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13098</code></p>
 <p>Read, replace, or reset the default node and edge mapper collections.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1710,7 +1710,7 @@ helios.setInterpolation({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13829</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13831</code></p>
 <p>Alias for <code>mappers(mappers)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1733,7 +1733,7 @@ helios.setInterpolation({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9815</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9817</code></p>
 <p>Read or set the multiplier applied to edge width attributes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1756,7 +1756,7 @@ helios.edgeWidthScale(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9828</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9830</code></p>
 <p>Read or set the constant edge width added before scaling.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1779,7 +1779,7 @@ helios.edgeWidthBase(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9841</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9843</code></p>
 <p>Read or set the multiplier applied to edge opacity attributes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1802,7 +1802,7 @@ helios.edgeOpacityScale(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9854</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9856</code></p>
 <p>Read or set the constant edge opacity added before scaling.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1825,7 +1825,7 @@ helios.edgeOpacityBase(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9867</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9869</code></p>
 <p>Read or set the multiplier applied to node opacity attributes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1848,7 +1848,7 @@ helios.nodeOpacityScale(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9880</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9882</code></p>
 <p>Read or set the constant node opacity added before scaling.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1871,7 +1871,7 @@ helios.nodeOpacityBase(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9893</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9895</code></p>
 <p>Read or set the multiplier applied to node size attributes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1894,7 +1894,7 @@ helios.nodeSizeScale(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9906</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9908</code></p>
 <p>Read or set the constant node radius added before scaling.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1917,7 +1917,7 @@ helios.nodeSizeBase(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9919</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9921</code></p>
 <p>Read or set semantic zoom compensation for node and label sizing.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1940,7 +1940,7 @@ helios.semanticZoomExponent(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9934</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9936</code></p>
 <p>Read or set the multiplier applied to node outline width attributes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1963,7 +1963,7 @@ helios.nodeOutlineWidthScale(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9947</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9949</code></p>
 <p>Read or set the constant node outline width added before scaling.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -1986,7 +1986,7 @@ helios.nodeOutlineWidthBase(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9960</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9962</code></p>
 <p>Read or set the default node outline color.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2009,7 +2009,7 @@ helios.nodeOutlineColor(&#x27;#4aa3ff&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9977</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9979</code></p>
 <p>Read or set whether outline attributes participate in node styling.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2032,7 +2032,7 @@ helios.nodeOutlineUseAttributes(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:9990</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:9992</code></p>
 <p>Read or set how far edge geometry is trimmed away from node centers.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2055,7 +2055,7 @@ helios.edgeEndpointTrim(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10003</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10005</code></p>
 <p>Read or set whether rendered edge width is clamped by endpoint node diameter.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2078,7 +2078,7 @@ helios.edgeWidthClampToNodeDiameter(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10019</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10021</code></p>
 <p>Read or set whether node rendering blends visually with adjacent edges.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2101,7 +2101,7 @@ helios.nodeBlendWithEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10032</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10034</code></p>
 <p>Read or set whether edge fragments write to the depth buffer.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2124,7 +2124,7 @@ helios.edgeDepthWrite(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10045</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10047</code></p>
 <p>Read or set the manual fast edge-rendering override.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2147,7 +2147,7 @@ helios.edgeFastRendering(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10058</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10060</code></p>
 <p>Read or set whether shaded rendering is enabled.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2170,7 +2170,7 @@ helios.shadedEnabled(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10074</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10076</code></p>
 <p>Read or set whether node geometry receives shaded lighting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2193,7 +2193,7 @@ helios.shadedNodes(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10090</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10092</code></p>
 <p>Read or set whether edge geometry receives shaded lighting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2216,7 +2216,7 @@ helios.shadedEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10106</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10108</code></p>
 <p>Read or set the directional light vector used by shaded rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2239,7 +2239,7 @@ helios.shadedLightDirection(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10121</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10123</code></p>
 <p>Read or set the x component of the shaded light direction.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2262,7 +2262,7 @@ helios.shadedLightDirectionX(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10136</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10138</code></p>
 <p>Read or set the y component of the shaded light direction.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2285,7 +2285,7 @@ helios.shadedLightDirectionY(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10151</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10153</code></p>
 <p>Read or set the z component of the shaded light direction.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2308,7 +2308,7 @@ helios.shadedLightDirectionZ(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10166</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10168</code></p>
 <p>Read or set the direct light color used by shaded rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2331,7 +2331,7 @@ helios.shadedLightColor(&#x27;#4aa3ff&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10185</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10187</code></p>
 <p>Read or set the upper hemisphere ambient color for shaded rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2354,7 +2354,7 @@ helios.shadedAmbientTopColor(&#x27;#4aa3ff&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10204</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10206</code></p>
 <p>Read or set the lower hemisphere ambient color for shaded rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2377,7 +2377,7 @@ helios.shadedAmbientBottomColor(&#x27;#4aa3ff&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10223</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10225</code></p>
 <p>Read or set diffuse lighting strength for shaded rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2400,7 +2400,7 @@ helios.shadedDiffuseStrength(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10241</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10243</code></p>
 <p>Read or set ambient lighting strength for shaded rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2423,7 +2423,7 @@ helios.shadedAmbientStrength(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10259</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10261</code></p>
 <p>Read or set the specular highlight color for shaded rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2446,7 +2446,7 @@ helios.shadedSpecularColor(&#x27;#4aa3ff&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10278</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10280</code></p>
 <p>Read or set specular highlight strength for shaded rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2469,7 +2469,7 @@ helios.shadedSpecularStrength(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10296</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10298</code></p>
 <p>Read or set specular shininess for shaded rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2492,7 +2492,7 @@ helios.shadedShininess(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10314</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10316</code></p>
 <p>Read or set whether screen-space ambient occlusion is enabled.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2515,7 +2515,7 @@ helios.ambientOcclusionEnabled(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10330</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10332</code></p>
 <p>Read or set whether ambient occlusion is applied to nodes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2538,7 +2538,7 @@ helios.ambientOcclusionNodes(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10346</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10348</code></p>
 <p>Read or set whether ambient occlusion is applied to edges.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2561,7 +2561,7 @@ helios.ambientOcclusionEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10362</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10364</code></p>
 <p>Read or set ambient occlusion strength.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2584,7 +2584,7 @@ helios.ambientOcclusionStrength(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10380</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10382</code></p>
 <p>Read or set ambient occlusion sampling radius.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2607,7 +2607,7 @@ helios.ambientOcclusionRadius(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10398</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10400</code></p>
 <p>Read or set ambient occlusion depth bias.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2630,7 +2630,7 @@ helios.ambientOcclusionBias(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10416</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10418</code></p>
 <p>Read or set ambient occlusion compositing mode.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2653,7 +2653,7 @@ helios.ambientOcclusionMode(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10436</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10438</code></p>
 <p>Read or set ambient occlusion intensity scaling.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2676,7 +2676,7 @@ helios.ambientOcclusionIntensityScale(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10454</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10456</code></p>
 <p>Read or set ambient occlusion intensity offset.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2699,7 +2699,7 @@ helios.ambientOcclusionIntensityShift(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10472</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10474</code></p>
 <p>Read or set ambient occlusion quality preset.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2722,7 +2722,7 @@ helios.ambientOcclusionQuality(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10492</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10494</code></p>
 <p>Read or update the adaptive edge-quality policy used to switch fast edge rendering on slow frames.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2747,7 +2747,7 @@ helios.edgeAdaptiveQuality({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10535</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10537</code></p>
 <p>Read or set whether adaptive edge quality is enabled.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2770,7 +2770,7 @@ helios.edgeAdaptiveQualityEnabled(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10549</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10551</code></p>
 <p>Read or set the frame-time threshold that counts as slow for adaptive edge quality.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2793,7 +2793,7 @@ helios.edgeAdaptiveQualitySlowFrameThresholdMs(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10563</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10565</code></p>
 <p>Read or set how many recent frames are averaged before adaptive quality changes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2816,7 +2816,7 @@ helios.edgeAdaptiveQualitySlowFrameConsecutiveFrames(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10577</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10579</code></p>
 <p>Read or set how often adaptive quality probes full-quality edge rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2839,7 +2839,7 @@ helios.edgeAdaptiveQualityProbeIntervalMs(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10591</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10593</code></p>
 <p>Read or set how long adaptive quality stays fast after interaction.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2862,7 +2862,7 @@ helios.edgeAdaptiveQualityInteractionHoldMs(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10605</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10607</code></p>
 <p>Read or set whether camera interaction forces fast edge rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2885,7 +2885,7 @@ helios.edgeAdaptiveQualityFastDuringCamera(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10619</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10621</code></p>
 <p>Read or set whether active layout ticks force fast edge rendering.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2908,7 +2908,7 @@ helios.edgeAdaptiveQualityFastDuringLayout(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10633</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10635</code></p>
 <p>Read or set the renderer background color.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2931,7 +2931,7 @@ helios.background(&#x27;#4aa3ff&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10650</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10652</code></p>
 <p>Alias for <code>background(color)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2954,7 +2954,7 @@ helios.clearColor(&#x27;#4aa3ff&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:10663</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:10665</code></p>
 <p>Read or set the renderer supersampling preset.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -2977,7 +2977,7 @@ helios.supersampling(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11467</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11469</code></p>
 <p>Read or set the edge transparency compositing mode.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3004,7 +3004,7 @@ helios.edgeTransparencyMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13968</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13970</code></p>
 <p>Schedule a render frame.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This Helios instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/Helios/"><code>Helios</code></a></span></div>
@@ -3016,7 +3016,7 @@ helios.edgeTransparencyMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13980</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13982</code></p>
 <p>Render one frame immediately when manual rendering is enabled.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><span class="helios-api-return-type"><strong>Type</strong> <code>void</code></span></div>
@@ -3028,7 +3028,7 @@ helios.edgeTransparencyMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14029</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14031</code></p>
 <p>Enable offscreen attribute tracking for picking.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3049,7 +3049,7 @@ helios.edgeTransparencyMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14052</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14054</code></p>
 <p>Disable attribute tracking for a scope or for all scopes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3068,7 +3068,7 @@ helios.edgeTransparencyMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14063</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14065</code></p>
 <p>Render the attribute-tracking target for the current frame.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Tracking render result, or <code>null</code> when tracking is disabled.</p><span class="helios-api-return-type"><strong>Type</strong> <code>Promise</code>&lt;<code>Object</code>|<code>null</code>&gt;</span></div>
@@ -3080,7 +3080,7 @@ helios.edgeTransparencyMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14083</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14085</code></p>
 <p>Pick encoded node and edge attributes at viewport coordinates.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3100,7 +3100,7 @@ helios.edgeTransparencyMode(&#x27;2d&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14096</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14098</code></p>
 <p>Returns a Map of framebuffer/attachment references to monotonically increasing &quot;version&quot; counters (wrapping at Number.MAX_SAFE_INTEGER). Keys are live object references (e.g. RenderTarget instances, WebGLFramebuffer, GPUTexture) so they can be used for identity comparisons.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -3114,7 +3114,7 @@ const value = helios.getFramebufferVersionsByRefMap();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14138</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14140</code></p>
 <p>Returns framebuffer/attachment information keyed by a meaningful name. Values include the version counter and a minimal shape description. Key format conventions: - <code>attributes.&lt;attributeName&gt;.&lt;scope&gt;.&lt;tracking|picking&gt;[.&lt;depth&gt;]</code> - <code>render.&lt;variation&gt;</code></p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -3128,7 +3128,7 @@ const value = helios.getFramebufferInformation();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14268</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14270</code></p>
 <p>Returns an object keyed by a meaningful framebuffer name, where each value is the version counter. Key format conventions: - <code>attributes.&lt;attributeName&gt;.&lt;scope&gt;.&lt;tracking|picking&gt;[.&lt;depth&gt;]</code> - <code>render.&lt;variation&gt;</code></p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -3142,7 +3142,7 @@ const value = helios.getFramebufferVersions();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14336</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14338</code></p>
 <p>Return framebuffer resource versions keyed by reference for renderer diagnostics.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>Plain object mapping framebuffer references to version numbers.</p><span class="helios-api-return-type"><strong>Type</strong> <code>Object</code></span></div>
@@ -3158,7 +3158,7 @@ const value = helios.getFramebufferVersionsByRef();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14348</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14350</code></p>
 <p>Enable pointer picking for nodes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3183,7 +3183,7 @@ helios.enableNodePicking({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14364</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14366</code></p>
 <p>Enable pointer picking for edges.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3208,7 +3208,7 @@ helios.enableEdgePicking({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14379</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14381</code></p>
 <p>Disable node pointer picking.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This Helios instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/Helios/"><code>Helios</code></a></span></div>
@@ -3220,7 +3220,7 @@ helios.enableEdgePicking({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:14392</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:14394</code></p>
 <p>Disable edge pointer picking.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This Helios instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/Helios/"><code>Helios</code></a></span></div>
@@ -3257,7 +3257,7 @@ helios.enableEdgePicking({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11139</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11141</code></p>
 <p>Read or update the screen-space density overlay configuration.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3288,7 +3288,7 @@ helios.density({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11300</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11302</code></p>
 <p>Read or set whether the density overlay is enabled.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3311,7 +3311,7 @@ helios.densityEnabled(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11313</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11315</code></p>
 <p>Read or set the density overlay quality scale.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3334,7 +3334,7 @@ helios.densityScale(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11326</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11328</code></p>
 <p>Read or set whether density is rendered with topographic contours.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3357,7 +3357,7 @@ helios.densityTopographic(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11339</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11341</code></p>
 <p>Read or set whether density bandwidth scales with camera zoom.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3380,7 +3380,7 @@ helios.densityScaleWithZoom(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11352</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11354</code></p>
 <p>Read or set the density kernel bandwidth.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3403,7 +3403,7 @@ helios.densityBandwidth(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11365</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11367</code></p>
 <p>Read or set the scalar multiplier applied to density weights.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3426,7 +3426,7 @@ helios.densityWeight(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11378</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11380</code></p>
 <p>Read or set the node attribute used as the primary density property.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3449,7 +3449,7 @@ helios.densityProperty(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11391</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11393</code></p>
 <p>Read or set the comparison property used for diverging density views.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3472,7 +3472,7 @@ helios.densityVsProperty(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11404</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11406</code></p>
 <p>Read or set whether comparison density values are normalized before differencing.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3495,7 +3495,7 @@ helios.densityNormalizeVs(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11417</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11419</code></p>
 <p>Read or set the sequential colormap used by the density overlay.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3518,7 +3518,7 @@ helios.densityColormap(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11430</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11432</code></p>
 <p>Read or set the diverging colormap used by comparison density overlays.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3541,7 +3541,7 @@ helios.densityDivergingColormap(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11442</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11444</code></p>
 <p>Request a density overlay update on the next render frame.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This Helios instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/Helios/"><code>Helios</code></a></span></div>
@@ -3553,7 +3553,7 @@ helios.densityDivergingColormap(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11454</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11456</code></p>
 <p>Alias for <code>updateDensityMap()</code>.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This Helios instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/Helios/"><code>Helios</code></a></span></div>
@@ -3565,7 +3565,7 @@ helios.densityDivergingColormap(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11489</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11491</code></p>
 <p>Read or update label rendering options.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3594,7 +3594,7 @@ helios.labels({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11549</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11551</code></p>
 <p>Read or update legend rendering options.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3620,7 +3620,7 @@ helios.legends({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:11569</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:11571</code></p>
 <p>Read or set whether legends are enabled.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3643,7 +3643,7 @@ helios.legendsEnabled(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12054</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12056</code></p>
 <p>Read or set reserved viewport insets for overlays such as labels and legends.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3666,7 +3666,7 @@ helios.legendsEnabled(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12078</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12080</code></p>
 <p>Read or set whether labels are enabled.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3689,7 +3689,7 @@ helios.labelsEnabled(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12094</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12096</code></p>
 <p>Read or set the label selection mode.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3712,7 +3712,7 @@ helios.labelsMode(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12124</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12126</code></p>
 <p>Read or set the maximum number of visible labels.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3735,7 +3735,7 @@ helios.labelsMaxVisible(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12139</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12141</code></p>
 <p>Read or set whether selected-only labels still avoid spatial collisions.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3758,7 +3758,7 @@ helios.labelsSelectedOnlySpaceAware(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12152</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12154</code></p>
 <p>Read or set the label font-size multiplier.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3781,7 +3781,7 @@ helios.labelsFontSizeScale(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12167</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12169</code></p>
 <p>Read or set the minimum on-screen node radius required for label candidates.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3804,7 +3804,7 @@ helios.labelsMinScreenRadius(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12182</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12184</code></p>
 <p>Read or set label outline width.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3827,7 +3827,7 @@ helios.labelsOutlineWidth(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12197</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12199</code></p>
 <p>Read or set the radial node-size multiplier used to offset labels.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3850,7 +3850,7 @@ helios.labelsOffsetRadiusFactor(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12212</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12214</code></p>
 <p>Read or set the fixed pixel offset added to label placement.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3873,7 +3873,7 @@ helios.labelsOffsetPx(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12227</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12229</code></p>
 <p>Read or set the maximum number of characters per label row.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3896,7 +3896,7 @@ helios.labelsMaxChars(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12242</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12244</code></p>
 <p>Read or set the maximum number of rows per wrapped label.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3919,7 +3919,7 @@ helios.labelsMaxRows(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12257</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12259</code></p>
 <p>Read or set label fill color.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3942,7 +3942,7 @@ helios.labelFill(&#x27;#4aa3ff&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12273</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12275</code></p>
 <p>Read or set label outline color.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3965,7 +3965,7 @@ helios.labelOutlineColor(&#x27;#4aa3ff&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12289</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12291</code></p>
 <p>Read or set the CSS font-family used by labels.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -3988,7 +3988,7 @@ helios.labelFontFamily(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12303</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12305</code></p>
 <p>Read or set the label text source.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4011,7 +4011,7 @@ helios.labelSource(&#x27;auto&#x27;);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13802</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13804</code></p>
 <p>Alias for <code>density(options)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4036,7 +4036,7 @@ helios.setDensity({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13811</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13813</code></p>
 <p>Alias for <code>labels(options)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4061,7 +4061,7 @@ helios.setLabels({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13820</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13822</code></p>
 <p>Alias for <code>legends(options)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4088,7 +4088,7 @@ helios.setLegends({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12506</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12508</code></p>
 <p>Read or set whether selected and highlighted items are promoted later in render order.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4111,7 +4111,7 @@ helios.interactionRenderOrder(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12577</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12579</code></p>
 <p>Apply a state bitmask to node indices.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4137,7 +4137,7 @@ helios.nodeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12634</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12636</code></p>
 <p>Apply a state bitmask to edge indices.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4163,7 +4163,7 @@ helios.edgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12680</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12682</code></p>
 <p>Set transient hover state for a node.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4183,7 +4183,7 @@ helios.edgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12718</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12720</code></p>
 <p>Set transient hover state for an edge.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4203,7 +4203,7 @@ helios.edgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12820</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12822</code></p>
 <p>Read or set whether highlighted nodes also highlight their connected edges.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4226,7 +4226,7 @@ helios.highlightConnectedEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12840</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12842</code></p>
 <p>Read or set styling for nodes carrying a state bit.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4246,7 +4246,7 @@ helios.highlightConnectedEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12884</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12886</code></p>
 <p>Read or set styling for nodes with no active state bits.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4265,7 +4265,7 @@ helios.highlightConnectedEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12916</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12918</code></p>
 <p>Read or set styling for edges carrying a state bit.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4285,7 +4285,7 @@ helios.highlightConnectedEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12959</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12961</code></p>
 <p>Read or set styling for edges with no active state bits.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4304,7 +4304,7 @@ helios.highlightConnectedEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:12989</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:12991</code></p>
 <p>Read or set the transient hover style for nodes.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4323,7 +4323,7 @@ helios.highlightConnectedEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13018</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13020</code></p>
 <p>Read or set the transient hover style for edges.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4342,7 +4342,7 @@ helios.highlightConnectedEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13054</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13056</code></p>
 <p>Read or set whether hover style follows the highlighted-state style.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4365,7 +4365,7 @@ helios.hoverStyleFromHighlight(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13072</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13074</code></p>
 <p>Reset all node and edge state styles to renderer defaults.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This Helios instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/Helios/"><code>Helios</code></a></span></div>
@@ -4377,7 +4377,7 @@ helios.hoverStyleFromHighlight(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13840</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13842</code></p>
 <p>Alias for <code>nodeState(indices, mask, options)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4402,7 +4402,7 @@ helios.setNodeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13851</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13853</code></p>
 <p>Alias for <code>edgeState(indices, mask, options)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4427,7 +4427,7 @@ helios.setEdgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13861</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13863</code></p>
 <p>Alias for <code>nodeStateStyle(slot, style)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4447,7 +4447,7 @@ helios.setEdgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13871</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13873</code></p>
 <p>Alias for <code>edgeStateStyle(slot, style)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4467,7 +4467,7 @@ helios.setEdgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13880</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13882</code></p>
 <p>Alias for <code>nodeNoStateStyle(style)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4486,7 +4486,7 @@ helios.setEdgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13889</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13891</code></p>
 <p>Alias for <code>edgeNoStateStyle(style)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4505,7 +4505,7 @@ helios.setEdgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13898</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13900</code></p>
 <p>Alias for <code>nodeHoverStyle(style)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4524,7 +4524,7 @@ helios.setEdgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13907</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13909</code></p>
 <p>Alias for <code>edgeHoverStyle(style)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4543,7 +4543,7 @@ helios.setEdgeState([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13916</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13918</code></p>
 <p>Alias for <code>hoverStyleFromHighlight(value)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4566,7 +4566,7 @@ helios.setHoverStyleFromHighlight(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:13925</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:13927</code></p>
 <p>Alias for <code>highlightConnectedEdges(value)</code>.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4591,7 +4591,7 @@ helios.setHighlightConnectedEdges(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:8346</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:8348</code></p>
 <p>Capture scheduler, layout, and optional node-position runtime state for persistence.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4618,7 +4618,7 @@ helios.snapshotLayoutRuntimeState({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:8361</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:8363</code></p>
 <p>Capture layout runtime state, preferring async delegate readback when active.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -4645,7 +4645,7 @@ helios.snapshotLayoutRuntimeStateAsync({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/Helios.js:8423</code></p>
+<p class="helios-api-source">Source: <code>src/Helios.js:8425</code></p>
 <p>Restore scheduler, layout, and encoded position state from a previous snapshot.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
