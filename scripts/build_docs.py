@@ -137,13 +137,13 @@ def write_root_homepage() -> None:
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100vh; background: #f7f9fb; color: #17212b; }
     a { color: inherit; }
-    .shell { width: min(1180px, calc(100vw - 40px)); margin: 0 auto; }
+    .shell { width: min(1260px, calc(100vw - 40px)); margin: 0 auto; }
     header { min-height: min(760px, 100vh); display: flex; flex-direction: column; }
     nav { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding: 22px 0 6px; }
     .tabs { display: flex; align-items: center; gap: 4px; border: 1px solid #cbd5df; border-radius: 8px; padding: 4px; background: #ffffff; }
     .tabs a { text-decoration: none; font-weight: 650; font-size: 0.95rem; line-height: 1; padding: 10px 13px; border-radius: 6px; white-space: nowrap; }
     .tabs a:hover, .tabs a.primary { background: #17212b; color: #ffffff; }
-    .hero { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, 470px); align-items: center; gap: clamp(28px, 6vw, 72px); padding: 8px 0 60px; }
+    .hero { flex: 1; display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(420px, 560px); align-items: center; gap: clamp(28px, 5vw, 64px); margin-top: -50pt; padding: 8px 0 60px; }
     .logo { width: min(390px, 76vw); height: auto; display: block; margin: 0 0 28px; }
     h1 { font-size: clamp(2.35rem, 6vw, 5.4rem); line-height: 0.96; margin: 0 0 24px; letter-spacing: 0; max-width: 760px; }
     .lead { max-width: 700px; font-size: 1.13rem; line-height: 1.68; margin: 0 0 30px; color: #435160; }
@@ -153,7 +153,7 @@ def write_root_homepage() -> None:
     .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 760px; }
     .fact { border-top: 2px solid #2f7d79; padding-top: 10px; font-size: 0.92rem; line-height: 1.45; color: #435160; }
     .fact strong { display: block; color: #17212b; margin-bottom: 4px; }
-    .preview { aspect-ratio: 1; min-height: 360px; border: 1px solid #cbd5df; border-radius: 8px; overflow: hidden; background: #071018; position: relative; }
+    .preview { aspect-ratio: 1; min-height: 430px; border: 1px solid #cbd5df; border-radius: 8px; overflow: hidden; background: #071018; position: relative; }
     #network-preview { position: absolute; inset: 0; }
     .preview-label { position: absolute; left: 14px; bottom: 12px; z-index: 2; color: #dce8f2; font-size: 0.78rem; letter-spacing: 0; background: rgba(7, 16, 24, 0.72); padding: 7px 9px; border-radius: 5px; }
     .below { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; border-top: 1px solid #d8e0e8; background: #d8e0e8; }
@@ -165,7 +165,7 @@ def write_root_homepage() -> None:
       header { min-height: auto; }
       nav { align-items: flex-start; flex-direction: column; }
       .tabs { width: 100%; overflow-x: auto; }
-      .hero { grid-template-columns: 1fr; padding-top: 28px; }
+      .hero { grid-template-columns: 1fr; margin-top: 0; padding-top: 28px; }
       .preview { min-height: min(86vw, 420px); }
       .facts, .below { grid-template-columns: 1fr; }
     }
@@ -268,16 +268,23 @@ def write_root_homepage() -> None:
             depth: 190,
             kRepulsion: 2.4,
             kAttraction: 0.004,
-            kGravity: 0.0012,
+            kGravity: 0.00045,
           },
         },
       });
       await helios.ready;
-      helios.nodeSizeScale(0.08);
-      helios.edgeWidthScale(0.32);
+      helios.nodeSizeScale(0.05);
+      helios.edgeWidthScale(0.24);
       helios.legends(false);
-      helios.cameraControls?.({ autoFit: true, autoFitPaddingRatio: 0.12 });
-      helios.frameNetwork({ animate: false, paddingRatio: 0.16 });
+      helios.cameraControls?.({
+        autoFit: true,
+        autoFitPaddingRatio: 0.18,
+        orbit: true,
+        orbitSpeed: 0.025,
+        orbitAngle: 12,
+        orbitAxis: [0, 1, 0],
+      });
+      helios.frameNetwork({ animate: false, paddingRatio: 0.2 });
       label.textContent = '520 nodes - 3D Watts-Strogatz';
       window.__heliosLandingPreview = helios;
     } catch (error) {
