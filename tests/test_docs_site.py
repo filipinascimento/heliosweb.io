@@ -33,6 +33,8 @@ def test_mkdocs_material_and_sidecode_are_configured():
     assert config["extra"]["version"]["default"] == "0.10.9"
     assert any("Examples" in item for item in config["nav"])
     assert any("Apps And Integrations" in item for item in config["nav"])
+    apps_nav = next(item["Apps And Integrations"] for item in config["nav"] if "Apps And Integrations" in item)
+    assert any("Builder Skill" in item for item in apps_nav)
     requirements = (DOCS_SITE / "requirements.txt").read_text(encoding="utf-8")
     assert "mkdocs-sidecode==0.1.7" in requirements
     assert "./vendor/mkdocs-sidecode" not in requirements
@@ -244,6 +246,14 @@ def test_docs_build_path_succeeds():
     assert (DOCS_SITE / "site/docs/index.html").exists()
     docs_index_text = (DOCS_SITE / "site/docs/index.html").read_text(encoding="utf-8")
     assert 'href="https://heliosweb.io/" title="Helios" class="md-header__button md-logo"' in docs_index_text
+    apps_index_text = (DOCS_SITE / "site/docs/apps/index.html").read_text(encoding="utf-8")
+    assert "Builder Skill" in apps_index_text
+    assert "helios-web-builder-skill" in apps_index_text
+    builder_skill_text = (DOCS_SITE / "site/docs/apps/helios-web-builder-skill/index.html").read_text(encoding="utf-8")
+    assert "Short name:" in builder_skill_text
+    assert "create a new standalone Helios visualization app" in builder_skill_text
+    builder_skill_source = (DOCS_SITE / "docs/apps/helios-web-builder-skill.md").read_text(encoding="utf-8")
+    assert "git clone https://github.com/filipinascimento/helios-web-builder-skill.git" in builder_skill_source
     assert (DOCS_SITE / "site/app/index.html").exists()
     app_main = (DOCS_SITE / "site/app/main.js").read_text(encoding="utf-8")
     assert "generateWattsStrogatz" in app_main

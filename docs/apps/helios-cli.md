@@ -47,6 +47,8 @@ helios session stop <sessionId>
 
 ## Agentic Skill
 
+Short name: **CLI Skill**.
+
 The `helios-web-cli` package ships an agent-facing skill at
 `skills/helios-cli`. Install the CLI first, then copy the skill into the agent
 runtime that should operate Helios sessions.
@@ -69,6 +71,9 @@ cp -R "$SKILL_SRC" ".claude/skills/helios-cli"
 The skill is plain Markdown plus reference files. It tells agents to verify the
 installed package versions with `helios version`, start local sessions, call
 JSON-RPC methods, inspect visual output, and stop sessions when finished.
+
+For creating a new standalone visualization app, use the
+[Builder Skill](helios-web-builder-skill.md) instead.
 
 Supported network inputs are `.xnet`, `.zxnet`, `.bxnet`, `.gml`, `.gt`, and
 `.gt.zst`. GML and GT are lossy graph interchange formats in the

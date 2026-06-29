@@ -123,6 +123,7 @@ nav:
   - Apps And Integrations:
       - Overview: apps/index.md
       - Helios CLI: apps/helios-cli.md
+      - Builder Skill: apps/helios-web-builder-skill.md
       - Helios Widget: apps/helios-widget.md
       - Helios Desktop: apps/helios-desktop.md
   - API Reference:
