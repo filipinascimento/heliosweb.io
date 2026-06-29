@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/layouts/GpuForceLayout.js:263</dd>
+<dd>src/layouts/GpuForceLayout.js:288</dd>
 </dl>
 
 ## Description
@@ -58,7 +58,7 @@ buffers for rendering.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:301</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:328</code></p>
 <p>Configures or reads initialize.</p>
 </div>
 
@@ -72,7 +72,7 @@ buffers for rendering.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:349</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:376</code></p>
 <p>Configures or reads sync auto settings for network.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -91,7 +91,7 @@ buffers for rendering.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:443</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:472</code></p>
 <p>Read or set the seed from network positions setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -120,7 +120,7 @@ helios.seedFromNetworkPositions({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:297</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:324</code></p>
 <p>Returns the current position delegate value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -138,7 +138,7 @@ const value = helios.getPositionDelegate();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:388</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:415</code></p>
 <p>Set the settings setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -159,7 +159,7 @@ const value = helios.getPositionDelegate();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:454</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:483</code></p>
 <p>Returns the current parameter bindings value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -177,7 +177,7 @@ const value = helios.getParameterBindings();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:305</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:332</code></p>
 <p>Configures or reads should run.</p>
 </div>
 
@@ -187,7 +187,7 @@ const value = helios.getParameterBindings();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:309</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:336</code></p>
 <p>Configures or reads step.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -204,7 +204,7 @@ const value = helios.getParameterBindings();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:330</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:357</code></p>
 <p>Configures or reads resize.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -221,7 +221,7 @@ const value = helios.getParameterBindings();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:437</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:466</code></p>
 <p>Configures or reads reheat.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -238,6 +238,6 @@ const value = helios.getParameterBindings();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:807</code></p>
+<p class="helios-api-source">Source: <code>src/layouts/GpuForceLayout.js:852</code></p>
 <p>Configures or reads dispose.</p>
 </div>

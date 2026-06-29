@@ -9,14 +9,15 @@ wrap that runtime for different workflows.
 | Surface | Audience | Runtime | Persistence owner |
 | --- | --- | --- | --- |
 | Helios Web | Web applications and embedded graph tools | Browser canvas with WebGPU/WebGL fallback | `helios.storage` in the page or host storage client |
-| Helios CLI | Automation, agents, batch export, reproducible sessions | Local daemon plus Helios Web client | CLI filesystem session store |
+| Helios CLI | Automation, agents, batch export, reproducible sessions, and agentic skills | Local daemon plus Helios Web client | CLI filesystem session store |
 | Helios Widget | Jupyter notebooks and Python-first exploration | AnyWidget/Jupyter or local browser fallback | Python traitlets plus Helios Web storage client |
-| Helios Desktop | Native document workflow for network files | NW.js shell backed by CLI sessions | Desktop document checkpoint plus CLI session |
+| Helios Desktop | Native document workflow for network files; hosted launch coming soon | NW.js shell backed by CLI sessions | Desktop document checkpoint plus CLI session |
 
 ## Project Links
 
 - Helios Web package: https://www.npmjs.com/package/helios-web
-- Helios CLI package: https://www.npmjs.com/package/helios-cli
+- Helios Network package: https://www.npmjs.com/package/helios-network
+- Helios CLI package: https://www.npmjs.com/package/helios-web-cli
 - Helios Widget package: https://github.com/filipinascimento/helios-widget
 - Helios Desktop package: https://github.com/filipinascimento/helios-desktop
 

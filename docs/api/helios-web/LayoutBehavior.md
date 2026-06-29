@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/behaviors/LayoutBehavior.js:297</dd>
+<dd>src/behaviors/LayoutBehavior.js:338</dd>
 </dl>
 
 ## Description
@@ -60,7 +60,7 @@ dynamic layout without replacing the Helios instance.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:298</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:339</code></p>
 <p>Id exposed by the class.</p>
 </div>
 
@@ -74,8 +74,18 @@ dynamic layout without replacing the Helios instance.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:433</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:508</code></p>
 <p>Configures or reads refresh parameter state entries.</p>
+</div>
+
+<a id="method-refreshpauseoninteractionstateentry" class="helios-api-member-anchor"></a>
+
+### `refreshPauseOnInteractionStateEntry()`
+
+<div class="helios-api-member-detail">
+
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:518</code></p>
+<p>Configures or reads refresh pause on interaction state entry.</p>
 </div>
 
 <a id="method-getpublicstate" class="helios-api-member-anchor"></a>
@@ -84,7 +94,7 @@ dynamic layout without replacing the Helios instance.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:465</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:577</code></p>
 <p>Returns the current public state value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -98,7 +108,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:496</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:610</code></p>
 <p>Configures or reads run state.</p>
 </div>
 
@@ -112,7 +122,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:308</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:357</code></p>
 <p>Configures or reads attach.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -129,7 +139,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:345</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:418</code></p>
 <p>Handles serialize for the current graph or visualization state.</p>
 </div>
 
@@ -139,7 +149,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:443</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:527</code></p>
 <p>Updates the restore state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -162,7 +172,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:574</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:849</code></p>
 <p>Updates the position attribute state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -188,7 +198,7 @@ helios.applyPositionAttribute(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:618</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:893</code></p>
 <p>Read or set the reset setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -217,7 +227,7 @@ helios.reset({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:322</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:381</code></p>
 <p>Read or set the update setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -242,7 +252,7 @@ helios.update({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:356</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:430</code></p>
 <p>Configures or reads state entries.</p>
 </div>
 
@@ -252,7 +262,7 @@ helios.update({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:460</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:572</code></p>
 <p>Configures or reads emit change.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -270,7 +280,7 @@ helios.update({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:484</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:598</code></p>
 <p>Configures or reads descriptor.</p>
 </div>
 
@@ -280,7 +290,7 @@ helios.update({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:488</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:602</code></p>
 <p>Configures or reads choices.</p>
 </div>
 
@@ -290,7 +300,7 @@ helios.update({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:492</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:606</code></p>
 <p>Configures or reads bindings.</p>
 </div>
 
@@ -300,7 +310,7 @@ helios.update({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:500</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:614</code></p>
 <p>Returns the current dynamic value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -314,7 +324,7 @@ const value = helios.isDynamic();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:504</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:618</code></p>
 <p>Configures or reads type.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -336,7 +346,7 @@ helios.type(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:525</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:639</code></p>
 <p>Configures or reads parameter.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -355,7 +365,7 @@ helios.type(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:542</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:656</code></p>
 <p>Configures or reads parameters.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -367,13 +377,35 @@ helios.type(1);
 </table>
 </div>
 
+<a id="method-pauseoninteraction" class="helios-api-member-anchor"></a>
+
+### `pauseOnInteraction(value, options = {})`
+
+<div class="helios-api-member-detail">
+
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:671</code></p>
+<p>Configures or reads pause on interaction.</p>
+<h4>Parameters</h4>
+<table class="helios-api-params">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="helios-api-param-name"><code>value</code></td><td class="helios-api-param-type"></td><td class="helios-api-param-attributes"></td><td class="helios-api-param-default"></td><td class="helios-api-param-description">New pause on interaction value. Omit this argument to read the current value.</td></tr>
+<tr><td class="helios-api-param-name"><code>options</code></td><td class="helios-api-param-type"><code>Object</code></td><td class="helios-api-param-attributes">optional</td><td class="helios-api-param-default"><code>{}</code></td><td class="helios-api-param-description">Options object for this operation.</td></tr>
+</tbody>
+</table>
+<h4>Example</h4>
+<pre class="helios-api-example"><code>
+helios.pauseOnInteraction(1);
+</code></pre>
+</div>
+
 <a id="method-positionattribute" class="helios-api-member-anchor"></a>
 
 ### `positionAttribute(value, options = {})`
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:557</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:832</code></p>
 <p>Configures or reads position attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -395,7 +427,7 @@ helios.positionAttribute(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:567</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:842</code></p>
 <p>Configures or reads position attribute choices.</p>
 </div>
 
@@ -405,7 +437,7 @@ helios.positionAttribute(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:594</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:869</code></p>
 <p>Configures or reads start.</p>
 </div>
 
@@ -415,7 +447,7 @@ helios.positionAttribute(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:601</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:876</code></p>
 <p>Configures or reads stop.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -432,7 +464,7 @@ helios.positionAttribute(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:607</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/LayoutBehavior.js:882</code></p>
 <p>Configures or reads reheat.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

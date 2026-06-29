@@ -29,8 +29,8 @@ npm run dev
     "preview": "vite preview"
   },
   "dependencies": {
-    "helios-network": "^0.10.2",
-    "helios-web": "^0.10.5"
+    "helios-network": "^0.10.3",
+    "helios-web": "^0.10.9"
   },
   "devDependencies": {
     "vite": "^5"
@@ -97,29 +97,36 @@ depending on a public CDN while package names are finalized.
 
 ## Local Checkout Development
 
-From this repository:
+In the Helios Network checkout:
 
 ```bash
-cd helios-network-v2
 npm install
 npm run build:wasm
 npm run build
 npm test
+npm link
 ```
 
+In the Helios Web checkout:
+
 ```bash
-cd ../helios-web
 npm install
 npm run build
 npm test
+npm link
 ```
 
-Then rebuild heliosweb.io:
+Then rebuild in the heliosweb.io checkout:
 
 ```bash
-cd ../heliosweb.io
-python3 scripts/build_docs.py
+npm run link:local
+npm run build
 ```
+
+For release-style docs, keep the npm package references in `package.json` and
+run the normal build. For local website testing, run `npm link` in each local
+package checkout, then run `npm run link:local` so `node_modules` resolves to
+those local package links before `npm run build`.
 
 ## Common Problems
 

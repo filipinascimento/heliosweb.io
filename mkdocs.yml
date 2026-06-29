@@ -73,9 +73,9 @@ extra_javascript:
 extra:
   homepage: https://heliosweb.io/
   version:
-    default: "0.10.0"
+    default: "0.10.9"
   helios:
-    docs_channel: "0.10.0"
+    docs_channel: "0.10.9"
     public_urls:
       landing: https://heliosweb.io/
       app: https://heliosweb.io/app/

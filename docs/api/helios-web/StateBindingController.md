@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/state/HeliosStateManager.js:831</dd>
+<dd>src/state/HeliosStateManager.js:898</dd>
 </dl>
 
 ## Description
@@ -37,7 +37,7 @@ export class StateBindingController {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:921</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:988</code></p>
 <p>Manages destroy for the current instance.</p>
 </div>
 
@@ -51,7 +51,7 @@ export class StateBindingController {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:839</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:906</code></p>
 <p>Configures or reads bind.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -70,7 +70,7 @@ export class StateBindingController {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:897</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:964</code></p>
 <p>Updates the apply state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -89,7 +89,7 @@ export class StateBindingController {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:914</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:981</code></p>
 <p>Configures or reads unbind.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

@@ -1,7 +1,7 @@
 
 # API Reference
 
-<p class="helios-api-version">Preview reference generated from revision bef1e92</p>
+<p class="helios-api-version">Preview reference generated from revision 6ebb568</p>
 
 The API reference is generated from package boundaries and source annotations. Each package has a landing page, section pages through the navigation, and per-symbol pages for classes, functions, methods, constants, and native C functions.
 

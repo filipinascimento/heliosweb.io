@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>method</dd>
 <dt>Source</dt>
-<dd>src/js/HeliosNetwork.js:5700</dd>
+<dd>src/js/HeliosNetwork.js:5701</dd>
 </dl>
 
 ## Description

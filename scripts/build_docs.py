@@ -5,6 +5,7 @@ import re
 import shutil
 import subprocess
 import sys
+import json
 import os
 from pathlib import Path
 
@@ -33,21 +34,27 @@ def copy_file(source: Path, target: Path) -> None:
     shutil.copy2(source, target)
 
 
-def resolve_dist(env_name: str, package_name: str, sibling_name: str) -> Path:
-    candidates: list[Path] = []
-    explicit = os.environ.get(env_name)
-    if explicit:
-        candidates.append(Path(explicit).expanduser().resolve())
-    candidates.append(DOCS_SITE / "node_modules" / package_name / "dist")
-    candidates.append(ROOT / sibling_name / "dist")
-    for candidate in candidates:
-        if candidate.exists():
-            return candidate
-    searched = "\n".join(f"- {candidate}" for candidate in candidates)
+def resolve_dist(package_name: str) -> Path:
+    candidate = DOCS_SITE / "node_modules" / package_name / "dist"
+    if candidate.exists():
+        return candidate
     raise FileNotFoundError(
-        f"Could not locate {package_name} dist assets. Searched:\n{searched}\n"
-        f"Install {package_name} with npm or set {env_name}."
+        f"Could not locate {package_name} dist assets in node_modules. "
+        f"Install {package_name} with npm, or register a local npm link and run `npm run link:local`."
     )
+
+
+def describe_staged_package(package_name: str) -> None:
+    package_root = DOCS_SITE / "node_modules" / package_name
+    package_json = package_root / "package.json"
+    version = "unknown version"
+    if package_json.exists():
+        try:
+            version = json.loads(package_json.read_text(encoding="utf-8")).get("version") or version
+        except json.JSONDecodeError:
+            pass
+    source = "npm-linked local package" if package_root.is_symlink() else "npm-installed package"
+    print(f"Staging {package_name} runtime bundle from {source} ({version})")
 
 
 def copy_optional_bundle_helpers(source_dir: Path, target_dir: Path, bundle_source: str) -> None:
@@ -67,13 +74,16 @@ def stage_example_assets() -> None:
     checkout builds are accepted as a fallback while preparing the release.
     """
     try:
-        network_dist = resolve_dist("HELIOS_NETWORK_DIST", "helios-network", "helios-network-v2")
-        web_dist = resolve_dist("HELIOS_WEB_DIST", "helios-web", "helios-web")
+        network_dist = resolve_dist("helios-network")
+        web_dist = resolve_dist("helios-web")
     except FileNotFoundError:
         if (VENDOR_DIR / "helios-network.js").exists() and (VENDOR_DIR / "helios-web.es.js").exists():
             print("Using committed Helios vendor bundles; released packages were not installed yet.")
             return
         raise
+
+    describe_staged_package("helios-network")
+    describe_staged_package("helios-web")
 
     if VENDOR_DIR.exists():
         shutil.rmtree(VENDOR_DIR)
@@ -147,9 +157,12 @@ def write_root_homepage() -> None:
     .logo { width: min(390px, 76vw); height: auto; display: block; margin: 0 0 28px; }
     h1 { font-size: clamp(2.35rem, 6vw, 5.4rem); line-height: 0.96; margin: 0 0 24px; letter-spacing: 0; max-width: 760px; }
     .lead { max-width: 700px; font-size: 1.13rem; line-height: 1.68; margin: 0 0 30px; color: #435160; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
-    .button { border: 1px solid #17212b; color: #17212b; text-decoration: none; padding: 12px 16px; border-radius: 6px; font-weight: 700; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 34px; }
+    .button { border: 1px solid #17212b; color: #17212b; text-decoration: none; padding: 11px 13px; border-radius: 6px; font-weight: 700; }
     .button.primary { background: #17212b; color: white; }
+    .button.disabled { color: #83909e; border-color: #b9c4cf; background: #edf2f6; cursor: not-allowed; position: relative; }
+    .button.disabled::after { content: attr(data-tooltip); position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%); padding: 6px 8px; border-radius: 5px; background: #17212b; color: #ffffff; font-size: 0.78rem; line-height: 1; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 120ms ease; }
+    .button.disabled:hover::after, .button.disabled:focus-visible::after { opacity: 1; }
     .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 760px; }
     .fact { border-top: 2px solid #2f7d79; padding-top: 10px; font-size: 0.92rem; line-height: 1.45; color: #435160; }
     .fact strong { display: block; color: #17212b; margin-bottom: 4px; }
@@ -177,6 +190,8 @@ def write_root_homepage() -> None:
       .lead, .fact, .below p { color: #b6c2cf; }
       .fact strong { color: #eef4fa; }
       .button { border-color: #eef4fa; color: #eef4fa; }
+      .button.disabled { color: #737f8d; border-color: #43505f; background: #17202a; }
+      .button.disabled::after { background: #eef4fa; color: #0d1117; }
       .below { border-color: #2a3541; background: #2a3541; }
       .preview { border-color: #2a3541; background: #071018; }
       .preview-label { color: #dce8f2; background: rgba(7, 16, 24, 0.72); }
@@ -202,6 +217,8 @@ def write_root_homepage() -> None:
           <a class="button primary" href="/app/">Launch app</a>
           <a class="button" href="/docs/">Read docs</a>
           <a class="button" href="/docs/getting-started/">Quickstart</a>
+          <a class="button" href="/docs/apps/helios-cli/#agentic-skill">CLI & Skills</a>
+          <span class="button disabled" role="button" aria-disabled="true" tabindex="0" data-tooltip="Coming soon...">Desktop</span>
         </div>
         <div class="facts">
           <div class="fact"><strong>Renderer</strong> WebGPU first, WebGL2 fallback.</div>
@@ -241,7 +258,7 @@ def write_root_homepage() -> None:
 
     try {
       const network = await HeliosNetwork.generateWattsStrogatz({
-        nodeCount: 520,
+        nodeCount: 2000,
         neighborLevel: 2,
         rewiringProbability: 0.006,
         directed: false,
@@ -249,45 +266,41 @@ def write_root_homepage() -> None:
       });
       const helios = new Helios(network, {
         container,
-        renderer: 'webgl',
         mode: '3d',
         projection: 'perspective',
-        ui: false,
-        quickControls: false,
+        ui: {
+          panels: ['data', 'mappers', 'layout', 'camera'],
+          allowDrag: true,
+        },
         debug: false,
         storage: false,
         session: false,
+        startup: {
+          hideCanvasUntilFirstFrame: false,
+          layoutIterations: 0,
+          layoutDurationMs: 0,
+          initialCameraFit: false,
+        },
         warnOnUnsavedSessionChanges: false,
         legends: { enabled: false },
         behaviors: { legends: false },
-        layout: {
-          type: 'd3force3d',
-          options: {
-            mode: '3d',
-            use2D: false,
-            radius: 155,
-            depth: 190,
-            kRepulsion: 2.4,
-            kAttraction: 0.004,
-            kGravity: 0.00045,
-          },
-        },
       });
       await helios.ready;
-      helios.nodeSizeScale(0.05);
-      helios.edgeWidthScale(0.16);
+      helios.layout?.()?.setSettings?.({ linkDistance: 6 }, { reheat: true, reason: 'landing-preview' });
+      helios.nodeSizeScale(2);
+      helios.edgeWidthScale(3);
       helios.legends(false);
-      helios.frameNetwork({ animate: false, paddingRatio: 0.2 });
+      helios.setCameraPose?.({ distance: 1000, target: [0, 0, 0] }, { applyState: false });
       helios.cameraControls?.({
         autoFit: true,
-        autoFitPaddingRatio: 0.18,
+        autoFitPaddingRatio: 0.04,
+        animation: true,
         orbit: true,
         orbitSpeed: 0.04,
         orbitAngle: 16,
-        orbitAxis: [0, 1, 0],
+        orbitAxis: [0.83, 0.75, 0],
       });
-      helios.scheduler?.requestRender?.();
-      label.textContent = '520 nodes - 3D Watts-Strogatz';
+      label.textContent = '2,000 nodes - 3D Watts-Strogatz';
       window.__heliosLandingPreview = helios;
     } catch (error) {
       console.warn('Helios landing preview failed to start', error);

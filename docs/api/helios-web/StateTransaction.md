@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/state/HeliosStateManager.js:799</dd>
+<dd>src/state/HeliosStateManager.js:866</dd>
 </dl>
 
 ## Description
@@ -37,7 +37,7 @@ export class StateTransaction {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:806</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:873</code></p>
 <p>Set the set setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -58,7 +58,7 @@ export class StateTransaction {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:812</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:879</code></p>
 <p>Updates the reset state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -82,6 +82,6 @@ export class StateTransaction {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:816</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:883</code></p>
 <p>Configures or reads result.</p>
 </div>

@@ -15,6 +15,25 @@ the npm-installed packages staged into `docs/assets/vendor/helios/`. Set
 `HELIOS_WEB_SOURCE` or `HELIOS_NETWORK_SOURCE` when the source checkouts are not
 adjacent to this repository.
 
+Local website testing can stage checkout builds through npm links without
+changing the release dependency references:
+
+```bash
+cd <helios-network checkout>
+npm run build
+npm link
+
+cd <helios-web checkout>
+npm run build
+npm link
+
+cd <heliosweb.io checkout>
+npm run link:local
+npm run build
+```
+
+The normal build then stages the linked package bundles from `node_modules`.
+
 `index.d.ts` files are not documentation sources. They should be generated from
 the same source annotations that feed the API pages. Do not hand-edit generated
 declaration files to close documentation gaps; until declaration generation is

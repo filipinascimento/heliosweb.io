@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>function</dd>
 <dt>Source</dt>
-<dd>src/pipeline/Mapper.js:1161</dd>
+<dd>src/pipeline/Mapper.js:1162</dd>
 </dl>
 
 ## Description

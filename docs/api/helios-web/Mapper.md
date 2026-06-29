@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/pipeline/Mapper.js:841</dd>
+<dd>src/pipeline/Mapper.js:842</dd>
 </dl>
 
 ## Description
@@ -62,7 +62,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:853</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:854</code></p>
 <p>Set the channel setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -82,7 +82,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:865</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:866</code></p>
 <p>Returns the current channel value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -103,7 +103,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:849</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:850</code></p>
 <p>Configures or reads channel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -120,7 +120,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:869</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:870</code></p>
 <p>Configures or reads map item.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -138,7 +138,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:878</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:879</code></p>
 <p>Configures or reads map items.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -156,7 +156,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:882</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:883</code></p>
 <p>Configures or reads ensure percentile lookup.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -173,7 +173,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:891</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:892</code></p>
 <p>Configures or reads ensure buffers for channel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -190,7 +190,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:942</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:943</code></p>
 <p>Configures or reads should ensure channel buffer.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -208,7 +208,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:950</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:951</code></p>
 <p>Returns the current node passthrough channel value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -226,7 +226,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:958</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:959</code></p>
 <p>Configures or reads resolve node source attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -244,7 +244,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:970</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:971</code></p>
 <p>Configures or reads resolve node source dimension.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -262,7 +262,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:987</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:988</code></p>
 <p>Configures or reads resolve passthrough config.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -282,7 +282,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1024</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1025</code></p>
 <p>Configures or reads ensure node source attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -302,7 +302,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1112</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1113</code></p>
 <p>Manages edge attribute for the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -319,7 +319,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1125</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1126</code></p>
 <p>Configures or reads unregister node to edge.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -336,7 +336,7 @@ that need to build visual attributes programmatically.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1138</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1139</code></p>
 <p>Configures or reads unregister channel.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

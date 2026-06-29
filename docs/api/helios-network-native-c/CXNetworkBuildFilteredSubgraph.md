@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>function</dd>
 <dt>Source</dt>
-<dd>src/native/include/helios/CXNetwork.h:1030</dd>
+<dd>src/native/include/helios/CXNetwork.h:1044</dd>
 </dl>
 
 ## Description
@@ -22,7 +22,7 @@ Builds an induced filtered subgraph from optional node/edge filters. - `nodeFilt
 <div markdown="1" class="helios-api-template-section">
 
 ```text
-CX_EXTERN CXBool CXNetworkBuildFilteredSubgraph( CXNetworkRef network, CXNodeSelectorRef nodeFilter, CXEdgeSelectorRef edgeFilter, CXNodeSelectorRef outNodeSelector, CXEdgeSelectorRef outEdgeSelector );
+CX_EXTERN CXBool CXNetworkBuildFilteredSubgraph( CXNetworkRef network, CXNodeSelectorRef nodeFilter, CXEdgeSelectorRef edgeFilter, CXSize minComponentSize, CXNodeSelectorRef outNodeSelector, CXEdgeSelectorRef outEdgeSelector );
 ```
 
 </div>

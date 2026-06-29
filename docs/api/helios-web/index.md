@@ -3,7 +3,7 @@
 
 <img class="helios-api-logo" src="../../assets/helios-logo.svg" alt="Helios Web logo">
 
-<p class="helios-api-version">Version 0.10.5</p>
+<p class="helios-api-version">Version 0.10.9</p>
 
 Helios Web is the browser visualization layer: renderer selection, camera and interaction state, behaviors, mappers, filters, layouts, persistence, and export. The reference below is grouped by the way users usually extend or configure a visualization.
 
@@ -559,7 +559,10 @@ The docs build emits a structured typed reference at [`../reference.json`](../re
 
 Top-level public exports without source summaries:
 
-- No unannotated public exports detected.
+- `LogSliderControls` from `src/ui/controls/LogSliderControls.js:1`
+- `TwoHandleRange` from `src/ui/controls/TwoHandleRange.js:1`
+- `createFpsThrottle` from `src/ui/controls/createFpsThrottle.js:1`
+- `createTooltipManager` from `src/ui/controls/createTooltipManager.js:1`
 
 Primary public class members currently using generated fallback descriptions:
 

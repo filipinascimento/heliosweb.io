@@ -32,7 +32,7 @@ const helios = new Helios(network, {
 
 await helios.ready;
 await new Promise((resolve) => setTimeout(resolve, 900));
-helios.frameNetwork({ animate: false });
+helios.frameNetwork({ animate: false, paddingRatio: 0.02 });
 ```
 
 The default behaviors are already attached. That means later examples can call

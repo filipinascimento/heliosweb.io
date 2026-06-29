@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/js/HeliosNetwork.js:3199</dd>
+<dd>src/js/HeliosNetwork.js:3200</dd>
 </dl>
 
 ## Description
@@ -37,7 +37,7 @@ export class HeliosNetwork extends BaseEventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/js/HeliosNetwork.js:9918</code></p>
+<p class="helios-api-source">Source: <code>src/js/HeliosNetwork.js:9924</code></p>
 <p>Measures local clustering coefficients.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -67,7 +67,7 @@ helios.measureLocalClusteringCoefficient({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/js/HeliosNetwork.js:9972</code></p>
+<p class="helios-api-source">Source: <code>src/js/HeliosNetwork.js:9978</code></p>
 <p>Measures node coreness (k-core index).</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -96,7 +96,7 @@ helios.measureCoreness({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/js/HeliosNetwork.js:10042</code></p>
+<p class="helios-api-source">Source: <code>src/js/HeliosNetwork.js:10048</code></p>
 <p>Creates a steppable coreness session for incremental execution. Run <code>session.step({budget})</code> in a loop until <code>phase</code> becomes <code>3</code> (done), then call <code>session.finalize()</code> to retrieve coreness values.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -125,7 +125,7 @@ helios.createCorenessSession({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/js/HeliosNetwork.js:10762</code></p>
+<p class="helios-api-source">Source: <code>src/js/HeliosNetwork.js:10768</code></p>
 <p>Creates a steppable Leiden session for incremental execution. Run <code>session.step({budget})</code> in a loop until <code>phase</code> becomes <code>5</code> (done), then call <code>session.finalize()</code> to write the output attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

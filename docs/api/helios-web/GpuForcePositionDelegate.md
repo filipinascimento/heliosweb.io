@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/delegates/GpuForcePositionDelegate.js:4708</dd>
+<dd>src/delegates/GpuForcePositionDelegate.js:5279</dd>
 </dl>
 
 ## Description
@@ -61,7 +61,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:4840</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5464</code></p>
 <p>Updates the dynamic state from network state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -84,7 +84,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:4899</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5523</code></p>
 <p>Configures or reads capture network version snapshot.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -101,7 +101,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5446</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:6257</code></p>
 <p>Configures or reads synchronize node positions to network.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -122,7 +122,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5305</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5941</code></p>
 <p>Returns the current node position view value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -139,7 +139,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5318</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5954</code></p>
 <p>Returns the current web gpuposition buffer value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -156,7 +156,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5330</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5966</code></p>
 <p>Returns the current web glposition texture value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -173,7 +173,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5343</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5979</code></p>
 <p>Returns the current gpu position resource value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -190,7 +190,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5356</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5992</code></p>
 <p>Configures or reads snapshot node positions.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -207,7 +207,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5370</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:6079</code></p>
 <p>Configures or reads snapshot node positions by id.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -226,7 +226,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5430</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:6241</code></p>
 <p>Configures or reads write position snapshot.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -248,7 +248,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5471</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:6282</code></p>
 <p>Configures or reads flatten node depth to plane.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -266,7 +266,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5512</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:6323</code></p>
 <p>Configures or reads inject planar depth jitter.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -288,7 +288,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:4849</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5473</code></p>
 <p>Updates the annealing state on the current instance.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This instance.</p><span class="helios-api-return-type"><strong>Type</strong> <code>this</code></span></div>
@@ -300,7 +300,7 @@ indirectly through `GpuForceLayout` or `LayoutBehavior`.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:4860</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5484</code></p>
 <p>Returns the current completed epochs value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -312,13 +312,30 @@ const value = helios.getCompletedEpochs();
 
 <p class="helios-api-section-description">Additional public helpers that do not belong to a narrower API area.</p>
 
+<a id="method-marktopologydirty" class="helios-api-member-anchor"></a>
+
+### `markTopologyDirty(reason = 'manual')`
+
+<div class="helios-api-member-detail">
+
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5343</code></p>
+<p>Configures or reads mark topology dirty.</p>
+<h4>Parameters</h4>
+<table class="helios-api-params">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="helios-api-param-name"><code>reason</code></td><td class="helios-api-param-type"><code>string</code></td><td class="helios-api-param-attributes">optional</td><td class="helios-api-param-default"><code>&#x27;manual&#x27;</code></td><td class="helios-api-param-description">Reason for this operation.</td></tr>
+</tbody>
+</table>
+</div>
+
 <a id="method-diddetach" class="helios-api-member-anchor"></a>
 
 ### `didDetach()`
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:4756</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5354</code></p>
 <p>Configures or reads did detach.</p>
 </div>
 
@@ -328,7 +345,7 @@ const value = helios.getCompletedEpochs();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:4760</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5358</code></p>
 <p>Configures or reads update options.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -345,7 +362,7 @@ const value = helios.getCompletedEpochs();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:4815</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5427</code></p>
 <p>Configures or reads dispose.</p>
 </div>
 
@@ -355,7 +372,7 @@ const value = helios.getCompletedEpochs();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:4963</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5587</code></p>
 <p>Configures or reads synchronize topology.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -372,7 +389,7 @@ const value = helios.getCompletedEpochs();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5095</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5730</code></p>
 <p>Configures or reads step.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -389,7 +406,7 @@ const value = helios.getCompletedEpochs();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:5393</code></p>
+<p class="helios-api-source">Source: <code>src/delegates/GpuForcePositionDelegate.js:6153</code></p>
 <p>Configures or reads snapshot node centroid by id.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

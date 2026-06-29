@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>function</dd>
 <dt>Source</dt>
-<dd>src/native/include/helios/CXNetwork.h:1009</dd>
+<dd>src/native/include/helios/CXNetwork.h:1022</dd>
 </dl>
 
 ## Description

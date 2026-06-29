@@ -78,9 +78,11 @@ cd heliosweb.io
 python3 -m http.server 8111 --bind 0.0.0.0 --directory site
 ```
 
-The docs examples load staged local bundles from `docs/assets/vendor/helios/`.
-If a visual example is stale, update/install the npm packages first, then
-rebuild the website so those bundles are copied again.
+The docs examples load staged bundles from `docs/assets/vendor/helios/`. Normal
+release builds stage the npm-installed packages. During local work, run
+`npm link` in each local package checkout, then run `npm run link:local` in
+`heliosweb.io` and use the normal build. The build logs report whether each
+runtime bundle came from an npm-installed package or an npm-linked local package.
 
 ## API Documentation Contract
 
@@ -175,7 +177,7 @@ reports browser console errors.
 
 Docs versions follow package releases. Keep examples written with package-style
 imports and tag this repository with the matching release tag, such as
-`v0.10.0`.
+`v0.10.9`.
 
 Record documentation-impacting changes in the package changelog when a public
 API, supported file format, import path, persistence envelope, or generated

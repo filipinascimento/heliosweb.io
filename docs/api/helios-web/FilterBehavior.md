@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/behaviors/FilterBehavior.js:50</dd>
+<dd>src/behaviors/FilterBehavior.js:56</dd>
 </dl>
 
 ## Description
@@ -60,7 +60,7 @@ dynamic layouts.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:51</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:57</code></p>
 <p>Id exposed by the class.</p>
 </div>
 
@@ -74,7 +74,7 @@ dynamic layouts.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:179</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:205</code></p>
 <p>Returns the current public state value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -84,11 +84,11 @@ const value = helios.getPublicState();
 
 <a id="method-replacerules" class="helios-api-member-anchor"></a>
 
-### `replaceRules({ nodeRules = [], edgeRules = [], scope } = {})` &rarr; &#123;FilterBehavior&#125;
+### `replaceRules({ nodeRules = [], edgeRules = [], scope, minComponentSize } = {})` &rarr; &#123;FilterBehavior&#125;
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:217</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:248</code></p>
 <p>Replace all active node and edge filter rules.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -100,7 +100,8 @@ const value = helios.getPublicState();
 <tr><td class="helios-api-param-name"><span class="helios-api-param-nested" title="options.scope"><span aria-hidden="true">|</span><code>scope</code></span></td><td class="helios-api-param-type">&#x27;<code>render</code>&#x27;|&#x27;<code>render</code>+<code>layout</code>&#x27;</td><td class="helios-api-param-attributes">optional</td><td class="helios-api-param-default"></td><td class="helios-api-param-description">Filter scope.</td></tr>
 <tr><td class="helios-api-param-name"><code>nodeRules</code></td><td class="helios-api-param-type"></td><td class="helios-api-param-attributes">optional</td><td class="helios-api-param-default"><code>[]</code></td><td class="helios-api-param-description">Value passed to <code>replaceRules</code>.</td></tr>
 <tr><td class="helios-api-param-name"><code>edgeRules</code></td><td class="helios-api-param-type"></td><td class="helios-api-param-attributes">optional</td><td class="helios-api-param-default"><code>[]</code></td><td class="helios-api-param-description">Value passed to <code>replaceRules</code>.</td></tr>
-<tr><td class="helios-api-param-name"><code>scope</code></td><td class="helios-api-param-type"></td><td class="helios-api-param-attributes">optional</td><td class="helios-api-param-default"><code>{}</code></td><td class="helios-api-param-description">Attribute scope: node, edge, or network.</td></tr>
+<tr><td class="helios-api-param-name"><code>scope</code></td><td class="helios-api-param-type"></td><td class="helios-api-param-attributes"></td><td class="helios-api-param-default"></td><td class="helios-api-param-description">Attribute scope: node, edge, or network.</td></tr>
+<tr><td class="helios-api-param-name"><code>minComponentSize</code></td><td class="helios-api-param-type"></td><td class="helios-api-param-attributes">optional</td><td class="helios-api-param-default"><code>{}</code></td><td class="helios-api-param-description">Value passed to <code>replaceRules</code>.</td></tr>
 </tbody>
 </table>
 <h4>Returns</h4>
@@ -115,7 +116,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:234</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:268</code></p>
 <p>Remove the active graph filter and restore the unfiltered render view.</p>
 <h4>Returns</h4>
 <div class="helios-api-return"><p>This behavior instance.</p><span class="helios-api-return-type"><strong>Type</strong> <a href="/docs/api/helios-web/FilterBehavior/"><code>FilterBehavior</code></a></span></div>
@@ -127,7 +128,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:255</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:290</code></p>
 <p>Set the filter model setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -152,7 +153,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:60</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:67</code></p>
 <p>Configures or reads attach.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -169,7 +170,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:92</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:102</code></p>
 <p>Handles serialize for the current graph or visualization state.</p>
 </div>
 
@@ -179,7 +180,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:161</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:186</code></p>
 <p>Updates the restore state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -192,6 +193,33 @@ const value = helios.getPublicState();
 <div class="helios-api-return"><p>This instance.</p><span class="helios-api-return-type"><strong>Type</strong> <code>this</code></span></div>
 </div>
 
+## Appearance { #api-appearance .helios-api-section-title }
+
+<p class="helios-api-section-description">Visual rendering settings for nodes, edges, labels, legends, density, shading, and background. <a href="AppearanceBehavior.md">AppearanceBehavior</a>, <a href="LabelsBehavior.md">LabelsBehavior</a>, and <a href="LegendsBehavior.md">LegendsBehavior</a> cover the built-in controls.</p>
+
+<a id="method-setmincomponentsize" class="helios-api-member-anchor"></a>
+
+### `setMinComponentSize(value)` &rarr; &#123;number|this&#125;
+
+<div class="helios-api-member-detail">
+
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:230</code></p>
+<p>Read or set the set min component size setting.</p>
+<h4>Parameters</h4>
+<table class="helios-api-params">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td class="helios-api-param-name"><code>value</code></td><td class="helios-api-param-type"><code>number</code></td><td class="helios-api-param-attributes"></td><td class="helios-api-param-default"></td><td class="helios-api-param-description">New set min component size value. Omit this argument to read the current value.</td></tr>
+</tbody>
+</table>
+<h4>Returns</h4>
+<div class="helios-api-return"><p>Current set min component size value when called without arguments; otherwise this instance for chaining.</p><span class="helios-api-return-type"><strong>Type</strong> <code>number</code>|<code>this</code></span></div>
+<h4>Example</h4>
+<pre class="helios-api-example"><code>
+helios.setMinComponentSize(1);
+</code></pre>
+</div>
+
 ## Configuration { #api-configuration .helios-api-section-title }
 
 <p class="helios-api-section-description">General configuration setters and compatibility helpers.</p>
@@ -202,7 +230,7 @@ const value = helios.getPublicState();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:187</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:213</code></p>
 <p>Returns the current model value or state.</p>
 <h4>Example</h4>
 <pre class="helios-api-example"><code>
@@ -216,7 +244,7 @@ const value = helios.getModel();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:198</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:224</code></p>
 <p>Set the scope setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -239,7 +267,7 @@ const value = helios.getModel();
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:75</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:82</code></p>
 <p>Read or set the update setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -264,7 +292,7 @@ helios.update({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:105</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:116</code></p>
 <p>Configures or reads state entries.</p>
 </div>
 
@@ -274,7 +302,7 @@ helios.update({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:175</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:201</code></p>
 <p>Configures or reads emit change.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -292,7 +320,7 @@ helios.update({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:191</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:217</code></p>
 <p>Read or set the filters setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -317,7 +345,7 @@ helios.filters({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:275</code></p>
+<p class="helios-api-source">Source: <code>src/behaviors/FilterBehavior.js:314</code></p>
 <p>Configures or reads sync from helios.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

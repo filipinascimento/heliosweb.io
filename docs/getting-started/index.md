@@ -81,8 +81,8 @@ Create a package:
     "build": "vite build"
   },
   "dependencies": {
-    "helios-network": "<version>",
-    "helios-web": "<version>"
+    "helios-network": "^0.10.3",
+    "helios-web": "^0.10.9"
   },
   "devDependencies": {
     "vite": "^5"

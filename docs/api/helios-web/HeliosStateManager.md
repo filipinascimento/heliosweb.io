@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/state/HeliosStateManager.js:179</dd>
+<dd>src/state/HeliosStateManager.js:229</dd>
 </dl>
 
 ## Description
@@ -37,7 +37,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:399</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:449</code></p>
 <p>Configures or reads dirty state.</p>
 </div>
 
@@ -51,7 +51,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:465</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:515</code></p>
 <p>Updates the restore state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -71,7 +71,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:502</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:552</code></p>
 <p>Handles serialize for the current graph or visualization state.</p>
 </div>
 
@@ -85,7 +85,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:201</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:251</code></p>
 <p>Set the override tracking ready setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -104,7 +104,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:302</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:352</code></p>
 <p>Returns the current get value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -122,7 +122,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:310</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:360</code></p>
 <p>Set the set setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -143,7 +143,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:314</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:364</code></p>
 <p>Set the default setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -164,7 +164,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:345</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:395</code></p>
 <p>Updates the reset state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -184,7 +184,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:365</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:415</code></p>
 <p>Updates the to default state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -204,7 +204,7 @@ export class HeliosStateManager extends EventTarget {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:520</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:570</code></p>
 <p>Read or set the get overrides setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -233,7 +233,7 @@ helios.getOverrides({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:206</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:256</code></p>
 <p>Manages register for the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -254,7 +254,7 @@ helios.getOverrides({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:289</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:339</code></p>
 <p>Configures or reads entry.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -271,7 +271,7 @@ helios.getOverrides({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:295</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:345</code></p>
 <p>Configures or reads entries for.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -288,7 +288,7 @@ helios.getOverrides({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:369</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:419</code></p>
 <p>Configures or reads status.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -305,7 +305,7 @@ helios.getOverrides({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:415</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:465</code></p>
 <p>Configures or reads subscribe.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -324,7 +324,7 @@ helios.getOverrides({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:433</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:483</code></p>
 <p>Configures or reads transaction.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -348,7 +348,7 @@ helios.transaction({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:487</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:537</code></p>
 <p>Read or set the snapshot setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -373,7 +373,7 @@ helios.snapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:510</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:560</code></p>
 <p>Configures or reads preferred key.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -390,7 +390,7 @@ helios.snapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:516</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:566</code></p>
 <p>Configures or reads override keys.</p>
 </div>
 
@@ -400,7 +400,7 @@ helios.snapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:538</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:588</code></p>
 <p>Configures or reads resolve key.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -417,7 +417,7 @@ helios.snapshot({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:713</code></p>
+<p class="helios-api-source">Source: <code>src/state/HeliosStateManager.js:768</code></p>
 <p>Read or set the debug stats setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">

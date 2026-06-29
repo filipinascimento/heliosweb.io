@@ -6,6 +6,9 @@ session, so the desktop app does not maintain a separate visualization runtime.
 
 Project link: https://github.com/filipinascimento/helios-desktop
 
+Status: coming soon on the hosted website. The development documentation below
+describes the desktop package shape and CLI-backed document model.
+
 ## When To Use It
 
 Use Desktop when users need:

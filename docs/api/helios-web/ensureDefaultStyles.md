@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>function</dd>
 <dt>Source</dt>
-<dd>src/ui/style/defaultStyles.js:2947</dd>
+<dd>src/ui/style/defaultStyles.js:2967</dd>
 </dl>
 
 ## Description

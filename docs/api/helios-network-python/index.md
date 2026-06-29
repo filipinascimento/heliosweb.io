@@ -1,7 +1,7 @@
 
 # Helios Network Python API
 
-<p class="helios-api-version">Version 0.10.2</p>
+<p class="helios-api-version">Version 0.10.3</p>
 
 The Python API provides a convenient wrapper for the native graph core plus file readers and conversion utilities for common graph ecosystems.
 

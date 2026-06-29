@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/pipeline/VisualAttributes.js:166</dd>
+<dd>src/pipeline/VisualAttributes.js:168</dd>
 </dl>
 
 ## Description
@@ -47,7 +47,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:181</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:183</code></p>
 <p>Node positions exposed by the class.</p>
 </div>
 
@@ -57,7 +57,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:185</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:187</code></p>
 <p>Node colors exposed by the class.</p>
 </div>
 
@@ -67,7 +67,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:189</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:191</code></p>
 <p>Node sizes exposed by the class.</p>
 </div>
 
@@ -77,7 +77,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:193</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:195</code></p>
 <p>Node states exposed by the class.</p>
 </div>
 
@@ -87,7 +87,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:197</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:199</code></p>
 <p>Node outline widths exposed by the class.</p>
 </div>
 
@@ -97,7 +97,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:201</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:203</code></p>
 <p>Node outline colors exposed by the class.</p>
 </div>
 
@@ -107,7 +107,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:205</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:207</code></p>
 <p>Edge colors exposed by the class.</p>
 </div>
 
@@ -117,7 +117,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:209</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:211</code></p>
 <p>Edge widths exposed by the class.</p>
 </div>
 
@@ -127,7 +127,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:213</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:215</code></p>
 <p>Edge opacities exposed by the class.</p>
 </div>
 
@@ -137,7 +137,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:217</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:219</code></p>
 <p>Edge states exposed by the class.</p>
 </div>
 
@@ -151,7 +151,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:341</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:343</code></p>
 <p>Set the network visual config setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -174,7 +174,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:740</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:742</code></p>
 <p>Configures or reads mark positions dirty.</p>
 </div>
 
@@ -184,7 +184,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:845</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:847</code></p>
 <p>Seeds missing node positions with random values so downstream layouts/renderers always have finite coordinates to start with.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -205,7 +205,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:327</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:329</code></p>
 <p>Updates the mappers state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -223,7 +223,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:504</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:506</code></p>
 <p>Updates the node mapper state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -241,7 +241,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:562</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:564</code></p>
 <p>Updates the edge mapper state on the current instance.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -263,7 +263,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:300</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:302</code></p>
 <p>When networks are populated before Helios is created, edge opacity buffers start at zero which hides edges entirely. Seed a reasonable default for any active edge that still has an uninitialized (zero/invalid) opacity.</p>
 </div>
 
@@ -273,7 +273,7 @@ export class VisualAttributes {
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1359</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1361</code></p>
 <p>Read or set the resolve edge color pair setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -300,7 +300,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:221</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:223</code></p>
 <p>Returns the current node attribute view value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -317,7 +317,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:226</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:228</code></p>
 <p>Returns the current edge attribute view value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -334,7 +334,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:277</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:279</code></p>
 <p>Returns the current prepared node attribute view value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -352,7 +352,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:286</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:288</code></p>
 <p>Returns the current prepared edge attribute view value or state.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -374,7 +374,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:231</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:233</code></p>
 <p>Configures or reads normalize lookup name.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -391,7 +391,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:235</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:237</code></p>
 <p>Configures or reads prepare node attribute lookups.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -409,7 +409,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:256</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:258</code></p>
 <p>Configures or reads prepare edge attribute lookups.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -427,7 +427,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:350</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:352</code></p>
 <p>Configures or reads build visual constant config.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -445,7 +445,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:358</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:360</code></p>
 <p>Configures or reads build node constant config.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -462,7 +462,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:379</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:381</code></p>
 <p>Configures or reads build edge constant config.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -480,7 +480,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:422</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:424</code></p>
 <p>Configures or reads augment edge source config.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -498,7 +498,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:634</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:636</code></p>
 <p>Configures or reads ensure visual attributes for config.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -517,7 +517,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:683</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:685</code></p>
 <p>Configures or reads ensure attributes.</p>
 </div>
 
@@ -527,7 +527,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:689</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:691</code></p>
 <p>Configures or reads bump node attributes.</p>
 </div>
 
@@ -537,7 +537,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:715</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:717</code></p>
 <p>Configures or reads bump edge attributes.</p>
 </div>
 
@@ -547,7 +547,7 @@ helios.resolveEdgeColorPair(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:748</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:750</code></p>
 <p>Initializes basic node visuals. Can be re-used whenever nodes are added.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -568,7 +568,7 @@ helios.applyNodeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:805</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:807</code></p>
 <p>Initializes basic edge visuals. Can be re-used whenever edges are added.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -589,7 +589,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:951</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:953</code></p>
 <p>Configures or reads ensure node attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -608,7 +608,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1013</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1015</code></p>
 <p>Configures or reads ensure edge attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -627,7 +627,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1075</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1077</code></p>
 <p>Configures or reads ensure node to edge attribute.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -646,7 +646,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1133</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1135</code></p>
 <p>Configures or reads collect attribute names.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -664,7 +664,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1159</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1161</code></p>
 <p>Configures or reads resolve node attribute buffers.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -681,7 +681,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1179</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1181</code></p>
 <p>Configures or reads resolve edge attribute buffers.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -698,7 +698,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1198</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1200</code></p>
 <p>Configures or reads build attribute object.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -716,7 +716,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1218</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1220</code></p>
 <p>Configures or reads build edge attribute object.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -734,7 +734,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1222</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1224</code></p>
 <p>Configures or reads write node visuals.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -753,7 +753,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1255</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1257</code></p>
 <p>Configures or reads write edge visuals.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -772,7 +772,7 @@ helios.applyEdgeDefaults([0, 1, 2]);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1291</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1293</code></p>
 <p>Read or set the to rgba setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -795,7 +795,7 @@ helios.toRgba(1);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1380</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1382</code></p>
 <p>Read or set the resolve edge scalar pair setting.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -818,7 +818,7 @@ helios.resolveEdgeScalarPair(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1454</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1456</code></p>
 <p>Configures or reads write edge defaults.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -841,7 +841,7 @@ helios.resolveEdgeScalarPair(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1481</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1483</code></p>
 <p>Configures or reads with buffer access.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -858,6 +858,6 @@ helios.resolveEdgeScalarPair(true);
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1501</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/VisualAttributes.js:1503</code></p>
 <p>Configures or reads flush pending attribute bumps.</p>
 </div>

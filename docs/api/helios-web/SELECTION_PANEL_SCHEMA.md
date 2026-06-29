@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>symbol</dd>
 <dt>Source</dt>
-<dd>src/ui/panels/panelSchema.js:558</dd>
+<dd>src/ui/panels/panelSchema.js:562</dd>
 </dl>
 
 ## Description

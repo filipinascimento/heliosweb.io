@@ -6,7 +6,7 @@ browser, and exposes JSON-RPC methods for scene, network, camera, layout,
 mappers, filters, labels, legends, density, metrics, picking, persistence, and
 figure export.
 
-Project link: https://www.npmjs.com/package/helios-cli
+Project link: https://www.npmjs.com/package/helios-web-cli
 
 ## When To Use It
 
@@ -19,6 +19,15 @@ Use the CLI when you need:
 - a bridge that desktop and other hosts can reuse.
 
 ## Basic Commands
+
+Install the published package, then install the managed browser used by headed
+and headless automation sessions:
+
+```sh
+npm install -g helios-web-cli@latest
+helios browser install
+helios version
+```
 
 ```sh
 helios version
@@ -35,6 +44,31 @@ helios call <sessionId> persistence.save --json '{"fullSession":true}'
 helios call <sessionId> export.figure --json '{"format":"png","preset":"window","outputPath":"./figure.png"}'
 helios session stop <sessionId>
 ```
+
+## Agentic Skill
+
+The `helios-web-cli` package ships an agent-facing skill at
+`skills/helios-cli`. Install the CLI first, then copy the skill into the agent
+runtime that should operate Helios sessions.
+
+For Codex:
+
+```sh
+SKILL_SRC="$(npm root -g)/helios-web-cli/skills/helios-cli"
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R "$SKILL_SRC" "${CODEX_HOME:-$HOME/.codex}/skills/helios-cli"
+```
+
+For a project-local Claude install:
+
+```sh
+mkdir -p ".claude/skills"
+cp -R "$SKILL_SRC" ".claude/skills/helios-cli"
+```
+
+The skill is plain Markdown plus reference files. It tells agents to verify the
+installed package versions with `helios version`, start local sessions, call
+JSON-RPC methods, inspect visual output, and stop sessions when finished.
 
 Supported network inputs are `.xnet`, `.zxnet`, `.bxnet`, `.gml`, `.gt`, and
 `.gt.zst`. GML and GT are lossy graph interchange formats in the

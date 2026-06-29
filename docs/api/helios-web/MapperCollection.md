@@ -8,7 +8,7 @@
 <dt>Kind</dt>
 <dd>class</dd>
 <dt>Source</dt>
-<dd>src/pipeline/Mapper.js:1207</dd>
+<dd>src/pipeline/Mapper.js:1208</dd>
 </dl>
 
 ## Description
@@ -64,7 +64,7 @@ them before applying visual attributes.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1265</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1266</code></p>
 <p>Configures or reads create mapper.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -81,7 +81,7 @@ them before applying visual attributes.
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1288</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1289</code></p>
 <p>Merges all registered mappers into a single Mapper (channels override in insertion order).</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -110,7 +110,7 @@ helios.toCombinedMapper({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1257</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1258</code></p>
 <p>Replaces the default mapper.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -133,7 +133,7 @@ helios.toCombinedMapper({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1222</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1223</code></p>
 <p>Returns a ChannelBuilder bound to the default mapper. Calling <code>.done()</code> will mark the collection dirty.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -150,7 +150,7 @@ helios.toCombinedMapper({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1239</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1240</code></p>
 <p>Adds a Mapper instance or a descriptor object describing channels.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -170,7 +170,7 @@ helios.toCombinedMapper({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1271</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1272</code></p>
 <p>Configures or reads build from descriptor.</p>
 <h4>Parameters</h4>
 <table class="helios-api-params">
@@ -187,6 +187,6 @@ helios.toCombinedMapper({
 
 <div class="helios-api-member-detail">
 
-<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1313</code></p>
+<p class="helios-api-source">Source: <code>src/pipeline/Mapper.js:1314</code></p>
 <p>Configures or reads touch.</p>
 </div>
