@@ -215,6 +215,7 @@ def test_docs_build_path_succeeds():
     assert "Interactive network visualization</h1>" in index_text
     assert "1M+ nodes with real-time GPU-based layout in 2D and 3D" in index_text
     assert "agentic skill integrations" in index_text
+    assert "nav { position: relative; z-index: 5;" in index_text
     assert 'href="/docs/getting-started/">Quickstart</a>' in index_text
     assert 'href="/docs/apps/helios-cli/#agentic-skill">CLI & Skills</a>' in index_text
     assert 'aria-disabled="true" tabindex="0" data-tooltip="Coming soon..."' in index_text

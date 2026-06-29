@@ -149,7 +149,7 @@ def write_root_homepage() -> None:
     a { color: inherit; }
     .shell { width: min(1260px, calc(100vw - 40px)); margin: 0 auto; }
     header { min-height: min(760px, 100vh); display: flex; flex-direction: column; }
-    nav { display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding: 22px 0 6px; }
+    nav { position: relative; z-index: 5; display: flex; justify-content: flex-end; align-items: center; gap: 24px; padding: 22px 0 6px; }
     .tabs { display: flex; align-items: center; gap: 4px; border: 1px solid #cbd5df; border-radius: 8px; padding: 4px; background: #ffffff; }
     .tabs a { text-decoration: none; font-weight: 650; font-size: 0.95rem; line-height: 1; padding: 10px 13px; border-radius: 6px; white-space: nowrap; }
     .tabs a:hover, .tabs a.primary { background: #17212b; color: #ffffff; }
