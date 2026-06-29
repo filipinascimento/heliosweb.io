@@ -48,8 +48,8 @@ plugins:
   - search
   - sidecode:
       import_map:
-        helios-web: ../vendor/helios/helios-web.es.js
-        helios-network: ../vendor/helios/helios-network.js
+        helios-web: /docs/assets/vendor/helios/helios-web.es.js
+        helios-network: /docs/assets/vendor/helios/helios-network.js
 
 markdown_extensions:
   - admonition

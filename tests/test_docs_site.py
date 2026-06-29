@@ -25,7 +25,10 @@ def test_mkdocs_material_and_sidecode_are_configured():
     assert "viewBox=\"0 0 221.462 221.462\"" in mark
     assert "<rect width=\"64\" height=\"64\"" not in mark
     sidecode_config = next(item["sidecode"] for item in config["plugins"] if isinstance(item, dict) and "sidecode" in item)
-    assert sidecode_config["import_map"]["helios-web"].endswith("helios-web.es.js")
+    assert sidecode_config["import_map"] == {
+        "helios-web": "/docs/assets/vendor/helios/helios-web.es.js",
+        "helios-network": "/docs/assets/vendor/helios/helios-network.js",
+    }
     assert config["site_url"].endswith("/docs/")
     assert "assets/stylesheets/helios.css" in config["extra_css"]
     assert "assets/javascripts/api-search.js" in config["extra_javascript"]
@@ -264,7 +267,14 @@ def test_docs_build_path_succeeds():
     assert "mkdocs-sidecode-page-data" in visual_examples
     assert '<template class="mkdocs-sidecode-page-data">' in visual_examples
     payload = visual_examples.split('class="mkdocs-sidecode-page-data">', 1)[1].split("</template>", 1)[0]
-    assert json.loads(payload)["examples"]
+    page_data = json.loads(payload)
+    assert page_data["examples"]
+    assert page_data["importMap"] == {
+        "helios-web": "/docs/assets/vendor/helios/helios-web.es.js",
+        "helios-network": "/docs/assets/vendor/helios/helios-network.js",
+    }
+    assert "../vendor/helios/helios-web.es.js" not in visual_examples
+    assert "../vendor/helios/helios-network.js" not in visual_examples
     sidecode_css = (DOCS_SITE / "site/docs/assets/mkdocs-sidecode/styles.css").read_text(encoding="utf-8")
     assert "--sidecode-console-bg: #ffffff" in sidecode_css
     assert "--sidecode-console-text: #172033" in sidecode_css
